@@ -1,0 +1,3 @@
+-m
+--preview='bat --color=always {1} --highlight-line {2}'
+--layout='reverse'
