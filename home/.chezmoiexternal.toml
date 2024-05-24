@@ -1,47 +1,47 @@
 [".vim/pack/other/opt/lsp"]
 type = "git-repo"
-url = "https://github.com/yegappan/lsp"
+url = "https://github.com/yegappan/lsp.git"
 
 [".vim/pack/other/start/commentary"]
 type = "git-repo"
-url = "https://github.com/tpope/vim-commentary"
+url = "https://github.com/tpope/vim-commentary.git"
 
 [".vim/pack/other/start/editorconfig-vim"]
 type = "git-repo"
-url = "https://github.com/editorconfig/editorconfig-vim"
+url = "https://github.com/editorconfig/editorconfig-vim.git"
 
 [".vim/pack/other/start/fugitive"]
 type = "git-repo"
-url = "https://github.com/tpope/vim-fugitive"
+url = "https://github.com/tpope/vim-fugitive.git"
 
 [".vim/pack/other/start/fzf"]
 type = "git-repo"
-url = "https://github.com/junegunn/fzf"
+url = "https://github.com/junegunn/fzf.git"
 
 [".vim/pack/other/start/fzf.vim"]
 type = "git-repo"
-url = "https://github.com/junegunn/fzf.vim"
+url = "https://github.com/junegunn/fzf.vim.git"
 
 [".vim/pack/other/start/nerdtree"]
 type = "git-repo"
-url = "https://github.com/preservim/nerdtree"
+url = "https://github.com/preservim/nerdtree.git"
 
 [".vim/pack/other/start/surround"]
 type = "git-repo"
-url = "https://github.com/tpope/vim-surround"
+url = "https://github.com/tpope/vim-surround.git"
 
 [".vim/pack/other/start/vim-airline"]
 type = "git-repo"
-url = "https://github.com/vim-airline/vim-airline"
+url = "https://github.com/vim-airline/vim-airline.git"
 
 [".vim/pack/other/start/vim-gitgutter"]
 type = "git-repo"
-url = "https://github.com/airblade/vim-gitgutter"
+url = "https://github.com/airblade/vim-gitgutter.git"
 
 [".vim/pack/syntax/start/rust.vim"]
 type = "git-repo"
-url = "https://github.com/rust-lang/rust.vim"
+url = "https://github.com/rust-lang/rust.vim.git"
 
 [".vim/pack/themes/opt/onedark"]
 type = "git-repo"
-url = "https://github.com/joshdick/onedark.vim"
+url = "https://github.com/joshdick/onedark.vim.git"
