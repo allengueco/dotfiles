@@ -1,6 +1,6 @@
 # dotfiles
 
-My (very messy) dotfiles.
+My (very messy) dotfiles. I maintain this using (chezmoi)[https://www.chezmoi.io/]
 
 For now, I don't have any install scripts, so to remind myself, I have these tools installed:
 - brew
