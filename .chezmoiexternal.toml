@@ -1,0 +1,32 @@
+[".vim/pack/other/opt/lsp"]
+type = "git-repo"
+url = "https://github.com/yegappan/lsp"
+
+[".vim/pack/other/start/commentary"]
+type = "git-repo"
+url = "https://github.com/tpope/vim-commentary"
+
+[".vim/pack/other/start/commentary"]
+type = "git-repo"
+url = "https://github.com/tpope/vim-commentary"
+refreshPeriod = "168h"
+
+[".vim/pack/other/start/commentary"]
+type = "git-repo"
+url = "https://github.com/tpope/vim-commentary"
+refreshPeriod = "168h"
+
+[".vim/pack/other/start/commentary"]
+type = "git-repo"
+url = "https://github.com/tpope/vim-commentary"
+refreshPeriod = "168h"
+
+[".vim/pack/other/start/commentary"]
+type = "git-repo"
+url = "https://github.com/tpope/vim-commentary"
+refreshPeriod = "168h"
+
+[".vim/pack/other/start/commentary"]
+type = "git-repo"
+url = "https://github.com/tpope/vim-commentary"
+refreshPeriod = "168h"
