@@ -1,0 +1,18 @@
+[user]
+    email = allen.gueco1@gmail.com
+    name = Allen Gueco
+
+[init]
+    defaultBranch = main
+
+[status]
+    short = true
+
+[fetch]
+    prune = true
+
+[color]
+    ui = auto
+
+[core]
+    autocrlf = input
