@@ -113,8 +113,10 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
+export FZF_DEFAULT_OPTS_FILE="$HOME/.fzfrc"
 if type rg &> /dev/null; then
     export FZF_DEFAULT_COMMAND="rg --color=always --files --ignore-vcs --hidden"
-    export FZF_DEFAULT_OPTS_FILE="$HOME/.fzfrc"
     export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 fi
+
+eval "$(starship init zsh)"
