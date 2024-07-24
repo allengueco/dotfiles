@@ -2,31 +2,19 @@
 
 My (very messy) dotfiles. I maintain this using [chezmoi](https://www.chezmoi.io/)
 
-For now, I don't have any install scripts, so to remind myself, I have these tools installed:
+For now, I don't have any install scripts.So to remind myself, I have these tools installed:
 - brew
 - oh-my-zsh
-- vim
 - fzf
+- Neovim
 - ripgrep
 - bat
 - eza
+- delta
 
-## vim plugins
+## Neovim Plugins 
+My neovim plugins can be find [here](./home/dot_config/nvim/lua/allengueco/packer.lua)
 
-### Start
-- yegappan/lsp
-- rust-analyzer
-- commentary
-- editorconfig-vim
-- fugitive
-- fzf
-- fzf.vim
-- nerdtree
-- surround
-- vim-airline
-- vim-gitgutter
-- rust.vim
-
-### Optional
-- lsp 
-- onedark
+## Theme
+I've chosen to use [Catppuccin](https://catppuccin.com/) as my color scheme for most of my config.
+Their [ports](https://catppuccin.com/ports) to various software helps me make everything consistent.
