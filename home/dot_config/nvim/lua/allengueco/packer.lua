@@ -97,4 +97,12 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons',
         },
     }
+    use {
+        'alker0/chezmoi.vim',
+        init = function()
+            -- this option is required to prevent having to care about plugin
+            -- order
+            vim.g['chezmoi#use_tmp_buffer'] = true
+        end
+    }
 end)
