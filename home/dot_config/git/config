@@ -26,3 +26,9 @@
 
 [diff]
     colorMoved = default
+
+[include]
+    path = "~/.config/delta/themes/catppuccin.gitconfig"
+
+[delta]
+    features = catppuccin-frappe
