@@ -15,7 +15,7 @@ require'nvim-treesitter.configs'.setup {
     highlight = {
         enable = true,
         disable  = function()
-            if string.find(vim.bo.filetype, 'chezmoitmpl') then
+            if string.find(vim.bo.filetype, 'template.chezmoitmpl') then
                 return true
             end
         end,
