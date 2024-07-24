@@ -13,9 +13,9 @@ require'nvim-treesitter.configs'.setup {
     -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
     highlight = {
-        enable = true,
+        -- enable = true,
         disable  = function()
-            if string.find(vim.bo.filetype, 'template.chezmoitmpl') then
+            if string.find(vim.bo.filetype, 'chezmoitmpl') then
                 return true
             end
         end,
