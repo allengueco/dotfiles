@@ -93,7 +93,8 @@ local function get_jdtls_paths()
     {
       name = 'JavaSE-21',
       path = vim.fn.expand({{ .java.path.jdk21 | quote }}),
-
+    }
+  }
   cache_vars.paths = path
 
   return path
