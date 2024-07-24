@@ -17,4 +17,4 @@ My neovim plugins can be find [here](./home/dot_config/nvim/lua/allengueco/packe
 
 ## Theme
 I've chosen to use [Catppuccin](https://catppuccin.com/) as my color scheme for most of my config.
-Their [ports](https://catppuccin.com/ports) to various software helps me make everything consistent.
+Their [ports](https://catppuccin.com/ports) to various software help me make everything consistent.
