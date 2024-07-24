@@ -36,3 +36,4 @@
     navigate = true
     line-numbers = true
     true-colors = always
+    hyperlinks = true
