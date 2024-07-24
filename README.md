@@ -1,8 +1,8 @@
 # dotfiles
 
-My (very messy) dotfiles. I maintain this using [chezmoi](https://www.chezmoi.io/)
+My (very messy) dotfiles. I maintain this using [chezmoi](https://www.chezmoi.io/).
 
-For now, I don't have any install scripts.So to remind myself, I have these tools installed:
+For now, I don't have any install scripts. So to remind myself, I have these tools installed:
 - brew
 - oh-my-zsh
 - fzf
@@ -13,7 +13,7 @@ For now, I don't have any install scripts.So to remind myself, I have these tool
 - delta
 
 ## Neovim Plugins 
-My neovim plugins can be find [here](./home/dot_config/nvim/lua/allengueco/packer.lua)
+My neovim plugins can be found [here](./home/dot_config/nvim/lua/allengueco/packer.lua).
 
 ## Theme
 I've chosen to use [Catppuccin](https://catppuccin.com/) as my color scheme for most of my config.
