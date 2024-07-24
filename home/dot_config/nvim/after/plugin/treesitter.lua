@@ -13,7 +13,7 @@ require'nvim-treesitter.configs'.setup {
     -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
     highlight = {
-        -- enable = true,
+        enable = true,
         disable  = function()
             if string.find(vim.bo.filetype, 'chezmoitmpl') then
                 return true
@@ -23,6 +23,6 @@ require'nvim-treesitter.configs'.setup {
         -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
         -- Using this option may slow down your editor, and you may see some duplicate highlights.
         -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = {'lua'},
+        additional_vim_regex_highlighting = false,
     },
 }
