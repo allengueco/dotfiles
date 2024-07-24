@@ -40,14 +40,3 @@ require("nvim-tree").setup {
         }
     }
 }
--- Need to disable nvim-treesitter for chezmoitmpl and rely 
--- on vim syntax highlighting
-require('nvim-treesitter.configs').setup({
-    highlight = {
-        disable = function()
-            if string.find(vim.bo.filetype, 'chezmoitmpl') then
-                return true
-            end
-        end
-    }
-})
