@@ -105,4 +105,10 @@ return require('packer').startup(function(use)
             vim.g['chezmoi#use_tmp_buffer'] = true
         end
     }
+
+    use {
+        'epwalsh/obsidian.nvim',
+        tag = '*',
+        requires = { 'nvim-lua/plenary.nvim' }
+    }
 end)
