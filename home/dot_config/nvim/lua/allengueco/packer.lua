@@ -62,12 +62,8 @@ return require('packer').startup(function(use)
     use ('nvim-lualine/lualine.nvim')
     use {
         'nvimdev/dashboard-nvim',
-        event = 'VimEnter',
-        config = function()
-            require('dashboard').setup {
-                -- setup
-            }
-        end,
+        -- See: https://github.com/nvimdev/dashboard-nvim/issues/359#issuecomment-1646270988
+        -- event = 'VimEnter',
         requires = {'nvim-tree/nvim-web-devicons'}
     }
     use ('folke/trouble.nvim')
