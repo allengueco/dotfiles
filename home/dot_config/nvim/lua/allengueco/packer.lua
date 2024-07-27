@@ -107,4 +107,15 @@ return require('packer').startup(function(use)
         tag = '*',
         requires = { 'nvim-lua/plenary.nvim' }
     }
+
+    use {
+        'xvzc/chezmoi.nvim',
+        dependencies = { 'nvim-lua/plenary' },
+        config = function()
+            require('chezmoi').setup {
+
+
+            }
+        end
+    }
 end)
