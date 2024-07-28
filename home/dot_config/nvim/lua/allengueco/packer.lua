@@ -110,7 +110,7 @@ return require('packer').startup(function(use)
 
     use {
         'xvzc/chezmoi.nvim',
-        dependencies = { 'nvim-lua/plenary' },
+        dependencies = { 'nvim-lua/plenary.nvim' },
         config = function()
             require('chezmoi').setup {
 
