@@ -20,7 +20,7 @@ require('dashboard').setup {
                 {
                     desc = ' Chezmoi',
                     group = 'DiagnosticHint',
-                    action = 'Telescope chezmoi',
+                    action = 'Telescope chezmoi find_files',
                     key = 'c',
                 },
                 {
