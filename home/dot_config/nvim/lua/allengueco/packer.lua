@@ -29,7 +29,6 @@ return require('packer').startup(function(use)
     use { "catppuccin/nvim", as = "catppuccin" }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('nvim-treesitter/playground')
 
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -56,7 +55,10 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
     }
-    use('tpope/vim-surround')
+    use {
+        'kylechui/nvim-surround',
+        tag = '*'
+    }
     use('romgrk/barbar.nvim')
     use('nvim-tree/nvim-web-devicons')
     use('nvim-lualine/lualine.nvim')
