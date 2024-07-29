@@ -111,15 +111,12 @@ return require('packer').startup(function(use)
     use {
         'xvzc/chezmoi.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
-        config = function()
-            require('chezmoi').setup {
-
-
-            }
-        end
     }
     use {
         'stevearc/conform.nvim',
-        event = { 'BufReadPre', 'BufNewFile' }
+        event = { 'BufReadPre', 'BufNewFile' },
+        config = function()
+            require('conform').setup ()
+        end,
     }
 end)
