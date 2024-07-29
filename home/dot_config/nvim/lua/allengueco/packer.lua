@@ -57,7 +57,10 @@ return require('packer').startup(function(use)
     }
     use {
         'kylechui/nvim-surround',
-        tag = '*'
+        tag = '*',
+        config = function()
+            require('nvim-surround').setup()
+        end
     }
     use('romgrk/barbar.nvim')
     use('nvim-tree/nvim-web-devicons')
