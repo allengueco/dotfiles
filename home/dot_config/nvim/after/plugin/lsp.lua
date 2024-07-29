@@ -11,7 +11,6 @@ lsp_zero.set_sign_icons({
     hint = '⚑',
     info = '»'
 })
-lsp_zero.setup()
 -- Mason Configure
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -22,6 +21,7 @@ require('mason-lspconfig').setup({
         function(server_name)
             require('lspconfig')[server_name].setup({})
         end,
+        -- Configured with jdtls.lua
         jdtls = lsp_zero.noop,
     }
 })
