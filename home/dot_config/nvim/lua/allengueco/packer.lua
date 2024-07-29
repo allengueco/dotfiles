@@ -118,4 +118,8 @@ return require('packer').startup(function(use)
             }
         end
     }
+    use {
+        'stevearc/conform.nvim',
+        event = { 'BufReadPre', 'BufNewFile' }
+    }
 end)
