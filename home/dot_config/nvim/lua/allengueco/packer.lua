@@ -126,7 +126,6 @@ return require('packer').startup(function(use)
     }
    use {
        'folke/noice.nvim',
-       event = 'VeryLazy',
        dependencies = {
            {'MunifTanjim/nui.nvim'},
            {'rcarriga/nvim-notify'}
