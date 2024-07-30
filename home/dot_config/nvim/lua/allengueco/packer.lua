@@ -124,4 +124,12 @@ return require('packer').startup(function(use)
             require('conform').setup {}
         end,
     }
+   use {
+       'folke/noice.nvim',
+       event = 'VeryLazy',
+       dependencies = {
+           {'MunifTanjim/nui.nvim'},
+           {'rcarriga/nvim-notify'}
+       }
+   }
 end)
