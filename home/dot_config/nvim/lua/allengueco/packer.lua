@@ -115,7 +115,7 @@ return require('packer').startup(function(use)
 
     use {
         'xvzc/chezmoi.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim' },
+        requires = { 'nvim-lua/plenary.nvim' },
     }
     use {
         'stevearc/conform.nvim',
@@ -126,7 +126,7 @@ return require('packer').startup(function(use)
     }
    use {
        'folke/noice.nvim',
-       dependencies = {
+       requires = {
            {'MunifTanjim/nui.nvim'},
            {'rcarriga/nvim-notify'}
        }
