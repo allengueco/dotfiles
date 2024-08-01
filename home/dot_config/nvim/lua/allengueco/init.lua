@@ -1,4 +1,4 @@
-require("allengueco.remap")
 require("allengueco.set")
+require("allengueco.remap")
+require("allengueco.lazy")
 
-vim.cmd.colorscheme "catppuccin-frappe"
