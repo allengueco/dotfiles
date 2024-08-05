@@ -10,6 +10,10 @@ return {
     opts = {
         workspaces = {
             {
+                name = "aws",
+                path = "~/vaults/aws",
+            },
+            {
                 name = "personal",
                 path = "~/vaults/personal"
             }
