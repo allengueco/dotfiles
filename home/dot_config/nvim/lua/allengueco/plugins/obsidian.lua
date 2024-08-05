@@ -11,7 +11,7 @@ return {
         workspaces = {
             {
                 name = "aws",
-                path = "~/vaults/aws",
+                path = "~/vaults/aws"
             },
             {
                 name = "personal",
