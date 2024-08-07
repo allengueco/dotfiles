@@ -23,5 +23,5 @@ return {
         { '<A-c>', '<Cmd>BufferClose<CR>', desc = 'Close current buffer' },
         { '<A-s-c>', '<Cmd>BufferRestore<CR>', desc = 'Restore buffer' },
     }
-        
+
 }
