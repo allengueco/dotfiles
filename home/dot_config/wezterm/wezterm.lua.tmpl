@@ -9,7 +9,9 @@ config.inactive_pane_hsb = {
     saturation = 0.8,
     brightness = 0.7
 }
+
 {{- if eq .chezmoi.os "windows" }}
+config.front_end = 'WebGpu'
 config.default_prog = { 'pwsh.exe' }
 {{- end}}
 
