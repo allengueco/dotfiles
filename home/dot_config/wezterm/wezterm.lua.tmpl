@@ -12,8 +12,8 @@ config.inactive_pane_hsb = {
 }
 
 {{- if eq .chezmoi.os "windows" }}
-config.animation_fps = 120
-config.max_fps = 120
+config.window_background_opacity = 0
+config.win32_system_backdrop = "Mica"
 config.default_prog = { 'pwsh.exe' }
 {{- end}}
 
