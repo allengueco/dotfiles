@@ -13,7 +13,7 @@ For now, I don't have any install scripts. So to remind myself, I have these too
 - delta
 
 ## Neovim Plugins 
-My neovim plugins can be found [here](./home/dot_config/nvim/lua/allengueco/packer.lua).
+My neovim plugins can be found [here](./home/dot_config/nvim/lua/allengueco/lazy.lua).
 
 ## Theme
 I've chosen to use [Catppuccin](https://catppuccin.com/) as my color scheme for most of my config.
