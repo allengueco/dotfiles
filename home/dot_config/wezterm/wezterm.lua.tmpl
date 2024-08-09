@@ -14,6 +14,7 @@ config.inactive_pane_hsb = {
 {{- if eq .chezmoi.os "windows" }}
 local gpus = wezterm.gui.enumerate_gpus()
 config.webgpu_preferred_adapter = gpus[1]
+config.webgpu_power_preference = "HighPerformance"
 config.front_end = 'WebGpu'
 config.default_prog = { 'pwsh.exe' }
 {{- end}}
