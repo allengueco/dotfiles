@@ -12,7 +12,12 @@ return {
     {
         'williamboman/mason.nvim',
         lazy = false,
-        config = true,
+        opts = {
+            registries = {
+                "github:mason-org/mason-registry",
+                "github:nvim-java/mason-registry",
+            }
+        }
     },
     {
         'hrsh7th/nvim-cmp',
