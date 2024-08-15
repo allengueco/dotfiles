@@ -11,6 +11,7 @@ For now, I don't have any install scripts. So to remind myself, I have these too
 - bat
 - eza
 - delta
+- nvm
 
 ## Neovim Plugins 
 My neovim plugins can be found [here](./home/dot_config/nvim/lua/allengueco/lazy.lua).
