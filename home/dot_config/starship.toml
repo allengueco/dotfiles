@@ -4,7 +4,6 @@ format = """
 [](color_orange)\
 $os\
 $username\
-$hostname\
 [](fg:color_yellow bg:color_aqua)\
 $git_branch\
 $git_status\
