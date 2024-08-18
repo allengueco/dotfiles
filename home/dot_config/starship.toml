@@ -80,7 +80,7 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [hostname]
-style = ""
+style = "bg:color_orange fg:color_fg0"
 format = "[ $ssh_symbol$hostname ]($style)" 
 
 [directory.substitutions]
