@@ -53,6 +53,7 @@ symbol = " "
 symbol = " "
 
 [hostname]
+ssh_only = false
 ssh_symbol = " "
 
 [java]
