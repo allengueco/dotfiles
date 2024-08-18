@@ -3,8 +3,10 @@
 format = """
 [](color_orange)\
 $os\
-$username[@](bg:color_orange fg:color_fg0)$hostname\
-[](bg:color_yellow fg:color_orange)\
+$username\
+[](bg:color_orange fg:color_orange2)\
+$hostname\
+[](bg:color_orange2 fg:color_orange)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
 $git_branch\
@@ -40,6 +42,7 @@ color_orange = '#d65d0e'
 color_purple = '#b16286'
 color_red = '#cc241d'
 color_yellow = '#d79921'
+color_orange2 = 'fe8019'
 
 [os]
 disabled = false
