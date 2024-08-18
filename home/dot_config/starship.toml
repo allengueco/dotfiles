@@ -72,7 +72,9 @@ symbol = " "
 
 [hostname]
 ssh_only = false
+format = "on [$hostname](bold red)"
 ssh_symbol = " "
+disabled = false
 
 [java]
 symbol = " "
