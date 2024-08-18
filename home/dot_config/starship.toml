@@ -134,7 +134,7 @@ crust = "#11111b"
 
 [os]
 disabled = false
-format = "on [($name )]($style)"
+format = "on [($symbol )]($style)"
 
 [os.symbols]
 Windows = "󰍲"
