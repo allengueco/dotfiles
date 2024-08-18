@@ -13,7 +13,7 @@ disabled = false
 show_always = true
 style_root = "bold red"
 style_user = "bold yellow"
-format = "[$user]($style)"
+format = "[$user]($style) "
 disabled = false
 
 [aws]
@@ -36,6 +36,12 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+read_only_style = "red"
+style = "bold cyan"
+truncation_length = 8
+truncation_symbol = "…/"
+format = "[$read_only]($read_only_style)[$path]($style) "
+
 
 [docker_context]
 symbol = " "
