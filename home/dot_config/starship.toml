@@ -12,9 +12,8 @@ $env_var\
 $jobs\
 $sudo\
 $username\
-$character"""
-
-right_format = """
+$character\
+$fill\
 $singularity\
 $kubernetes\
 $directory\
@@ -85,6 +84,7 @@ $status\
 $os\
 $battery\
 $time"""
+
 
 [fill]
 symbol = ' '
