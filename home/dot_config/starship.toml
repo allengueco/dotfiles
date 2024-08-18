@@ -16,6 +16,7 @@ style = "bold mauve"
 
 [directory]
 truncation_length = 4
+truncation_symbol = "…/"
 style = "bold lavender"
 
 # Palette definitions
@@ -157,10 +158,6 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-
-[directory]
-truncation_length = 3
-truncation_symbol = "…/"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
