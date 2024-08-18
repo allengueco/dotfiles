@@ -1,3 +1,21 @@
+format = """
+[╭─](white)$username$hostname in $directory$java$gradle$kotlin$nodejs$python$rust$git_branch$battery$cmd_duration
+[╰─](white)$character """
+
+[character]
+format = "$symbol"
+success_symbol = "[❯](bold green)"
+error_symbol = "[✗](bold red) "
+vicmd_symbol = "[❮](bold green)"
+disabled = false
+
+[username]
+show_always = true
+style_root = "bold red"
+style_user = "bold yellow"
+format = "[$user]($style)"
+disabled = false
+
 [aws]
 symbol = "  "
 
