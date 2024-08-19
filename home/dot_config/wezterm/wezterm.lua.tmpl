@@ -79,6 +79,22 @@ config.keys = {
         key = '&',
         mods = 'LEADER|SHIFT',
         action = wezterm.action.CloseCurrentTab { confirm = true },
+    },
+    {
+        key = '|',
+        mods = 'LEADER|SHIFT',
+        action = wezterm.action.SplitPane {
+            direction = 'Right',
+            size = { Percent = 50 }
+        }
+    },
+    {
+        key = '-',
+        mods = 'LEADER',
+        action = wezterm.action.SplitPane {
+            direction = 'Down',
+            size = { Percent = 50 }
+        }
     }
 }
 
