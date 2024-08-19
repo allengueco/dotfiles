@@ -21,9 +21,7 @@ require("lazy").setup({
     spec = {
         -- import your plugins
         { 'catppuccin/nvim', name = 'catppuccin', priority = 1000, config = function() vim.cmd.colorscheme "catppuccin-frappe" end },
-        { 'JavaHello/spring-boot.nvim',
-            ft = 'java',
-        },
+        { 'JavaHello/spring-boot.nvim', ft = 'java' },
         { 'lewis6991/gitsigns.nvim' },
         { 'stevearc/dressing.nvim', opts = {} },
         { 'tpope/vim-fugitive' },
