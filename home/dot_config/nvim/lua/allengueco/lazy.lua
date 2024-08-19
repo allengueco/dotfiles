@@ -29,7 +29,6 @@ require("lazy").setup({
         { 'tpope/vim-fugitive' },
         { 'nvim-tree/nvim-web-devicons' },
         { 'saecki/crates.nvim', event = 'BufRead Cargo.toml', tag = 'stable' },
-        { 'xvzc/chezmoi.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
         { 'nvim-neotest/nvim-nio' },
         { 'windwp/nvim-autopairs', event = 'InsertEnter', config = true },
         { import = "allengueco.plugins" },
