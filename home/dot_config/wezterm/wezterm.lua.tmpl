@@ -62,11 +62,11 @@ config.keys = {
         action = wezterm.action.PromptInputLine {
             description = 'Enter new name for tab',
             action = wezterm.action_callback(
-                function(window, pane, line)
-                    if line then
-                        window:active_tab():set_title(line)
-                    end
+            function(window, pane, line)
+                if line then
+                    window:active_tab():set_title(line)
                 end
+            end
             ),
         },
     },
@@ -100,7 +100,17 @@ config.keys = {
         key = '{',
         mods = 'LEADER',
         action = wezterm.action.PaneSelect { mode = 'SwapWithActiveKeepFocus' }
-    }
+    },
+    {
+        key = ';',
+        mods = 'LEADER',
+        action = act.ActivatePaneDirection('Prev'),
+    },
+    {
+        key = 'o',
+        mods = 'LEADER',
+        action = act.ActivatePaneDirection('Next'),
+    },
 }
 
 {{- if eq .chezmoi.os "windows" }}
