@@ -76,11 +76,10 @@ config.keys = {
         action = wezterm.action.ShowTabNavigator,
     },
     {
-        keys = '&',
+        key = '&',
         mods = 'LEADER|SHIFT',
         action = wezterm.action.CloseCurrentTab { confirm = true },
     }
-
 }
 
 {{- if eq .chezmoi.os "windows" }}
