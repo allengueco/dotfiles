@@ -29,6 +29,7 @@ config.leader = {
     mods = 'CTRL',
     timeout_milliseconds = 2000,
 }
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 -- smart-splits.nvim integration because not lazy loading
 local function is_vim(pane)
     return pane:get_user_vars().IS_NVIM == 'true'
