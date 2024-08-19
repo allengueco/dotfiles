@@ -40,7 +40,7 @@ local direction_keys = {
     l = 'Right',
 }
 
-local function split_nav(resive_or_move, key)
+local function split_nav(resize_or_move, key)
     return {
         key = key
         mods = resize_or_move == 'resize' and 'ALT' or 'CTRL'
