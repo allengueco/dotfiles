@@ -82,8 +82,8 @@ return {
                 sign_text = {
                     warn = '▲',
                     hint = '⚑',
-                    info = '»'
-                    error = '✘',
+                    info = '»',
+                        error = '✘',
                 },
             })
 
