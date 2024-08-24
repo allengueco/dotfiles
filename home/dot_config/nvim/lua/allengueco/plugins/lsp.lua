@@ -1,13 +1,7 @@
 return {
     {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        lazy = true,
-        config = false,
-        init = function()
-            vim.g.lsp_zero_extend_cmp = 0
-            vim.g.lsp_zero_extend_lspconfig = 0
-        end,
+        branch = 'v4.x',
     },
     {
         'williamboman/mason.nvim',
@@ -64,7 +58,6 @@ return {
 
         end
     },
-
     {
         'neovim/nvim-lspconfig',
         cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
@@ -76,16 +69,22 @@ return {
         config = function()
             local lsp_zero = require('lsp-zero')
 
-            lsp_zero.on_attach(function(client, bufnr)
+            local lsp_attach = function(client, bufnr)
+                lsp_zero.highlight_symbol(client, bufnr)
+                lsp_zero.buffer_autoformat()
                 lsp_zero.default_keymaps({buffer = bufnr})
-            end)
+            end
 
-
-            lsp_zero.set_sign_icons({
-                error = '✘',
-                warn = '▲',
-                hint = '⚑',
-                info = '»'
+            lsp_zero.extend_lspconfig({
+                capabilities = require('cmp_nvim_lsp').default_capabilities(),
+                lsp_attach = lsp_attach,
+                float_border = 'rounded',
+                sign_text = {
+                    warn = '▲',
+                    hint = '⚑',
+                    info = '»'
+                    error = '✘',
+                },
             })
 
             require('mason-lspconfig').setup({
