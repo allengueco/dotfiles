@@ -2,7 +2,7 @@ return {
     'folke/noice.nvim',
     event = 'VeryLazy',
     enabled = false,
-    dependencies = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' },
+    dependencies = { 'MunifTanjim/nui.nvim' },
     opts = {
         lsp = {
             override = {
@@ -22,7 +22,7 @@ return {
             command_palette = true,
             long_message_to_split = true,
             inc_rename = false,
-            lsp_doc_border = false,
+            lsp_doc_border = true,
         }
     }
 }
