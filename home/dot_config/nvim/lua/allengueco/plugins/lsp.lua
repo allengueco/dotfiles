@@ -15,7 +15,7 @@ return {
         opts = {
             registries = {
                 "github:mason-org/mason-registry",
-                "github:nvim-java/mason-registry",
+                -- "github:nvim-java/mason-registry",
             }
         }
     },
