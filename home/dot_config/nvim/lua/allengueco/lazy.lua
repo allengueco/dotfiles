@@ -21,7 +21,6 @@ require("lazy").setup({
     spec = {
         -- import your plugins
         { 'JavaHello/spring-boot.nvim', ft = 'java' },
-        { 'lewis6991/gitsigns.nvim', config = function() require('gitsigns').setup() end },
         { 'stevearc/dressing.nvim', opts = {} },
         { 'tpope/vim-fugitive' },
         { 'nvim-tree/nvim-web-devicons' },
