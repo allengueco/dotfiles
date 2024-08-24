@@ -2,6 +2,8 @@ return {
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v4.x',
+        lazy = true,
+        config = false,
     },
     {
         'williamboman/mason.nvim',
@@ -102,30 +104,9 @@ return {
                     jdtls = lsp_zero.noop,
                     lua_ls = function()
                         require('lspconfig').lua_ls.setup {
-                            settings = {
-                                Lua = {
-                                    runtime = {
-                                        -- Tell the language server which version of Lua you're using
-                                        -- (most likely LuaJIT in the case of Neovim)
-                                        version = 'LuaJIT',
-                                    },
-                                    diagnostics = {
-                                        -- Get the language server to recognize the `vim` global
-                                        globals = {
-                                            'vim',
-                                            'require'
-                                        },
-                                    },
-                                    workspace = {
-                                        -- Make the server aware of Neovim runtime files
-                                        library = vim.api.nvim_get_runtime_file("", true),
-                                    },
-                                    -- Do not send telemetry data containing a randomized but unique identifier
-                                    telemetry = {
-                                        enable = false,
-                                    },
-                                },
-                            },
+                            on_init = function(client)
+                                lsp_zero.nvim_lua_settings(client, {})
+                            end
                         }
                     end
                 }
