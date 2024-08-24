@@ -3,6 +3,13 @@ return {
     opts = {
         options = {
             theme = "catppuccin"
+        },
+        extensions = {
+            'fugitive',
+            'fzf',
+            'lazy',
+            'nvim-tree',
+            'trouble'
         }
     }
 }
