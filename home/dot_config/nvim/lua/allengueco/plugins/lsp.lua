@@ -28,7 +28,7 @@ return {
             cmp.setup({
                 mapping = cmp.mapping.preset.insert({
                     -- `Enter` key to confirm completion
-                    ['<CR>'] = cmp.mapping.confirm({select = false}),
+                    ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
                     -- Ctrl+Space to trigger completion menu
                     ['<C-Space>'] = cmp.mapping.complete(),
@@ -49,13 +49,16 @@ return {
                         require('luasnip').lsp_expand(args.body)
                     end,
                 },
+                window = {
+                    completion = cmp.config.window.bordered(),
+                    documentation = cmp.config.window.bordered(),
+                },
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
                     { name = 'luasnip' },
                     { name = 'buffer' },
                 })
             })
-
         end
     },
     {
@@ -72,7 +75,7 @@ return {
             local lsp_attach = function(client, bufnr)
                 lsp_zero.highlight_symbol(client, bufnr)
                 lsp_zero.buffer_autoformat()
-                lsp_zero.default_keymaps({buffer = bufnr})
+                lsp_zero.default_keymaps({ buffer = bufnr })
             end
 
             lsp_zero.extend_lspconfig({
@@ -83,14 +86,14 @@ return {
                     warn = '▲',
                     hint = '⚑',
                     info = '»',
-                        error = '✘',
+                    error = '✘',
                 },
             })
 
             require('mason-lspconfig').setup({
                 -- Replace the language servers listed here
                 -- with the ones you want to install
-                ensure_installed = {'angularls', 'html', 'tsserver', 'rust_analyzer', 'jdtls'},
+                ensure_installed = { 'angularls', 'html', 'tsserver', 'rust_analyzer', 'jdtls' },
                 handlers = {
                     function(server_name)
                         require('lspconfig')[server_name].setup({})
@@ -127,7 +130,6 @@ return {
                     end
                 }
             })
-
         end
     }
 }
