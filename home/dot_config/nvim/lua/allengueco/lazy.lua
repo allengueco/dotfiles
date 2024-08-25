@@ -22,7 +22,7 @@ require("lazy").setup({
         -- import your plugins
         { 'stevearc/dressing.nvim',                 opts = {} },
         { 'tpope/vim-fugitive' },
-        { 'nvim-treesitter/nvim-treesitter/context' },
+        { 'nvim-treesitter/nvim-treesitter-context' },
         { 'nvim-tree/nvim-web-devicons' },
         { 'saecki/crates.nvim',                     event = 'BufRead Cargo.toml', tag = 'stable' },
         { 'nvim-neotest/nvim-nio' },
