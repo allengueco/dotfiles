@@ -8,8 +8,6 @@ return {
         vim.o.foldlevel = 99
         vim.o.foldlevelstart = 99
         vim.o.foldenable = true
-    end,
-    config = function()
         vim.api.nvim_create_autocmd('Filetype', {
             pattern = {
                 'NeogitStatus',
@@ -20,5 +18,5 @@ return {
                 vim.opt_local.foldcolumn = '0'
             end
         })
-    end
+    end,
 }
