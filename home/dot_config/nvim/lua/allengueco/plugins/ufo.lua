@@ -1,13 +1,3 @@
-vim.api.nvim_create_autocmd('Filetype', {
-    pattern = {
-        'NeogitStatus',
-    },
-    callback = function()
-        require('ufo').detach()
-        vim.opt_local.foldenable = false
-        vim.opt_local.foldcolumn = '0'
-    end
-})
 return {
     'kevinhwang91/nvim-ufo',
     dependencies = {
@@ -19,4 +9,16 @@ return {
         vim.o.foldlevelstart = 99
         vim.o.foldenable = true
     end,
+    config = function()
+        vim.api.nvim_create_autocmd('Filetype', {
+            pattern = {
+                'NeogitStatus',
+            },
+            callback = function()
+                require('ufo').detach()
+                vim.opt_local.foldenable = false
+                vim.opt_local.foldcolumn = '0'
+            end
+        })
+    end
 }
