@@ -26,8 +26,18 @@ require("lazy").setup({
         { 'nvim-tree/nvim-web-devicons' },
         { 'saecki/crates.nvim',                     event = 'BufRead Cargo.toml', tag = 'stable' },
         { 'nvim-neotest/nvim-nio' },
-        { 'lukas-reineke/indent-blankline.nvim',    main = 'ibl',                 opts = {} },
-        { 'windwp/nvim-autopairs',                  event = 'InsertEnter',        config = true },
+        {
+            'lukas-reineke/indent-blankline.nvim',
+            main = 'ibl',
+            opts = {
+                exclude = {
+                    filetypes = {
+                        'dashboard'
+                    }
+                }
+            }
+        },
+        { 'windwp/nvim-autopairs',      event = 'InsertEnter', config = true },
         { import = "allengueco.plugins" },
     },
     -- Configure any other settings here. See the documentation for more details.
