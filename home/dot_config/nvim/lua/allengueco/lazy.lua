@@ -19,8 +19,14 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
-        -- import your plugins
         { 'stevearc/dressing.nvim',                 opts = {} },
+        {
+            'JavaHello/spring-boot.nvim',
+            ft = 'java',
+            dependencies = {
+                'mfussenegger/nvim-jdtls'
+            }
+        },
         { 'tpope/vim-fugitive' },
         { 'nvim-treesitter/nvim-treesitter-context' },
         { 'nvim-tree/nvim-web-devicons' },
