@@ -87,6 +87,7 @@ local function get_jdtls_paths()
     -- if spring_bundle[1] ~= '' then
     --     vim.list_extend(path.bundles, spring_bundle)
     -- end
+    vim.list_extend(path.bundles, require('spring_boot').java_extensions())
 
     ---
     -- Useful if you're starting jdtls with a Java version that's
