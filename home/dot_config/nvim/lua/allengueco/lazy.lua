@@ -24,14 +24,14 @@ require("lazy").setup({
             'JavaHello/spring-boot.nvim',
             ft = 'java',
             dependencies = {
-                'mfussenegger/nvim-jdtls'
+                'mfussenegger/nvim-jdtls',
             },
             config = function()
                 local spring_mason = require('mason-registry')
                     .get_package('spring-boot-tools')
                     :get_install_path() .. '/extension/jars'
                 require('spring_boot').setup({
-                    ls_path = spring_mason
+                    ls_path = spring_mason,
                 })
             end
         },
