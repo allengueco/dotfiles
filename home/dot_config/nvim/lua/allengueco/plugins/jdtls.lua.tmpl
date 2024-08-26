@@ -100,11 +100,11 @@ local function get_jdtls_paths()
         -- This example assume you are using sdkman: https://sdkman.io
         {
             name = 'JavaSE-17',
-            path = vim.fn.expand({{ .java.path.jdk17 | squote}}),
+            path = vim.fn.expand({{ .java.path.jdk17 | squote }}),
         },
         {
             name = 'JavaSE-21',
-            path = vim.fn.expand({{ .java.path.jdk21 | squote}}),
+            path = vim.fn.expand({{ .java.path.jdk21 | squote }}),
         }
     }
     cache_vars.paths = path
