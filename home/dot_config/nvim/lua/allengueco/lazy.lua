@@ -25,7 +25,13 @@ require("lazy").setup({
             ft = 'java',
             dependencies = {
                 'mfussenegger/nvim-jdtls'
-            }
+            },
+            config = function()
+                local spring_mason = require('mason-registry').get_package('spring-boot-tools'):get_install_path()
+                require('spring_boot').setup({
+                    ls_path = spring_mason
+                })
+            end
         },
         { 'tpope/vim-fugitive' },
         { 'nvim-treesitter/nvim-treesitter-context' },
