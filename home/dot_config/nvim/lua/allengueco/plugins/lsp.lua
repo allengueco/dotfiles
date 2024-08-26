@@ -80,21 +80,8 @@ return {
                 lsp_zero.default_keymaps({ buffer = bufnr })
             end
 
-            local lsp_capabilities = vim.tbl_deep_extend(
-                'force',
-                require('cmp_nvim_lsp').default_capabilities(),
-                {
-                    textDocument = {
-                        foldingRange = {
-                            dynamicRegistration = false,
-                            lineFoldingOnly = true
-                        },
-                    }
-                }
-            )
-
             lsp_zero.extend_lspconfig({
-                capabilities = lsp_capabilities,
+                capabilities = require('cmp_nvim_lsp').default_capabilities(),
                 lsp_attach = lsp_attach,
                 float_border = 'rounded',
                 sign_text = {
