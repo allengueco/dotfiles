@@ -19,7 +19,10 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
-        { 'stevearc/dressing.nvim',                 opts = {} },
+        {
+            'stevearc/dressing.nvim',
+            opts = {}
+        },
         {
             'JavaHello/spring-boot.nvim',
             ft = 'java',
@@ -27,11 +30,19 @@ require("lazy").setup({
                 'mfussenegger/nvim-jdtls',
             },
         },
+        {
+            'm4xshen/hardtime.nvim',
+            dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' }
+        },
         { 'tpope/vim-fugitive' },
         { 'nvim-treesitter/nvim-treesitter-context' },
         { 'nvim-tree/nvim-web-devicons' },
-        { 'saecki/crates.nvim',                     event = 'BufRead Cargo.toml', tag = 'stable' },
-        { 'numToStr/Comment.nvim',                  opts = {} },
+        {
+            'saecki/crates.nvim',
+            event = 'BufRead Cargo.toml',
+            tag = 'stable'
+        },
+        { 'numToStr/Comment.nvim', opts = {} },
         { 'nvim-neotest/nvim-nio' },
         {
             'lukas-reineke/indent-blankline.nvim',
@@ -44,7 +55,11 @@ require("lazy").setup({
                 }
             }
         },
-        { 'windwp/nvim-autopairs',      event = 'InsertEnter', config = true },
+        {
+            'windwp/nvim-autopairs',
+            event = 'InsertEnter',
+            config = true
+        },
         { import = "allengueco.plugins" },
     },
     -- Configure any other settings here. See the documentation for more details.
