@@ -31,6 +31,7 @@ require("lazy").setup({
         { 'nvim-treesitter/nvim-treesitter-context' },
         { 'nvim-tree/nvim-web-devicons' },
         { 'saecki/crates.nvim',                     event = 'BufRead Cargo.toml', tag = 'stable' },
+        { 'numToStr/Comment.nvim',                  opts = {} },
         { 'nvim-neotest/nvim-nio' },
         {
             'lukas-reineke/indent-blankline.nvim',
