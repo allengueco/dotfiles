@@ -6,12 +6,15 @@ return {
         'nvim-tree/nvim-web-devicons',
     },
     keys = {
-        { '<leader>pe', '<Cmd>NvimTreeToggle<CR>' , desc = 'Open Nvim-Tree'}
+        { '<leader>pe', '<Cmd>NvimTreeToggle<CR>', desc = 'Open Nvim-Tree' }
     },
     opts = {
         disable_netrw = true,
         hijack_netrw = true,
         respect_buf_cwd = true,
         sync_root_with_cwd = true,
+        renderer = {
+            group_empty = true,
+        }
     }
 }
