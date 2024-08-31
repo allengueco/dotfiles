@@ -60,6 +60,10 @@ require("lazy").setup({
             event = 'InsertEnter',
             config = true
         },
+        {
+            'folke/todo-comments.nvim',
+            dependencies = { 'nvim-lua/plenary.nvim' },
+        },
         { import = "allengueco.plugins" },
     },
     -- Configure any other settings here. See the documentation for more details.
