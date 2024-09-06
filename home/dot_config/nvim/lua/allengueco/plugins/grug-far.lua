@@ -13,10 +13,9 @@ return {
                         filesFilter = ext and ext ~= "" and "*." .. ext or nil,
                     }
                 })
-            end
+            end,
             mode = { 'n', 'v' },
             desc = "Search and Replace",
         }
     }
 }
-
