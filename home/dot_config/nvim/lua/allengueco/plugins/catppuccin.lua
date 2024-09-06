@@ -11,6 +11,16 @@ return {
             nvim_surround = true,
             lsp_trouble = true,
             mason = true,
+            native_lsp = {
+                enabled = true,
+                underlines = {
+                    errors = { "undercurl" },
+                    hints = { "undercurl" },
+                    warnings = { "undercurl" },
+                    information = { "undercurl" },
+                },
+            },
+            which_key = true,
         }
     }
 }
