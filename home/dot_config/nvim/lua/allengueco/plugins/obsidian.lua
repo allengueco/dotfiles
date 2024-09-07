@@ -16,6 +16,10 @@ return {
             {
                 name = "personal",
                 path = "~/vaults/personal"
+            },
+            {
+                name = "leetcode",
+                path = "~/leetcode"
             }
         }
     }
