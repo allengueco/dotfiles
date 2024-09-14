@@ -120,9 +120,9 @@ return {
                         local angularls = require('mason-registry').get_package('angular-language-server')
                             :get_install_path()
 
-                        local ngserver = angularls .. '/node_modules/@angular/language-server/bin/ngserver'
+                        local ngserver = angularls .. '/node_modules/.bin/ngserver.cmd'
                         local cmd = {
-                            'ngserver',
+                            ngserver,
                             '--stdio',
                             '--tsProbeLocations',
                             table.concat({ angularls, vim.uv.cwd() }, ','),
