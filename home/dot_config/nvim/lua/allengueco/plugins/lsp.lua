@@ -120,7 +120,6 @@ return {
                         local angularls = require('mason-registry').get_package('angular-language-server')
                             :get_install_path()
 
-                        local ngserver = angularls .. '/node_modules/.bin/ngserver'
                         local cmd = {
                             'ngserver',
                             '--stdio',
