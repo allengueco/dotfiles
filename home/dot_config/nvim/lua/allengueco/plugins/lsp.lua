@@ -123,6 +123,7 @@ return {
                         local ngserver = angularls .. '/node_modules/@angular/language-server/bin/ngserver'
                         local cmd = {
                             ngserver,
+                            '--stdio',
                             '--tsProbeLocations',
                             table.concat({ angularls, vim.uv.cwd() }, ','),
                             '--ngProbeLocations',
