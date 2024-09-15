@@ -237,8 +237,19 @@ config.wsl_domains = {
     }, 
 }
 config.default_domain = 'WSL:Arch'
+config.default_cwd = '~'
 config.front_end = 'WebGpu'
-config.default_prog = { 'pwsh.exe', '-nologo' }
+
+config.launch_menu = {
+    {
+        label = 'Arch',
+        domain = 'WSL:Arch'
+    },
+    {
+        label = 'PowerShell',
+        domain = 'DefaultDomain'
+    }
+}
 {{- end}}
 
 return config
