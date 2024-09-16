@@ -1,5 +1,5 @@
 format = """
-[╭─](white)$username$hostname in $directory$java$gradle$kotlin$nodejs$python$rust$git_branch$battery$cmd_duration
+[╭─](white)$username$os$hostname in $directory$java$gradle$kotlin$nodejs$python$rust$git_branch$battery$cmd_duration
 [╰─](white)$character """
 
 [character]
