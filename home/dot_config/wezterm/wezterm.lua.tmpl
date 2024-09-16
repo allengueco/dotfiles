@@ -230,7 +230,12 @@ config.keys = {
 }
 
 {{- if eq .chezmoi.os "windows" }}
--- config.default_domain = 'WSL:Arch'
+config.launch_menu = {
+    {
+        label = 'Arch',
+        args = { 'wsl', 'Arch' }
+    }
+}
 config.wsl_domains = wezterm.default_wsl_domains()
 config.default_prog = { 'pwsh.exe', '-nologo' }
 config.front_end = 'WebGpu'
