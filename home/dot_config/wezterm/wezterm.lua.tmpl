@@ -230,8 +230,8 @@ config.keys = {
 }
 
 {{- if eq .chezmoi.os "windows" }}
-config.default_domain = 'WSL:Arch'
--- config.default_prog = { 'pwsh.exe', '-nologo' }
+-- config.default_domain = 'WSL:Arch'
+config.default_prog = { 'pwsh.exe', '-nologo' }
 config.front_end = 'WebGpu'
 {{- end}}
 
