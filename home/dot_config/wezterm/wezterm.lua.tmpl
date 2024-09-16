@@ -229,13 +229,12 @@ config.keys = {
     },
     {
         key = 'l',
-        mods = 'ALT',
+        mods = 'LEADER',
         action = wezterm.action.ShowLauncher 
     },
 }
 
 {{- if eq .chezmoi.os "windows" }}
-config.wsl_domains = wezterm.default_wsl_domains()
 config.default_prog = { 'pwsh.exe', '-nologo' }
 config.front_end = 'WebGpu'
 {{- end}}
