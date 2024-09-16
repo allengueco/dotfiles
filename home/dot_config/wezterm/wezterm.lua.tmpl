@@ -230,22 +230,8 @@ config.keys = {
 }
 
 {{- if eq .chezmoi.os "windows" }}
--- config.default_domain = 'WSL:Arch'
-config.ssh_domains = {
-    {
-        name = 'Allen-RPI',
-        remote_address = 'allen-rpi.local',
-        username = 'allengueco'
-    }
-}
-
-local wsl_domains = wezterm.default_wsl_domains()
-
-for _, dom in ipairs(wsl_domains) do
-    dom.default_prog = { 'zsh' }
-end
-config.wsl_domains = wsl_domains
-config.default_prog = { 'pwsh.exe', '-nologo' }
+config.default_domain = 'WSL:Arch'
+-- config.default_prog = { 'pwsh.exe', '-nologo' }
 config.front_end = 'WebGpu'
 {{- end}}
 
