@@ -3,10 +3,17 @@ return {
     version = '*',
     lazy = false,
     dependencies = {
-        'nvim-tree/nvim-web-devicons'
+        'nvim-tree/nvim-web-devicons',
+        'famiu/bufdelete.nvim',
     },
     opts = {
         options = {
+            close_command = function(bufnum)
+                require('bufdelete').bufdelete(bufnum, true)
+            end,
+            middle_mouse_command = function(bufnum)
+                require('bufdelete').bufdelete(bufnum, true)
+            end,
             hover = {
                 enabled = true,
                 delay = 200,
@@ -33,6 +40,6 @@ return {
         { "<A-7>", "<Cmd>BufferLineGoToBuffer 7<CR>" },
         { "<A-8>", "<Cmd>BufferLineGoToBuffer 8<CR>" },
         { "<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>" },
-        { "<A-c>", "<Cmd>BufferLinePickClose<CR>"}
+        { "<A-c>", "<Cmd>BufferLinePickClose<CR>" }
     }
 }
