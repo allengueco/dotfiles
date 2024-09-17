@@ -24,14 +24,14 @@ return {
         },
     },
     keys = {
-        { "<Alt>1", "<Cmd>BufferLineGoToBuffer 1<CR>" },
-        { "<Alt>2", "<Cmd>BufferLineGoToBuffer 2<CR>" },
-        { "<Alt>3", "<Cmd>BufferLineGoToBuffer 3<CR>" },
-        { "<Alt>4", "<Cmd>BufferLineGoToBuffer 4<CR>" },
-        { "<Alt>5", "<Cmd>BufferLineGoToBuffer 5<CR>" },
-        { "<Alt>6", "<Cmd>BufferLineGoToBuffer 6<CR>" },
-        { "<Alt>7", "<Cmd>BufferLineGoToBuffer 7<CR>" },
-        { "<Alt>8", "<Cmd>BufferLineGoToBuffer 8<CR>" },
-        { "<Alt>9", "<Cmd>BufferLineGoToBuffer 9<CR>" },
+        { "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>" },
+        { "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>" },
+        { "<A-3>", "<Cmd>BufferLineGoToBuffer 3<CR>" },
+        { "<A-4>", "<Cmd>BufferLineGoToBuffer 4<CR>" },
+        { "<A-5>", "<Cmd>BufferLineGoToBuffer 5<CR>" },
+        { "<A-6>", "<Cmd>BufferLineGoToBuffer 6<CR>" },
+        { "<A-7>", "<Cmd>BufferLineGoToBuffer 7<CR>" },
+        { "<A-8>", "<Cmd>BufferLineGoToBuffer 8<CR>" },
+        { "<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>" },
     }
 }
