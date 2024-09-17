@@ -64,6 +64,9 @@ require("lazy").setup({
             'folke/todo-comments.nvim',
             dependencies = { 'nvim-lua/plenary.nvim' },
         },
+        {
+            'famiu/bufdelete.nvim'
+        },
         { import = "allengueco.plugins" },
     },
     -- Configure any other settings here. See the documentation for more details.
