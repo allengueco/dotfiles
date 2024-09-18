@@ -18,7 +18,7 @@ return {
     {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
-        dependencies = { 'L3MON4D3/LuaSnip' },
+        dependencies = { 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path' },
         config = function()
             -- Configure autocomplete
             local lsp_zero = require('lsp-zero')
@@ -35,31 +35,24 @@ return {
                     -- Ctrl+Space to trigger completion menu
                     ['<C-Space>'] = cmp.mapping.complete(),
 
-                    -- Navigate between snippet placeholder
-                    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-                    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
-
                     -- Scroll up and down in the completion documentation
                     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-d>'] = cmp.mapping.scroll_docs(4),
-
-                    ['<Tab>'] = cmp_action.luasnip_supertab(),
-                    ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
                 }),
                 snippet = {
                     expand = function(args)
-                        require('luasnip').lsp_expand(args.body)
+                        vim.snippet.expand(args.body)
                     end,
                 },
                 window = {
                     completion = cmp.config.window.bordered(),
                     documentation = cmp.config.window.bordered(),
                 },
-                sources = cmp.config.sources({
+                sources = {
                     { name = 'nvim_lsp' },
-                    { name = 'luasnip' },
+                    { name = 'path' },
                     { name = 'buffer' },
-                })
+                }
             })
         end
     },
@@ -116,26 +109,6 @@ return {
                             }
                         }
                     end,
-                    -- angularls = function()
-                    --     local angularls = require('mason-registry').get_package('angular-language-server')
-                    --         :get_install_path()
-                    --
-                    --     local cmd = {
-                    --         'ngserver',
-                    --         '--stdio',
-                    --         '--tsProbeLocations',
-                    --         table.concat({ angularls, vim.uv.cwd() }, ','),
-                    --         '--ngProbeLocations',
-                    --         table.concat({ angularls .. '/node_modules/@angular/language-server', vim.uv.cwd() }, ','),
-                    --     }
-                    --
-                    --     require('lspconfig').angularls.setup {
-                    --         cmd = cmd,
-                    --         on_new_config = function(new_config, new_root_dir)
-                    --             new_config.cmd = cmd
-                    --         end,
-                    --     }
-                    -- end,
                 }
             })
         end
