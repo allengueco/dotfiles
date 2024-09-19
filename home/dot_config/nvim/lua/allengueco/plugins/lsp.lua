@@ -36,12 +36,12 @@ return {
             local cmp_action = lsp_zero.cmp_action()
             local lspkind = require('lspkind')
 
-            require('luasnip.loaders.from_vscode').lazy_load()
             local luasnip = require('luasnip')
             luasnip.filetype_extend('typescript', { 'angular/typescript.json' })
             luasnip.filetype_extend('html', { 'angular/html.json' })
             luasnip.filetype_extend('jsonc', { 'angular/jsonc.json' })
             luasnip.filetype_extend('htmlangular', { 'angular/html.json' })
+            require('luasnip.loaders.from_vscode').lazy_load()
             cmp.setup({
                 mapping = cmp.mapping.preset.insert({
                     -- `Enter` key to confirm completion
