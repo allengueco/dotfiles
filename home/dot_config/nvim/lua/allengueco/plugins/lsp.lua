@@ -21,13 +21,6 @@ return {
     {
         'L3MON4D3/LuaSnip',
         dependencies = { 'rafamadriz/friendly-snippets' },
-        config = function()
-            local luasnip = require('luasnip')
-            luasnip.filetype_extend('typescript', { 'angular/typescript.json' })
-            luasnip.filetype_extend('html', { 'angular/html.json' })
-            luasnip.filetype_extend('jsonc', { 'angular/jsonc.json' })
-            luasnip.filetype_extend('htmlangular', { 'angular/html.json' })
-        end
     },
     { 'ray-x/lsp_signature.nvim', event = 'VeryLazy' },
     {
@@ -44,6 +37,11 @@ return {
             local lspkind = require('lspkind')
 
             require('luasnip.loaders.from_vscode').lazy_load()
+            local luasnip = require('luasnip')
+            luasnip.filetype_extend('typescript', { 'angular/typescript.json' })
+            luasnip.filetype_extend('html', { 'angular/html.json' })
+            luasnip.filetype_extend('jsonc', { 'angular/jsonc.json' })
+            luasnip.filetype_extend('htmlangular', { 'angular/html.json' })
             cmp.setup({
                 mapping = cmp.mapping.preset.insert({
                     -- `Enter` key to confirm completion
@@ -61,7 +59,7 @@ return {
                 }),
                 snippet = {
                     expand = function(args)
-                        require('luasnip').lsp_expand(args.body)
+                        luasnip.lsp_expand(args.body)
                     end,
                 },
                 window = {
