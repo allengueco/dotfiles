@@ -16,7 +16,7 @@ return {
         }
     },
     { 'L3MON4D3/LuaSnip',         dependencies = { 'rafamadriz/friendly-snippets' } },
-    { 'ray-x/lsp_signature.nvim', 'VeryLazy' },
+    { 'ray-x/lsp_signature.nvim', event = 'VeryLazy' },
     {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
