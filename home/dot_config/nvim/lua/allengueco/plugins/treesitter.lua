@@ -6,7 +6,9 @@ return {
         config = function()
             require('nvim-treesitter.configs').setup {
                 -- A list of parser names, or "all" (the five listed parsers should always be installed)
-                ensure_installed = { "markdown", "markdown_inline", "toml", "rust", "angular", "javascript", "java", "typescript", "c", "lua", "vim", "vimdoc", "rust" },
+                ensure_installed = { "markdown", "markdown_inline", "toml",
+                    "rust", "angular", "javascript", "java", "typescript", "c",
+                    "lua", "vim", "vimdoc", "rust" },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,
@@ -30,6 +32,15 @@ return {
                     -- Using this option may slow down your editor, and you may see some duplicate highlights.
                     -- Instead of true it can also be a list of languages
                     additional_vim_regex_highlighting = false,
+                },
+                incremental_selection = {
+                    enable = true,
+                    keymaps = {
+                        init_selection = '<C-Space>',
+                        node_incremental = '<C-Space>',
+                        scope_incremental = false,
+                        node_decremental = "<BS>",
+                    }
                 },
                 textobjects = {
                     lsp_interop = {
@@ -72,4 +83,5 @@ return {
             }
         end
     },
+    { 'nvim-treesitter/nvim-treesitter-textobjects', event = 'VeryLazy' },
 }
