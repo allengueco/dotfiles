@@ -39,7 +39,7 @@ return {
                         init_selection = '<C-Space>',
                         node_incremental = '<C-Space>',
                         scope_incremental = false,
-                        node_decremental = "<BS>",
+                        node_decremental = "<bs>",
                     }
                 },
                 textobjects = {
