@@ -18,9 +18,22 @@ return {
             }
         }
     },
+
+    {
+        'rafamadriz/friendly-snippets',
+        config = function()
+            require('luasnip.loaders.from_vscode').lazy_load()
+        end
+    },
     {
         'L3MON4D3/LuaSnip',
         dependencies = { 'rafamadriz/friendly-snippets' },
+        config = function()
+            local luasnip = require('luasnip')
+            luasnip.filetype_extend('typescript', { 'angular' })
+            luasnip.filetype_extend('html', { 'angular' })
+            luasnip.filetype_extend('htmlangular', { 'angular' })
+        end
     },
     { 'ray-x/lsp_signature.nvim', event = 'VeryLazy' },
     {
@@ -36,11 +49,6 @@ return {
             local cmp_action = lsp_zero.cmp_action()
             local lspkind = require('lspkind')
 
-            local luasnip = require('luasnip')
-            require('luasnip.loaders.from_vscode').lazy_load()
-            luasnip.filetype_extend('typescript', { 'angular' })
-            luasnip.filetype_extend('html', { 'angular' })
-            luasnip.filetype_extend('htmlangular', { 'angular' })
             cmp.setup({
                 mapping = cmp.mapping.preset.insert({
                     -- `Enter` key to confirm completion
@@ -58,7 +66,7 @@ return {
                 }),
                 snippet = {
                     expand = function(args)
-                        luasnip.lsp_expand(args.body)
+                        require('luasnip').lsp_expand(args.body)
                     end,
                 },
                 window = {
@@ -67,8 +75,8 @@ return {
                 },
                 sources = {
                     { name = 'nvim_lsp' },
-                    { name = 'path' },
                     { name = 'luasnip' },
+                    { name = 'path' },
                     { name = 'buffer' },
                 },
                 formatting = {
