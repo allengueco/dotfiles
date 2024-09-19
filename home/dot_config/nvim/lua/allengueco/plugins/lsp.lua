@@ -15,7 +15,8 @@ return {
             }
         }
     },
-    { 'L3MON4D3/LuaSnip', dependencies = { 'rafamadriz/friendly-snippets' } },
+    { 'L3MON4D3/LuaSnip',         dependencies = { 'rafamadriz/friendly-snippets' } },
+    { 'ray-x/lsp_signature.nvim', 'VeryLazy' },
     {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
@@ -79,11 +80,18 @@ return {
         dependencies = {
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'williamboman/mason-lspconfig.nvim' },
+            { 'ray-x/lsp_signature.nvim' },
         },
         config = function()
             local lsp_zero = require('lsp-zero')
 
             local lsp_attach = function(client, bufnr)
+                require('lsp_signature').on_attach({
+                    bind = true,
+                    handler_opts = {
+                        border = 'rounded'
+                    }
+                })
                 lsp_zero.highlight_symbol(client, bufnr)
                 lsp_zero.buffer_autoformat()
                 lsp_zero.default_keymaps({ buffer = bufnr })
