@@ -18,7 +18,17 @@ return {
             }
         }
     },
-    { 'L3MON4D3/LuaSnip',         dependencies = { 'rafamadriz/friendly-snippets' } },
+    {
+        'L3MON4D3/LuaSnip',
+        dependencies = { 'rafamadriz/friendly-snippets' },
+        config = function()
+            local luasnip = require('luasnip')
+            luasnip.filetype_extend('typescript', { 'angular/typescript.json' })
+            luasnip.filetype_extend('html', { 'angular/html.json' })
+            luasnip.filetype_extend('jsonc', { 'angular/jsonc.json' })
+            luasnip.filetype_extend('htmlangular', { 'angular/html.json' })
+        end
+    },
     { 'ray-x/lsp_signature.nvim', event = 'VeryLazy' },
     {
         'hrsh7th/nvim-cmp',
