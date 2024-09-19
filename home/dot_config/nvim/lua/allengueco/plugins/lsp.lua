@@ -12,6 +12,9 @@ return {
             registries = {
                 "github:mason-org/mason-registry",
                 "github:nvim-java/mason-registry",
+            },
+            ui = {
+                border = 'rounded'
             }
         }
     },
