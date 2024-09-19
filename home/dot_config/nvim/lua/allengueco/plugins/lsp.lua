@@ -37,10 +37,9 @@ return {
             local lspkind = require('lspkind')
 
             local luasnip = require('luasnip')
-            luasnip.filetype_extend('typescript', { 'angular/typescript' })
-            luasnip.filetype_extend('html', { 'angular/html' })
-            luasnip.filetype_extend('jsonc', { 'angular/jsonc' })
-            luasnip.filetype_extend('htmlangular', { 'angular/html' })
+            luasnip.filetype_extend('typescript', { 'angular' })
+            luasnip.filetype_extend('html', { 'angular' })
+            luasnip.filetype_extend('htmlangular', { 'angular' })
             require('luasnip.loaders.from_vscode').lazy_load()
             cmp.setup({
                 mapping = cmp.mapping.preset.insert({
