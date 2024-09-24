@@ -18,7 +18,6 @@ return {
             }
         }
     },
-
     {
         'rafamadriz/friendly-snippets',
         config = function()
@@ -116,7 +115,6 @@ return {
                     client.server_capabilities.renameProvider = false
                 end
                 lsp_zero.highlight_symbol(client, bufnr)
-                lsp_zero.buffer_autoformat()
                 lsp_zero.default_keymaps({ buffer = bufnr })
             end
 
