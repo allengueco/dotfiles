@@ -187,7 +187,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				typescript = { "eslint_d" },
-				html = { "eslint_d " },
+				htmlangular = { "eslint_d " },
 				javascript = { "eslint_d" },
 			},
 			default_format_opts = {
