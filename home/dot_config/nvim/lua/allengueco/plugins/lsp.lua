@@ -140,6 +140,8 @@ return {
 					end,
 					-- Configured with jdtls.lua
 					jdtls = function() end,
+                    -- Configured with rustacean.lua
+					rust_analyzer = function() end,
 					lua_ls = function()
 						require("lspconfig").lua_ls.setup({
 							on_init = function(client)
