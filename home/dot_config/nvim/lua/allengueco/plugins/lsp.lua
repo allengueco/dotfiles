@@ -187,14 +187,12 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				typescript = { "eslint_d" },
+				html = { "eslint_d " },
 				javascript = { "eslint_d" },
 			},
 			default_format_opts = {
 				lsp_format = "fallback",
 			},
 		},
-	},
-	{
-		"zapling/mason-conform.nvim",
 	},
 }
