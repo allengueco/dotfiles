@@ -1,5 +1,5 @@
 return {
-	"mrcjkb/rustacean.nvim",
+	"mrcjkb/rustaceanvim",
 	version = "^5",
 	lazy = false,
     config = function ()
