@@ -35,7 +35,6 @@ return {
 			luasnip.filetype_extend("htmlangular", { "angular" })
 		end,
 	},
-	{ "ray-x/lsp_signature.nvim", event = "VeryLazy" },
 	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -98,19 +97,11 @@ return {
 		dependencies = {
 			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "williamboman/mason-lspconfig.nvim" },
-			{ "ray-x/lsp_signature.nvim" },
 		},
 		config = function()
 			local lsp_zero = require("lsp-zero")
 
 			local lsp_attach = function(client, bufnr)
-				require("lsp_signature").on_attach({
-					bind = true,
-					handler_opts = {
-						border = "rounded",
-					},
-				})
-
 				if client.name == "angularls" then
 					client.server_capabilities.renameProvider = false
 				end
