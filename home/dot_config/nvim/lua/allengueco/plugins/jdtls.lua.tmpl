@@ -294,6 +294,9 @@ end
 
 return {
     'mfussenegger/nvim-jdtls',
+    dependencies = { 
+        { 'JavaHello/spring-boot.nvim', opts = {} },
+    },
     config = function()
         vim.api.nvim_create_autocmd('FileType', {
             group = java_cmds,
