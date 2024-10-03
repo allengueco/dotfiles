@@ -207,14 +207,15 @@ local function jdtls_setup(event)
 
     local lsp_settings = {
         java = {
-            -- jdt = {
-            --   ls = {
-            --     vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m"
-            --   }
-            -- },
+            jdt = {
+                ls = {
+                    vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m"
+                }
+            },
             eclipse = {
                 downloadSources = true,
             },
+            
             configuration = {
                 updateBuildConfiguration = 'interactive',
                 runtimes = path.runtimes,
@@ -252,6 +253,8 @@ local function jdtls_setup(event)
                 'java.util.Objects.requireNonNull',
                 'java.util.Objects.requireNonNullElse',
                 'org.mockito.Mockito.*',
+                'org.springframework.test.web.servlet.request.MockMvcResultBuilders.*',
+                'org.springframework.test.web.servlet.result.MockMvcResultMatchers.*',
             },
         },
         contentProvider = {
@@ -298,5 +301,15 @@ return {
             desc = 'Setup jdtls',
             callback = jdtls_setup,
         })
-    end
+    end,
+    keys = {
+        { '<Leader>df', '<Cmd>lua require('jdtls').test_class()<CR>', desc = "jdtls Test class" },
+        { '<Leader>dn', '<Cmd>lua require('jdtls').test_nearest_class()<CR>', desc = "jdtls Test nearest class" },
+        { '<a-o>', "<cmd>lua require('jdtls').organize_imports()<cr>" },
+        { 'crv', "<cmd>lua require('jdtls').extract_variable()<cr>" },
+        { mode = "x", 'crv', "<esc><cmd>lua require('jdtls').extract_variable(true)<cr>" },
+        { 'crc', "<cmd>lua require('jdtls').extract_constant()<cr>" }, 
+        { mode = "x", 'crc', "<esc><cmd>lua require('jdtls').extract_constant(true)<cr>" }, 
+        { mode = "x", 'crm', "<esc><cmd>lua require('jdtls').extract_method(true)<cr>" },
+    }
 }
