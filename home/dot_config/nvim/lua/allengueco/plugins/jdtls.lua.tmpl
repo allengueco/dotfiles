@@ -297,13 +297,6 @@ return {
     dependencies = { 
         {   
             'JavaHello/spring-boot.nvim', 
-            config = function()
-                local spring_boot = require('spring_boot')
-                spring_boot.init_lsp_commands()
-                spring_boot.setup({
-                    ls_path = "~/.vscode-server/extensions/vmware.vscode-spring-boot-1.57.0"
-                })
-            end
         },
     },
     config = function()
