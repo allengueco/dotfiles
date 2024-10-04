@@ -84,11 +84,9 @@ local function get_jdtls_paths()
         :get_install_path() .. '/extension/jars/*.jar'
     local spring_bundle = vim.split(vim.fn.glob(spring_path), '\n')
 
-    if spring_bundle[1] ~= '' then
-        vim.list_extend(path.bundles, spring_bundle)
-        print(vim.inspect(path.bundles))
-        print(vim.inspect(spring_bundle))
-    end
+    -- if spring_bundle[1] ~= '' then
+    --     vim.list_extend(path.bundles, spring_bundle)
+    -- end
     -- vim.list_extend(path.bundles, require('spring_boot').java_extensions())
 
     ---
