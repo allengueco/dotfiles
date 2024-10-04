@@ -295,7 +295,11 @@ end
 return {
     'mfussenegger/nvim-jdtls',
     dependencies = { 
-        { 'JavaHello/spring-boot.nvim', opts = {} },
+        { 'JavaHello/spring-boot.nvim', 
+            opts = {
+                ls_path = "~/.vscode-server/extensions/vmware.vscode-spring-boot-1.57.0"
+            },
+        },
     },
     config = function()
         vim.api.nvim_create_autocmd('FileType', {
