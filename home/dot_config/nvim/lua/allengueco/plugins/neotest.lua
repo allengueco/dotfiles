@@ -16,8 +16,8 @@ return {
         "rcasia/neotest-java",
         ft = "java",
         dependencies = {
-            "mfusseneger/nvim-jdtls",
-            "mfusseneger/nvim-dap",
+            "mfussenegger/nvim-jdtls",
+            "mfussenegger/nvim-dap",
             "rcarriga/nvim-dap-ui",
             "theHamsta/nvim-dap-virtual-text"
         }
