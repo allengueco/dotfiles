@@ -11,18 +11,18 @@ return {
     opts = {
         lang = 'java',
     },
-    keys = {
-        {
-            '<leader>ll', '<Cmd>Leet list<CR>'
-        },
-        {
-            '<leader>lt', '<Cmd>Leet test<CR>'
-        },
-        {
-            '<leader>ld', '<Cmd>Leet desc<CR>'
-        },
-        {
-            '<leader>li', '<Cmd>Leet info<CR>'
-        }
-    }
+    -- keys = {
+    --     {
+    --         '<leader>ll', '<Cmd>Leet list<CR>'
+    --     },
+    --     {
+    --         '<leader>lt', '<Cmd>Leet test<CR>'
+    --     },
+    --     {
+    --         '<leader>ld', '<Cmd>Leet desc<CR>'
+    --     },
+    --     {
+    --         '<leader>li', '<Cmd>Leet info<CR>'
+    --     }
+    -- }
 }
