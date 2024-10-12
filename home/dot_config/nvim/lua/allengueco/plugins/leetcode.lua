@@ -10,5 +10,19 @@ return {
     },
     opts = {
         lang = 'java',
+    },
+    keys = {
+        {
+            '<Leader>ll', '<Cmd>Leet list<CR>'
+        },
+        {
+            '<Leader>lt', '<Cmd>Leet test<CR>'
+        },
+        {
+            '<Leader>ld', '<Cmd>Leet desc<CR>'
+        },
+        {
+            '<Leader>li', '<Cmd>Leet info<CR>'
+        }
     }
 }
