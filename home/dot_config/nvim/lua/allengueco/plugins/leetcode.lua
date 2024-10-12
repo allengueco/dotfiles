@@ -13,16 +13,16 @@ return {
     },
     keys = {
         {
-            '<Leader>ll', '<Cmd>Leet list<CR>'
+            '<leader>ll', '<Cmd>Leet list<CR>'
         },
         {
-            '<Leader>lt', '<Cmd>Leet test<CR>'
+            '<leader>lt', '<Cmd>Leet test<CR>'
         },
         {
-            '<Leader>ld', '<Cmd>Leet desc<CR>'
+            '<leader>ld', '<Cmd>Leet desc<CR>'
         },
         {
-            '<Leader>li', '<Cmd>Leet info<CR>'
+            '<leader>li', '<Cmd>Leet info<CR>'
         }
     }
 }
