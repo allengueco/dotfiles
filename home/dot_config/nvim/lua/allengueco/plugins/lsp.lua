@@ -135,6 +135,7 @@ return {
                     error = "✘",
                 },
             })
+            require('ufo').setup()
 
             require("mason-lspconfig").setup({
                 -- Replace the language servers listed here
@@ -177,7 +178,6 @@ return {
                 },
             })
 
-            require('ufo').setup()
         end,
     },
     {
