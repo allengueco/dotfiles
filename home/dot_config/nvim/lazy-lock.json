@@ -51,7 +51,7 @@
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "promise-async": { "branch": "main", "commit": "119e8961014c9bfaf1487bf3c2a393d254f337e2" },
   "rustaceanvim": { "branch": "master", "commit": "29f42cc149f915d771c550b6dfe7c788d856cf04" },
-  "smart-splits.nvim": { "branch": "master", "commit": "0523920a07c54eea7610f342ca8c1bddbee4b626" },
+  "smart-splits.nvim": { "branch": "master", "commit": "70f9e4f36082bf28b8bc1d05e2ea7c3f6aeb51ff" },
   "spring-boot.nvim": { "branch": "main", "commit": "7c2c9d90691e536bb00941a143e961f4c8db647d" },
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
