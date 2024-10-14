@@ -97,6 +97,7 @@ return {
         dependencies = {
             { "hrsh7th/cmp-nvim-lsp" },
             { "williamboman/mason-lspconfig.nvim" },
+            { "kevinhwang91/nvim-ufo " }
         },
         config = function()
             local lsp_zero = require("lsp-zero")
@@ -175,6 +176,8 @@ return {
                     end,
                 },
             })
+
+            require('ufo').setup()
         end,
     },
     {
