@@ -3,7 +3,7 @@ return {
     dependencies = {
         'kevinhwang91/promise-async'
     },
-    event = "VeryLazy",
+    event = "BufRead",
     init = function()
         vim.o.foldcolumn = '1'
         vim.o.foldlevel = 99
