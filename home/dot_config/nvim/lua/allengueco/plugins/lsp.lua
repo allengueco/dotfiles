@@ -102,6 +102,7 @@ return {
         config = function()
             local lsp_zero = require("lsp-zero")
 
+            require('ufo').setup()
             local lsp_attach = function(client, bufnr)
                 if client.name == "angularls" then
                     client.server_capabilities.renameProvider = false
