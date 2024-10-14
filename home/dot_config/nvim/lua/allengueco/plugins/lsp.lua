@@ -123,6 +123,13 @@ return {
                 }
             )
 
+            local lspconfig_defaults = require('lspconfig').util.default_config
+            lspconfig_defaults.capabilities = vim.tbl.tbl_deep_extend(
+                'force',
+                lspconfig_defaults.capabilities,
+                lsp_capabilities
+            )
+
 
             lsp_zero.extend_lspconfig({
                 capabilities = lsp_capabilities,
@@ -135,7 +142,6 @@ return {
                     error = "✘",
                 },
             })
-            require('ufo').setup()
 
             require("mason-lspconfig").setup({
                 -- Replace the language servers listed here
@@ -177,7 +183,6 @@ return {
                     end,
                 },
             })
-
         end,
     },
     {
