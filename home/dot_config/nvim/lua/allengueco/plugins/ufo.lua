@@ -10,6 +10,9 @@ return {
         vim.o.foldlevelstart = 99
         vim.o.foldenable = true
     end,
+    config = function ()
+        require('ufo').setup()
+    end,
     keys = {
         {
             'zR', "<Cmd>lua require('ufo').openAllFolds()<CR>"
