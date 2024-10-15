@@ -33,8 +33,10 @@ return {
         end,
     },
     {
+        -- NOTE: switch when jdtls is supported
         "saghen/blink.cmp",
         lazy = false,
+        enabled = false,
         dependencies = { "rafamadriz/friendly-snippets" },
         version = "v0.*",
         opts = {
@@ -52,12 +54,17 @@ return {
                 scroll_documentation_down = '<C-d>',
                 snippet_forward = '<Tab>',
                 snippet_backward = '<S-Tab>',
+            },
+            accept = {
+                auto_brackets = {
+                    enabled = true
+                }
             }
         }
     },
     {
         "hrsh7th/nvim-cmp",
-        enabled = false,
+        -- enabled = false,
         event = "InsertEnter",
         dependencies = { "L3MON4D3/LuaSnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "onsails/lspkind.nvim" },
         config = function()
@@ -88,10 +95,6 @@ return {
                     expand = function(args)
                         require("luasnip").lsp_expand(args.body)
                     end,
-                },
-                window = {
-                    completion = cmp.config.window.bordered(),
-                    documentation = cmp.config.window.bordered(),
                 },
                 sources = {
                     { name = "nvim_lsp" },
