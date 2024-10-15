@@ -63,9 +63,9 @@ return {
         }
     },
     {
+        -- "hrsh7th/nvim-cmp",
         "yioneko/nvim-cmp",
         branch = "perf",
-        -- enabled = false,
         event = "InsertEnter",
         dependencies = { "L3MON4D3/LuaSnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "onsails/lspkind.nvim" },
         config = function()
