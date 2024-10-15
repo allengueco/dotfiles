@@ -124,5 +124,5 @@ fi
 
 
 if type ng &> /dev/null; then
-    source <(ng competion script)
+    source <(ng completion script)
 fi
