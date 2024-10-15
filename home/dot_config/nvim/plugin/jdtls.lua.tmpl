@@ -165,7 +165,19 @@ local function jdtls_setup(event)
     if cache_vars.capabilities == nil then
         jdtls.extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
 
-        cache_vars.capabilities = vim.lsp.protocol.make_client_capabilities()
+        cache_vars.capabilities = vim.tbl_deep_extend(
+            'force',
+            vim.lsp.protocol.make_client_capabilities(),
+            {
+                textDocument = {
+                    completion = {
+                        competionItem = {
+                            snippetSupport = true
+                        }
+                    }
+                }
+            }
+        )
     end
 
     -- The command that starts the language server
