@@ -154,6 +154,7 @@ return {
                 lspconfig_defaults.capabilities,
                 lsp_capabilities
             )
+            vim.print(lsp_capabilities)
 
 
             lsp_zero.extend_lspconfig({
