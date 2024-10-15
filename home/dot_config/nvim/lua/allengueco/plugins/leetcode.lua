@@ -27,6 +27,9 @@ return {
         },
         {
             '<leader>li', '<Cmd>Leet info<CR>'
+        },
+        {
+            '<leader>lc', '<Cmd>Leet console<CR>'
         }
     }
 }
