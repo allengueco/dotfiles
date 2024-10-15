@@ -36,7 +36,31 @@ return {
         end,
     },
     {
+        "saghen/blink.cmp",
+        lazy = false,
+        dependencies = { "rafamadriz/friendly-snippets" },
+        version = "v0.*",
+        opts = {
+            highlight = {
+                use_nvim_cmp_as_default = true,
+            },
+            nerd_font_variant = "mono",
+            keymap = {
+                show = '<C-Space>',
+                hide = '<C-e>',
+                accept = '<CR>',
+                show_documentation = '<C-Space>',
+                hide_documentation = '<C-Space>',
+                scroll_documentation_up = '<C-u>',
+                scroll_documentation_down = '<C-d>',
+                snippet_forward = '<Tab>',
+                snippet_backward = '<S-Tab>',
+            }
+        }
+    },
+    {
         "hrsh7th/nvim-cmp",
+        enabled = false,
         event = "InsertEnter",
         dependencies = { "L3MON4D3/LuaSnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "onsails/lspkind.nvim" },
         config = function()
