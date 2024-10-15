@@ -13,9 +13,6 @@ return {
                 "github:mason-org/mason-registry",
                 "github:nvim-java/mason-registry",
             },
-            ui = {
-                border = "rounded",
-            },
         },
     },
     {
@@ -160,7 +157,6 @@ return {
             lsp_zero.extend_lspconfig({
                 capabilities = lsp_capabilities,
                 lsp_attach = lsp_attach,
-                float_border = "rounded",
                 sign_text = {
                     warn = "▲",
                     hint = "⚑",
