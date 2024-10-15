@@ -45,7 +45,6 @@ return {
                 textobjects = {
                     lsp_interop = {
                         enable = true,
-                        border = 'rounded',
                     },
                     move = {
                         enable = true,
