@@ -36,7 +36,7 @@ return {
         -- NOTE: switch when jdtls is supported
         "saghen/blink.cmp",
         lazy = false,
-        enabled = false,
+        -- enabled = false,
         dependencies = { "rafamadriz/friendly-snippets" },
         version = "v0.*",
         opts = {
@@ -66,6 +66,7 @@ return {
         -- "hrsh7th/nvim-cmp",
         "yioneko/nvim-cmp",
         branch = "perf",
+        enabled = false,
         event = "InsertEnter",
         dependencies = { "L3MON4D3/LuaSnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "onsails/lspkind.nvim" },
         config = function()
