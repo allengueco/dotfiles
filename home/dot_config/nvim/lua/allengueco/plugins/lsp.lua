@@ -40,9 +40,6 @@ return {
         dependencies = { "rafamadriz/friendly-snippets" },
         version = "v0.*",
         opts = {
-            highlight = {
-                use_nvim_cmp_as_default = true,
-            },
             nerd_font_variant = "mono",
             keymap = {
                 show = '<C-Space>',
@@ -62,66 +59,66 @@ return {
             }
         }
     },
-    {
-        -- "hrsh7th/nvim-cmp",
-        "yioneko/nvim-cmp",
-        branch = "perf",
-        enabled = false,
-        event = "InsertEnter",
-        dependencies = { "L3MON4D3/LuaSnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "onsails/lspkind.nvim" },
-        config = function()
-            -- Configure autocomplete
-            local lsp_zero = require("lsp-zero")
-            lsp_zero.extend_cmp()
-
-            local cmp = require("cmp")
-            local cmp_action = lsp_zero.cmp_action()
-            local lspkind = require("lspkind")
-
-            cmp.setup({
-                mapping = cmp.mapping.preset.insert({
-                    -- `Enter` key to confirm completion
-                    ["<CR>"] = cmp.mapping.confirm({ select = false }),
-
-                    -- Ctrl+Space to trigger completion menu
-                    ["<C-Space>"] = cmp.mapping.complete(),
-
-                    ["<Tab>"] = cmp_action.luasnip_supertab(),
-                    ["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
-
-                    -- Scroll up and down in the completion documentation
-                    ["<C-u>"] = cmp.mapping.scroll_docs(-4),
-                    ["<C-d>"] = cmp.mapping.scroll_docs(4),
-                }),
-                snippet = {
-                    expand = function(args)
-                        require("luasnip").lsp_expand(args.body)
-                    end,
-                },
-                sources = cmp.config.sources({
-                    { name = "nvim_lsp" },
-                    { name = "luasnip" },
-                    { name = "path" },
-                    { name = "buffer" },
-                }),
-                formatting = {
-                    fields = { "abbr", "kind", "menu" },
-                    format = lspkind.cmp_format({
-                        mode = "symbol_text",
-                        maxwidth = 50,
-                        ellipsis_char = "...",
-                        show_labelDetails = true,
-                    }),
-                },
-            })
-        end,
-    },
+    -- {
+    --     -- "hrsh7th/nvim-cmp",
+    --     "yioneko/nvim-cmp",
+    --     branch = "perf",
+    --     enabled = false,
+    --     event = "InsertEnter",
+    --     dependencies = { "L3MON4D3/LuaSnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "onsails/lspkind.nvim" },
+    --     config = function()
+    --         -- Configure autocomplete
+    --         local lsp_zero = require("lsp-zero")
+    --         lsp_zero.extend_cmp()
+    --
+    --         local cmp = require("cmp")
+    --         local cmp_action = lsp_zero.cmp_action()
+    --         local lspkind = require("lspkind")
+    --
+    --         cmp.setup({
+    --             mapping = cmp.mapping.preset.insert({
+    --                 -- `Enter` key to confirm completion
+    --                 ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    --
+    --                 -- Ctrl+Space to trigger completion menu
+    --                 ["<C-Space>"] = cmp.mapping.complete(),
+    --
+    --                 ["<Tab>"] = cmp_action.luasnip_supertab(),
+    --                 ["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
+    --
+    --                 -- Scroll up and down in the completion documentation
+    --                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+    --                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
+    --             }),
+    --             snippet = {
+    --                 expand = function(args)
+    --                     require("luasnip").lsp_expand(args.body)
+    --                 end,
+    --             },
+    --             sources = cmp.config.sources({
+    --                 { name = "nvim_lsp" },
+    --                 { name = "luasnip" },
+    --                 { name = "path" },
+    --                 { name = "buffer" },
+    --             }),
+    --             formatting = {
+    --                 fields = { "abbr", "kind", "menu" },
+    --                 format = lspkind.cmp_format({
+    --                     mode = "symbol_text",
+    --                     maxwidth = 50,
+    --                     ellipsis_char = "...",
+    --                     show_labelDetails = true,
+    --                 }),
+    --             },
+    --         })
+    --     end,
+    -- },
     {
         "neovim/nvim-lspconfig",
         cmd = { "LspInfo", "LspInstall", "LspStart" },
         event = { "BufReadPre", "BufNewFile" },
         dependencies = {
-            { "hrsh7th/cmp-nvim-lsp" },
+            -- { "hrsh7th/cmp-nvim-lsp" },
             { "williamboman/mason-lspconfig.nvim" },
             { "kevinhwang91/nvim-ufo" }
         },
