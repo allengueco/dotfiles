@@ -44,6 +44,21 @@ return {
             highlight = {
                 use_nvim_cmp_as_default = true,
             },
+            sources = {
+                providers = {
+                    {
+                        "blink.cmp.sources.snippets",
+                        name = "Snippets",
+                        opts = {
+                            extended_filetypes = {
+                                typescript = { "angular" },
+                                html = { "angular" },
+                                htmlangular = { "angular" },
+                            }
+                        }
+                    }
+                },
+            },
             nerd_font_variant = "mono",
             keymap = {
                 show = '<C-Space>',
