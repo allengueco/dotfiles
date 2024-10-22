@@ -37,8 +37,9 @@ return {
         "saghen/blink.cmp",
         lazy = false,
         -- enabled = false,
+        commit = "ffc428208f292fa00cb7cced09d35de6e815ab55",
         dependencies = { "rafamadriz/friendly-snippets" },
-        version = "v0.*",
+        -- version = "v0.*",
         opts = {
             nerd_font_variant = "mono",
             keymap = {
