@@ -41,6 +41,9 @@ return {
         dependencies = { "rafamadriz/friendly-snippets" },
         -- version = "v0.*",
         opts = {
+            highlight = {
+                use_nvim_cmp_as_default = true,
+            },
             nerd_font_variant = "mono",
             keymap = {
                 show = '<C-Space>',
@@ -119,7 +122,6 @@ return {
         cmd = { "LspInfo", "LspInstall", "LspStart" },
         event = { "BufReadPre", "BufNewFile" },
         dependencies = {
-            -- { "hrsh7th/cmp-nvim-lsp" },
             { "williamboman/mason-lspconfig.nvim" },
             { "kevinhwang91/nvim-ufo" }
         },
