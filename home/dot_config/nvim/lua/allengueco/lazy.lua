@@ -65,11 +65,6 @@ require("lazy").setup({
             opts = {},
         },
         { 'famiu/bufdelete.nvim' },
-        {
-            '3rd/image.nvim',
-            config = function()
-            end
-        },
         { import = "allengueco.plugins" },
     },
     -- Configure any other settings here. See the documentation for more details.
