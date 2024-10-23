@@ -64,8 +64,11 @@ require("lazy").setup({
             dependencies = { 'nvim-lua/plenary.nvim' },
             opts = {},
         },
+        { 'famiu/bufdelete.nvim' },
         {
-            'famiu/bufdelete.nvim'
+            '3rd/image.nvim',
+            config = function()
+            end
         },
         { import = "allengueco.plugins" },
     },
