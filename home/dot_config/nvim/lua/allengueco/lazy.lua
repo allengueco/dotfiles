@@ -34,7 +34,6 @@ require("lazy").setup({
             'm4xshen/hardtime.nvim',
             dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' }
         },
-        { 'tpope/vim-fugitive' },
         { 'nvim-treesitter/nvim-treesitter-context' },
         { 'nvim-tree/nvim-web-devicons' },
         {
@@ -63,6 +62,7 @@ require("lazy").setup({
         {
             'folke/todo-comments.nvim',
             dependencies = { 'nvim-lua/plenary.nvim' },
+            opts = {},
         },
         {
             'famiu/bufdelete.nvim'
