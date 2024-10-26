@@ -28,7 +28,8 @@ return {
                     which_key = true,
                 },
                 styles = {
-                    functions = { "italic" }
+                    functions = { "italic" },
+                    types = { "italic" }
                 }
             }
         )
