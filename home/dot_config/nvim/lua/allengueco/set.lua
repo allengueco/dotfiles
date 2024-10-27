@@ -10,13 +10,12 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.listchars = {
-    space = "⋅",
+    space = "·",
     eol = "↴",
+    trail = "·",
     tab = "▎_",
-    trail = "•",
     extends = "❯",
     precedes = "❮",
-    nbsp = "",
 }
 vim.opt.smartindent = true
 
