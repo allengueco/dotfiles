@@ -13,7 +13,9 @@ return {
                     diffview = true,
                     mason = true,
                     indent_blankline = {
-                        colored_indent_levels = true,
+                        enabled = true,
+                        scope_color = "lavender",
+                        colored_indent_levels = false,
                     },
                     neotest = true,
                     native_lsp = {
