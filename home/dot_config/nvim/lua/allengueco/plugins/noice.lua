@@ -24,7 +24,7 @@ return {
 				{
 					filter = {
 						event = "lsp",
-						kind = "progress",
+						kind = "message",
 						find = "jdtls",
 					},
 					opts = { skip = true },
