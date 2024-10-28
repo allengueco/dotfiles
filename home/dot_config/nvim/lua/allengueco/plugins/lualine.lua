@@ -1,15 +1,17 @@
 return {
-    'nvim-lualine/lualine.nvim',
+    "nvim-lualine/lualine.nvim",
     opts = {
         options = {
-            theme = "catppuccin"
+            theme = "catppuccin",
         },
         extensions = {
-            'fugitive',
-            'fzf',
-            'lazy',
-            'nvim-tree',
-            'trouble'
-        }
-    }
+            "fugitive",
+            "fzf",
+            "lazy",
+            "nvim-tree",
+            "trouble",
+            "mason",
+            "nvim-dap-ui",
+        },
+    },
 }
