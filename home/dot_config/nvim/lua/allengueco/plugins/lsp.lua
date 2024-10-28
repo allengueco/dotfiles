@@ -99,7 +99,6 @@ return {
 					client.server_capabilities.renameProvider = false
 				end
 				lsp_zero.highlight_symbol(client, bufnr)
-                lsp_zero.default_keymaps({buffer = bufnr})
 			end
 
 			local lsp_capabilities = vim.tbl_deep_extend("force", vim.lsp.protocol.make_client_capabilities(), {
