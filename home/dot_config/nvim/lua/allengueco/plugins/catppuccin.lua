@@ -12,6 +12,8 @@ return {
                     lsp_trouble = true,
                     diffview = true,
                     mason = true,
+                    noice = true,
+                    notify = true,
                     indent_blankline = {
                         enabled = true,
                         scope_color = "lavender",
