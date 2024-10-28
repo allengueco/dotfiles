@@ -17,8 +17,11 @@ vim.opt.listchars = {
     extends = "❯",
     precedes = "❮",
 }
+vim.opt.fillchars = {
+    diff = "╱",
+}
+vim.o.showbreak = "↳⋅"
 vim.opt.smartindent = true
-
 vim.opt.wrap = false
 
 vim.opt.swapfile = false
