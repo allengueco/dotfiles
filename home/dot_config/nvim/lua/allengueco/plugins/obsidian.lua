@@ -8,7 +8,6 @@ return {
     },
     dependencies = {
         'nvim-lua/plenary.nvim',
-        'yioneko/nvim-cmp',
     },
     opts = {
         mappings = {
