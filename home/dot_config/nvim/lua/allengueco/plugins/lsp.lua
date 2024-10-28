@@ -54,15 +54,15 @@ return {
 					},
 				},
 			},
-            windows = {
-                autocomplete = {
-                    selection = "manual",
-                    draw = "reversed",
-                },
-                documentation = {
-                    auto_show = true,
-                }
-            },
+			windows = {
+				autocomplete = {
+					selection = "manual",
+					draw = "reversed",
+				},
+				documentation = {
+					auto_show = true,
+				},
+			},
 			nerd_font_variant = "mono",
 			keymap = {
 				show = "<C-Space>",
@@ -128,7 +128,15 @@ return {
 			require("mason-lspconfig").setup({
 				-- Replace the language servers listed here
 				-- with the ones you want to install
-				ensure_installed = { "angularls", "html", "ts_ls", "rust_analyzer", "jdtls", "lua_ls", "marksman" },
+				ensure_installed = {
+					"angularls",
+					"html",
+					"ts_ls",
+					"rust_analyzer",
+					"jdtls",
+					"lua_ls",
+					"marksman",
+				},
 				handlers = {
 					function(server_name)
 						require("lspconfig")[server_name].setup({})
