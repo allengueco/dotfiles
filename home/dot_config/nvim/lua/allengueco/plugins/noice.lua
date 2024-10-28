@@ -15,17 +15,17 @@ return {
 			presets = {
 				long_message_to_split = true,
 				inc_rename = false,
-                lsp_doc_border = false,
+				lsp_doc_border = false,
 			},
 			routes = {
 				{
 					filter = {
 						event = "lsp",
 						kind = "progress",
-                        cond = function (message)
-                            local client = vim.tbl_get(message.opts, "progress", "client")
-                            return client == "jdtls"
-                        end
+						cond = function(message)
+							local client = vim.tbl_get(message.opts, "progress", "client")
+							return client == "jdtls"
+						end,
 					},
 					opts = { skip = true },
 				},
@@ -39,24 +39,6 @@ return {
 					size = {
 						width = 60,
 						height = "auto",
-					},
-				},
-				popupmenu = {
-					relative = "editor",
-					position = {
-						row = 8,
-						col = "50%",
-					},
-					size = {
-						width = 60,
-						height = 10,
-					},
-					border = {
-						style = "rounded",
-						padding = { 0, 1 },
-					},
-					win_options = {
-						winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
 					},
 				},
 			},
