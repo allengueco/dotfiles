@@ -19,13 +19,17 @@ return {
 			presets = {
 				long_message_to_split = true,
 				inc_rename = false,
+                lsp_doc_border = false,
 			},
 			routes = {
 				{
 					filter = {
 						event = "lsp",
-						kind = "message",
-						find = "jdtls",
+						kind = "progress",
+                        cond = function (message)
+                            local client = vim.tbl_get(message.opts, "progress", "client")
+                            return client == "jdtls"
+                        end
 					},
 					opts = { skip = true },
 				},
