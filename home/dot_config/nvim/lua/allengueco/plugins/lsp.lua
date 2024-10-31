@@ -65,15 +65,24 @@ return {
 			},
 			nerd_font_variant = "mono",
 			keymap = {
-				["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
+				["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 				["<C-e>"] = { "hide" },
-				["<CR>"] = { "accept" },
-				["<C-u>"] = { "scroll_documentation_up", "fallback" },
-				["<C-d>"] = { "scroll_documentation_down", "fallback" },
-				["<C-n>"] = { "scroll_next", "fallback" },
-				["<C-p>"] = { "scroll_prev", "fallback" },
-				["<Tab>"] = { "snippet_forward", "fallback" },
+				["<Tab>"] = {
+					function(cmp)
+						if cmp.is_in_snippet() then
+							return cmp.accept()
+						else
+							return cmp.select_and_accept()
+						end
+					end,
+					"snippet_forward",
+					"fallback",
+				},
 				["<S-Tab>"] = { "snippet_backward", "fallback" },
+				["<C-p>"] = { "select_prev", "fallback" },
+				["<C-n>"] = { "select_next", "fallback" },
+				["<C-b>"] = { "scroll_documentation_up", "fallback" },
+				["<C-f>"] = { "scroll_documentation_down", "fallback" },
 			},
 			accept = {
 				auto_brackets = {
