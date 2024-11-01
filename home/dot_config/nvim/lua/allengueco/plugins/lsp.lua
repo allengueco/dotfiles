@@ -98,6 +98,7 @@ return {
 		dependencies = {
 			{ "williamboman/mason-lspconfig.nvim" },
 			{ "kevinhwang91/nvim-ufo" },
+			{ "saghen/blink.cmp" },
 		},
 		config = function()
 			local lsp_zero = require("lsp-zero")
@@ -118,6 +119,9 @@ return {
 					},
 				},
 			})
+
+			lsp_capabilties =
+				vim.tbl_deep_extend("force", lsp_capabilities, require("blink.cmp").get_lsp_capabilities())
 
 			local lspconfig_defaults = require("lspconfig").util.default_config
 			lspconfig_defaults.capabilities =
