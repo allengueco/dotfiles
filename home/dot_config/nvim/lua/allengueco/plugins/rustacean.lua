@@ -3,7 +3,7 @@ return {
 	version = "^5",
 	lazy = false,
 	ft = "rust",
-	config = function()
+	init = function()
 		vim.g.rustaceanvim = {
 			server = {
 				capabilities = require("lsp-zero").get_capabilities(),
