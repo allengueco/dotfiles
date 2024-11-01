@@ -20,7 +20,6 @@ vim.opt.listchars = {
 vim.opt.fillchars = {
     diff = "╱",
 }
-vim.o.showbreak = "↳⋅"
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
