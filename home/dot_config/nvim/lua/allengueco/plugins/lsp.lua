@@ -111,7 +111,7 @@ return {
 				lsp_zero.highlight_symbol(client, bufnr)
 			end
 
-			local lsp_capabilities = vim.tbl_deep_extend("force", vim.lsp.protocol.make_client_capabilities(), {
+			local lsp_capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
 				textDocument = {
 					foldingRange = {
 						dynamicRegistration = false,
@@ -120,18 +120,10 @@ return {
 				},
 			})
 
-			lsp_capabilties =
-				vim.tbl_deep_extend("force", lsp_capabilities, require("blink.cmp").get_lsp_capabilities())
-
 			local lspconfig_defaults = require("lspconfig").util.default_config
 			lspconfig_defaults.capabilities =
 				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
 
-			lsp_zero.client_config({
-				on_init = function(client) 
-                    print('hello' .. client)
-                end,
-			})
 			lsp_zero.extend_lspconfig({
 				capabilities = lsp_capabilities,
 				lsp_attach = lsp_attach,
