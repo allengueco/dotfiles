@@ -8,8 +8,6 @@ return {
 			server = {
 				capabilities = require("lsp-zero").get_capabilities(),
 				on_attach = function(client, bufnr)
-					local bufnr = vim.api.nvim_get_current_buf()
-
 					vim.keymap.set("n", "<F4>", function()
 						vim.cmd.RustLsp("codeAction") -- supports rust-analyzer's grouping
 						-- or vim.lsp.buf.codeAction() if you don't want grouping.
@@ -22,20 +20,4 @@ return {
 			},
 		}
 	end,
-	keys = {
-		{
-			"K",
-			function()
-				vim.cmd.RustLsp({ "hover", "action" })
-			end,
-			silent = true,
-		},
-		{
-			"<F4>",
-			function()
-				vim.cmd.RustLsp("codeAction")
-			end,
-			silent = true,
-		},
-	},
 }
