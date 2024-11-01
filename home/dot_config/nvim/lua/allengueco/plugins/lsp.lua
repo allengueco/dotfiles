@@ -127,6 +127,11 @@ return {
 			lspconfig_defaults.capabilities =
 				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
 
+			lsp_zero.client_config({
+				on_init = function(client) 
+                    print('hello' .. client)
+                end,
+			})
 			lsp_zero.extend_lspconfig({
 				capabilities = lsp_capabilities,
 				lsp_attach = lsp_attach,
