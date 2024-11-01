@@ -5,7 +5,7 @@ return {
     config = function ()
         vim.g.rustaceanvim = {
             server = {
-                capabilities = require('blink.cmp').get_lsp_capabilities()
+                capabilities = require('lsp-zero').get_capabilities()
             }
         }
     end
