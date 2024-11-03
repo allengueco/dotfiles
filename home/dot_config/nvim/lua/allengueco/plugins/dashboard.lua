@@ -34,6 +34,7 @@ return {
                     key = 'd',
                 },
             },
+            project = { enable = true, limit = 8, icon = "", action = 'Telescope find_files cwd=~/dev'}
         }
     }
 }
