@@ -11,7 +11,6 @@ return {
     keys = {
         { '<leader>pe', '<Cmd>NvimTreeToggle<CR>', desc = 'Open Nvim-Tree' }
     },
-
     opts = {
         disable_netrw = true,
         hijack_cursor = true,
