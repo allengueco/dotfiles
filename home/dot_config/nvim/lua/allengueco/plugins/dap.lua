@@ -24,20 +24,20 @@ return {
 			end,
 		},
 		{
-			"<Leader>dh",
+			"<Leader>dp",
 			function()
 				require("dap.ui.widgets").preview()
 			end,
 		},
 		{
-			"<Leader>df",
+			"<Leader>dF",
 			function()
 				local widgets = require('dap.ui.widgets')
 				widgets.centered_float(widgets.frames)
 			end,
 		},
 		{
-			"<Leader>ds",
+			"<Leader>dS",
 			function()
                 local widgets = require('dap.ui.widgets')
 				widgets.centered_float(widgets.scopes)
