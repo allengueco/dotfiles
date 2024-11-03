@@ -1,10 +1,10 @@
 return {
 	"mfussenegger/nvim-dap",
 	keys = {
-		{ "<F5>", "<Cmd>lua require('dap').continue()" },
-		{ "<F7>", "<Cmd>lua require('dap').step_into()" },
-		{ "<F8>", "<Cmd>lua require('dap').step_over()" },
-		{ "<F9>", "<Cmd>lua require('dap').step_out()" },
+		{ "<F5>", "<Cmd>lua require('dap').continue()<CR>" },
+		{ "<F7>", "<Cmd>lua require('dap').step_into()<CR>", desc = "Step into"},
+		{ "<F8>", "<Cmd>lua require('dap').step_over()<CR", desc = "Step over" },
+		{ "<F9>", "<Cmd>lua require('dap').step_out()<CR", desc = "Step out" },
 		{
 			"<Leader>b",
 			function()
