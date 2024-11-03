@@ -3,8 +3,8 @@ return {
 	keys = {
 		{ "<F5>", "<Cmd>lua require('dap').continue()<CR>" },
 		{ "<F7>", "<Cmd>lua require('dap').step_into()<CR>", desc = "Step into"},
-		{ "<F8>", "<Cmd>lua require('dap').step_over()<CR", desc = "Step over" },
-		{ "<F9>", "<Cmd>lua require('dap').step_out()<CR", desc = "Step out" },
+		{ "<F8>", "<Cmd>lua require('dap').step_over()<CR>", desc = "Step over" },
+		{ "<F9>", "<Cmd>lua require('dap').step_out()<CR>", desc = "Step out" },
 		{
 			"<Leader>b",
 			function()
