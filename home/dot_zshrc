@@ -71,10 +71,10 @@ zstyle ':omz:update' frequency 7
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    catppuccin-mocha-zsh-syntax-highlighting
     git
     chezmoi
     gradle
-    catppuccin-mocha-zsh-syntax-highlighting
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-vi-mode
