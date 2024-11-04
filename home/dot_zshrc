@@ -74,6 +74,7 @@ plugins=(
     git
     chezmoi
     gradle
+    catppuccin-mocha-zsh-syntax-highlighting
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-vi-mode
