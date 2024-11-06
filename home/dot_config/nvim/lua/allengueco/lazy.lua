@@ -34,7 +34,7 @@ require("lazy").setup({
 			"m4xshen/hardtime.nvim",
 			dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 			opts = {
-				disabled_filetypes = { "grug-far" },
+				disabled_filetypes = { "grug-far", "lazy", "dashboard", "NvimTree", "mason" },
 			},
 		},
 		{ "nvim-treesitter/nvim-treesitter-context" },
