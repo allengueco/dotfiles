@@ -2,6 +2,7 @@ return {
     {
         "folke/noice.nvim",
         event = "VeryLazy",
+        enabled = false,
         dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
         opts = {
             lsp = {
@@ -31,6 +32,7 @@ return {
     },
     {
         "rcarriga/nvim-notify",
+        enabled = false,
         opts = {
             render = "wrapped-compact",
         },
