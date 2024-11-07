@@ -8,7 +8,7 @@ return {
     },
     opts = function(_, opts)
         if (vim.g.colors_name or ""):find("catppuccin") then
-            opts.highlight = require('catppuccin.groups.integrations.bufferline').get()
+            opts.highlights = require('catppuccin.groups.integrations.bufferline').get()
         end
         opts.options = {
             close_command = function(bufnum)
