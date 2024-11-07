@@ -5,7 +5,6 @@ return {
     dependencies = {
         'nvim-tree/nvim-web-devicons',
         'famiu/bufdelete.nvim',
-        'catppuccin/nvim',
     },
     opts = {
         highlights = require('catppuccin.groups.integrations.bufferline').get(),
