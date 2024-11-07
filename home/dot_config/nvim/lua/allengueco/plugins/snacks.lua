@@ -3,7 +3,10 @@ return {
 	priority = 1000,
 	lazy = false,
 	opts = {
-		notifier = { enabled = false },
-		statuscolumn = { enabled = true },
+		styles = {
+			notification = {
+				wo = { wrap = true },
+			},
+		},
 	},
 }
