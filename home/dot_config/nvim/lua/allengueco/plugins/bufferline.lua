@@ -6,9 +6,12 @@ return {
         'nvim-tree/nvim-web-devicons',
         'famiu/bufdelete.nvim',
     },
-    opts = {
-        highlights = require('catppuccin.groups.integrations.bufferline').get(),
-        options = {
+    optional = true,
+    opts = function(_, opts)
+        if (vim.g.colors_name or ""):find("catppuccin") then
+            opts.highlight = require('catppuccin.groups.integrations.bufferline').get()
+        end
+        opts.options = {
             close_command = function(bufnum)
                 require('bufdelete').bufdelete(bufnum, true)
             end,
@@ -29,8 +32,8 @@ return {
                     separator = true,
                 }
             }
-        },
-    },
+        }
+    end,
     keys = {
         { "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>" },
         { "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>" },
