@@ -42,7 +42,13 @@ return {
 				use_nvim_cmp_as_default = true,
 			},
 			sources = {
+                completion = {
+                    enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
+                },
 				providers = {
+                    -- dont show LuaLS require statements when lazydev has items
+                    lsp = { fallback_for = { "lazydev" } },
+                    lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
 					snippets = {
 						opts = {
 							extended_filetypes = {
@@ -209,4 +215,14 @@ return {
 			},
 		},
 	},
+    {
+        "folke/lazydev.nvim",
+        ft = "lua",
+        opts = {
+            library = {
+                { path = "luvit-meta/library", words = { "vim%.uv" } },
+            }
+        }
+    },
+    { "Bilal2453/luvit-meta", lazy = true },
 }
