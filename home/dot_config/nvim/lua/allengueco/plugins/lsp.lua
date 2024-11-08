@@ -161,13 +161,6 @@ return {
 					jdtls = function() end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
-					lua_ls = function()
-						require("lspconfig").lua_ls.setup({
-							on_init = function(client)
-								lsp_zero.nvim_lua_settings(client, {})
-							end,
-						})
-					end,
 					ltex = function()
 						require("lspconfig").ltex.setup({
 							filetypes = {
