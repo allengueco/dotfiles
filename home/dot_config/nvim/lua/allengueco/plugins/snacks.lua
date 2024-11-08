@@ -3,6 +3,12 @@ return {
 	lazy = false,
 	opts = {
 		styles = {
+            statuscolumn = {
+                folds = {
+                    open = true,
+                    git_hl = true,
+                }
+            },
 			notification = {
 				wo = { wrap = true },
 			},
