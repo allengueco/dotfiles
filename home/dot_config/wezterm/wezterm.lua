@@ -13,15 +13,14 @@ config.font = wezterm.font_with_fallback({
     'Flog Symbols' })
 config.window_decorations = "RESIZE"
 config.max_fps = 144
-config.cell_width = 0.9
 config.initial_rows = 36
 config.initial_cols = 96
 
 --- Windows Config
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.default_domain = 'WSL:Arch'
+    config.cell_width = 0.9
     config.default_prog = { 'pwsh.exe', '-nologo' }
-    config.front_end = 'WebGpu'
 end
 
 config.colors = {
