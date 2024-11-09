@@ -5,7 +5,6 @@ return {
 		current_line_blame = true,
 		numhl = true,
 		linehl = true,
-		word_diff = true,
 		current_line_blame_opts = {
 			virt_text_pos = "right_align",
 			delay = 500,
