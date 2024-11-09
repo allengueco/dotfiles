@@ -13,7 +13,7 @@ return {
 			border = "none",
 		},
 	},
-	key = {
+	keys = {
 		{
 			"<Leader>hp",
 			"<Cmd>Gitsigns preview_hunk<CR>",
