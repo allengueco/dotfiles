@@ -1,9 +1,23 @@
 return {
-    'lewis6991/gitsigns.nvim',
-    opts = {
-        current_line_blame = true,
-        current_line_blame_opts = {
-            virt_text_pos = 'right_align'
-        }
-    }
+	"lewis6991/gitsigns.nvim",
+	opts = {
+		current_line_blame = true,
+		numhl = true,
+		linehl = true,
+		word_diff = true,
+		current_line_blame_opts = {
+			virt_text_pos = "right_align",
+			delay = 500,
+		},
+		preview_config = {
+			border = "none",
+		},
+	},
+	key = {
+		{
+			"<Leader>hp",
+			"<Cmd>Gitsigns preview_hunk<CR>",
+			desc = "Preview hunk",
+		},
+	},
 }
