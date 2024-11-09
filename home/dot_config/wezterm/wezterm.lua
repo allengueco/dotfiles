@@ -8,10 +8,11 @@ config.pane_focus_follows_mouse = true
 config.scrollback_lines = 5000
 config.switch_to_last_active_tab_when_closing_tab = true
 config.color_scheme = "Catppuccin Mocha"
-config.font = wezterm.font_with_fallback({ 'JetBrainsMono Nerd Font', 'Flog Symbols' })
+config.font = wezterm.font_with_fallback({ 
+    { family = 'JetBrainsMono Nerd Font', weight = "Medium" }, 
+    'Flog Symbols' })
 config.max_fps = 144
-config.font_size = 12
-config.freetype_load_flags = 'NO_HINTING'
+config.cell_width = 0.9
 config.initial_rows = 36 
 config.initial_cols = 96 
 
