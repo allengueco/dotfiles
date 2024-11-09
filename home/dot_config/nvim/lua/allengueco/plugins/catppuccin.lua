@@ -10,6 +10,7 @@ return {
                     nvim_surround = true,
                     blink_cmp = true,
                     lsp_trouble = true,
+                    gitsigns = true,
                     diffview = true,
                     mason = true,
                     noice = true,
