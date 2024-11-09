@@ -8,13 +8,13 @@ config.pane_focus_follows_mouse = true
 config.scrollback_lines = 5000
 config.switch_to_last_active_tab_when_closing_tab = true
 config.color_scheme = "Catppuccin Mocha"
-config.font = wezterm.font_with_fallback({ 
-    { family = 'JetBrainsMono Nerd Font', weight = "Medium" }, 
+config.font = wezterm.font_with_fallback({
+    { family = 'JetBrainsMono Nerd Font', weight = "Medium" },
     'Flog Symbols' })
 config.max_fps = 144
 config.cell_width = 0.9
-config.initial_rows = 36 
-config.initial_cols = 96 
+config.initial_rows = 36
+config.initial_cols = 96
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.default_domain = 'WSL:Arch'
@@ -94,11 +94,6 @@ config.colors = {
         },
     },
 }
-
--- config.inactive_pane_hsb = {
---     saturation = 0.8,
---     brightness = 0.7
--- }
 
 config.window_padding = {
     left = 0,
@@ -187,11 +182,11 @@ config.keys = {
         action = wezterm.action.PromptInputLine {
             description = 'Enter new name for tab',
             action = wezterm.action_callback(
-            function(window, pane, line)
-                if line then
-                    window:active_tab():set_title(line)
+                function(window, pane, line)
+                    if line then
+                        window:active_tab():set_title(line)
+                    end
                 end
-            end
             ),
         },
     },
@@ -239,7 +234,7 @@ config.keys = {
     {
         key = 'l',
         mods = 'LEADER',
-        action = wezterm.action.ShowLauncher 
+        action = wezterm.action.ShowLauncher
     },
 }
 
