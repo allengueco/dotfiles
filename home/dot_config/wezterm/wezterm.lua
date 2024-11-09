@@ -11,14 +11,17 @@ config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font_with_fallback({
     { family = 'JetBrainsMono Nerd Font', weight = "Medium" },
     'Flog Symbols' })
+config.window_decorations = "RESIZE"
 config.max_fps = 144
 config.cell_width = 0.9
 config.initial_rows = 36
 config.initial_cols = 96
 
+--- Windows Config
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.default_domain = 'WSL:Arch'
     config.default_prog = { 'pwsh.exe', '-nologo' }
+    config.front_end = 'WebGpu'
 end
 
 config.colors = {
@@ -107,7 +110,6 @@ config.leader = {
     mods = 'CTRL',
     timeout_milliseconds = 2000,
 }
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 -- smart-splits.nvim integration because not lazy loading
 local function is_vim(pane)
     return pane:get_user_vars().IS_NVIM == 'true'
