@@ -2,9 +2,6 @@ return {
     'nvim-tree/nvim-tree.lua',
     version = "*",
     lazy = false,
-    init = function()
-        vim.g.barbar_auto_setup = false
-    end,
     dependencies = {
         'nvim-tree/nvim-web-devicons',
     },
