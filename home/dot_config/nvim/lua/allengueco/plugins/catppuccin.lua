@@ -6,7 +6,6 @@ return {
         require('catppuccin').setup(
             {
                 integrations = {
-                    barbar = true,
                     nvim_surround = true,
                     blink_cmp = true,
                     lsp_trouble = true,
