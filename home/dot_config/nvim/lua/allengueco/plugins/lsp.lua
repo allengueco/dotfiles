@@ -42,13 +42,13 @@ return {
 				use_nvim_cmp_as_default = true,
 			},
 			sources = {
-                completion = {
-                    enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
-                },
+				completion = {
+					enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
+				},
 				providers = {
-                    -- dont show LuaLS require statements when lazydev has items
-                    lsp = { fallback_for = { "lazydev" } },
-                    lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+					-- dont show LuaLS require statements when lazydev has items
+					lsp = { fallback_for = { "lazydev" } },
+					lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
 					snippets = {
 						opts = {
 							extended_filetypes = {
@@ -184,6 +184,7 @@ return {
 			})
 		end,
 	},
+	-- Formatting
 	{
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
@@ -200,22 +201,32 @@ return {
 		opts = {
 			formatters_by_ft = {
 				lua = { "stylua" },
-				typescript = { "eslint_d" },
-				javascript = { "eslint_d" },
+				typescript = { "prettierd" },
+				javascript = { "prettierd" },
 			},
 			default_format_opts = {
 				lsp_format = "fallback",
 			},
 		},
 	},
-    {
-        "folke/lazydev.nvim",
-        ft = "lua",
-        opts = {
-            library = {
-                { path = "luvit-meta/library", words = { "vim%.uv" } },
-            }
-        }
-    },
-    { "Bilal2453/luvit-meta", lazy = true },
+	-- Linting
+	{
+		"mfussenegger/nvim-lint",
+		config = function()
+			require("lint").linters_by_ft = {
+				typescript = { "eslint_d" },
+				javascript = { "eslint_d" },
+			}
+		end,
+	},
+	{
+		"folke/lazydev.nvim",
+		ft = "lua",
+		opts = {
+			library = {
+				{ path = "luvit-meta/library", words = { "vim%.uv" } },
+			},
+		},
+	},
+	{ "Bilal2453/luvit-meta", lazy = true },
 }
