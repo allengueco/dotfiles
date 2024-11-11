@@ -8,8 +8,7 @@ return {
 	{
 		"williamboman/mason.nvim",
 		lazy = false,
-		opts = {
-		},
+		opts = {},
 	},
 	{
 		"rafamadriz/friendly-snippets",
@@ -107,7 +106,7 @@ return {
 			local lsp_zero = require("lsp-zero")
 
 			require("ufo").setup()
-            require("neoconf").setup()
+			require("neoconf").setup()
 			local lsp_attach = function(client, bufnr)
 				if client.name == "angularls" then
 					client.server_capabilities.renameProvider = false
