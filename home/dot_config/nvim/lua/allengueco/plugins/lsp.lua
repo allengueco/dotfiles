@@ -104,9 +104,6 @@ return {
 		},
 		config = function()
 			local lsp_zero = require("lsp-zero")
-
-			require("ufo").setup()
-			require("neoconf").setup()
 			local lsp_attach = function(client, bufnr)
 				if client.name == "angularls" then
 					client.server_capabilities.renameProvider = false
@@ -150,7 +147,13 @@ return {
 					end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
-                    jdtls = function() end,
+					jdtls = function()
+						require("lspconfig").jdtls.setup({
+							handlers = {
+								["$/progress"] = function(_, result, ctx) end,
+							},
+						})
+					end,
 					ltex = function()
 						require("lspconfig").ltex.setup({
 							filetypes = {
