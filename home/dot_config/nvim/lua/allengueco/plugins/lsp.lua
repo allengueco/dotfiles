@@ -101,11 +101,13 @@ return {
 			{ "williamboman/mason-lspconfig.nvim" },
 			{ "kevinhwang91/nvim-ufo" },
 			{ "saghen/blink.cmp" },
+			{ "folke/neoconf.nvim" },
 		},
 		config = function()
 			local lsp_zero = require("lsp-zero")
 
 			require("ufo").setup()
+            require("neoconf").setup()
 			local lsp_attach = function(client, bufnr)
 				if client.name == "angularls" then
 					client.server_capabilities.renameProvider = false
