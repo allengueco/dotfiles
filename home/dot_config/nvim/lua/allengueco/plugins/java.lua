@@ -6,5 +6,10 @@ return {
 				auto_install = false,
 			},
 		})
+		require("lspconfig").jdtls.setup({
+			handlers = {
+				["$/progress"] = function(_, result, ctx) end,
+			},
+		})
 	end,
 }
