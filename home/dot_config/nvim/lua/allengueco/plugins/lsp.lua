@@ -114,6 +114,7 @@ return {
 				if client.name == "angularls" then
 					client.server_capabilities.renameProvider = false
 				end
+				lsp_zero.default_keymaps({ buffer = bufnr })
 				lsp_zero.highlight_symbol(client, bufnr)
 			end
 
