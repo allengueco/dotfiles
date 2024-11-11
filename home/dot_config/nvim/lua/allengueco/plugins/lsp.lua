@@ -129,14 +129,7 @@ return {
 				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
 
 			lsp_zero.extend_lspconfig({
-				capabilities = lsp_capabilities,
 				lsp_attach = lsp_attach,
-				sign_text = {
-					warn = "▲",
-					hint = "⚑",
-					info = "»",
-					error = "✘",
-				},
 			})
 
 			require("mason-lspconfig").setup({
