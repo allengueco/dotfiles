@@ -157,8 +157,6 @@ return {
 					function(server_name)
 						require("lspconfig")[server_name].setup({})
 					end,
-					-- Configured with jdtls.lua
-					jdtls = function() end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
 					ltex = function()
