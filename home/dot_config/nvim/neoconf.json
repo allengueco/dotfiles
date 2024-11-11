@@ -1,0 +1,18 @@
+{
+  "lspconfig": {
+    "jdtls": {
+      "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-21",
+          "path": "/opt/jdk-21",
+          "default": true
+        },
+        {
+          "name": "JavaSE-17",
+          "path": "/opt/jdk-21",
+          "default": true
+        }
+      ]
+    }
+  }
+}
