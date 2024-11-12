@@ -147,13 +147,6 @@ return {
 					end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
-					jdtls = function()
-						require("lspconfig").jdtls.setup({
-							handlers = {
-								["$/progress"] = function(_, result, ctx) end,
-							},
-						})
-					end,
 					ltex = function()
 						require("lspconfig").ltex.setup({
 							filetypes = {
