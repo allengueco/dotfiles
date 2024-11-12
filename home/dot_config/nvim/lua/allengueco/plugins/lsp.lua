@@ -147,7 +147,7 @@ return {
 					end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
-                    jdtls = function() end,
+					jdtls = function() end,
 					ltex = function()
 						require("lspconfig").ltex.setup({
 							filetypes = {
