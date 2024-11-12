@@ -1,11 +1,18 @@
 return {
 	"nvim-java/nvim-java",
-	opts = {
-		jdk = {
-			auto_install = false,
-		},
-		notifications = {
-			dap = false,
-		},
-	},
+	config = function()
+		require("lspconfig").jdtls.setup({
+			handlers = {
+				["$/progress"] = function(_, result, ctx) end,
+			},
+		})
+		require("java").setup({
+			jdk = {
+				auto_install = false,
+			},
+			notifications = {
+				dap = false,
+			},
+		})
+	end,
 }
