@@ -2,7 +2,7 @@ return {
 	"mfussenegger/nvim-dap",
 	keys = {
 		{ "<F5>", "<Cmd>lua require('dap').continue()<CR>" },
-		{ "<F7>", "<Cmd>lua require('dap').step_into()<CR>", desc = "Step into"},
+		{ "<F7>", "<Cmd>lua require('dap').step_into()<CR>", desc = "Step into" },
 		{ "<F8>", "<Cmd>lua require('dap').step_over()<CR>", desc = "Step over" },
 		{ "<F9>", "<Cmd>lua require('dap').step_out()<CR>", desc = "Step out" },
 		{
@@ -32,14 +32,14 @@ return {
 		{
 			"<Leader>dF",
 			function()
-				local widgets = require('dap.ui.widgets')
+				local widgets = require("dap.ui.widgets")
 				widgets.centered_float(widgets.frames)
 			end,
 		},
 		{
 			"<Leader>dS",
 			function()
-                local widgets = require('dap.ui.widgets')
+				local widgets = require("dap.ui.widgets")
 				widgets.centered_float(widgets.scopes)
 			end,
 		},
