@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP actions",
 	callback = function(event)
 		local map = function(m, lhs, rhs, desc)
-			local key_opts = { buffer = event.buf, desc = desc, nowait = true }
+			local key_opts = { buffer = event.buf, desc = desc, silent = true, nowait = true }
 			vim.keymap.set(m, lhs, rhs, key_opts)
 		end
 		map("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover documentation")
