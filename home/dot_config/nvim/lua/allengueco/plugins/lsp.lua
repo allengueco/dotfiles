@@ -3,7 +3,16 @@ return {
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v4.x",
 		lazy = true,
-		config = false,
+		config = function()
+			local lsp_zero = require("lsp-zero")
+			lsp_zero.on_attach(function(client, bufnr)
+				if client.name == "angularls" then
+					client.server_capabilities.renameProvider = false
+				end
+				lsp_zero.default_keymaps({ buffer = bufnr })
+				lsp_zero.highlight_symbol(client, bufnr)
+			end)
+        end
 	},
 	{
 		"williamboman/mason.nvim",
@@ -99,16 +108,9 @@ return {
 			{ "williamboman/mason-lspconfig.nvim" },
 			{ "saghen/blink.cmp" },
 			{ "folke/neoconf.nvim" },
+			{ "VonHeikemen/lsp-zero.nvim" },
 		},
 		config = function()
-			local lsp_zero = require("lsp-zero")
-			lsp_zero.on_attach(function(client, bufnr)
-				if client.name == "angularls" then
-					client.server_capabilities.renameProvider = false
-				end
-				lsp_zero.default_keymaps({ buffer = bufnr })
-				lsp_zero.highlight_symbol(client, bufnr)
-			end)
 
 			local lsp_capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
 				textDocument = {
