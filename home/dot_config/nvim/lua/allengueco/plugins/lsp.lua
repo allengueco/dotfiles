@@ -58,7 +58,6 @@ return {
 			windows = {
 				autocomplete = {
 					selection = "manual",
-					draw = "reversed",
 				},
 				documentation = {
 					auto_show = true,
