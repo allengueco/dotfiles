@@ -31,7 +31,7 @@ return {
 		"saghen/blink.cmp",
 		lazy = false,
 		dependencies = { "rafamadriz/friendly-snippets" },
-        branch = "main",
+		branch = "main",
 		opts = {
 			highlight = {
 				use_nvim_cmp_as_default = true,
@@ -102,13 +102,13 @@ return {
 		},
 		config = function()
 			local lsp_zero = require("lsp-zero")
-			local lsp_attach = function(client, bufnr)
+			lsp_zero.on_attach(function(client, bufnr)
 				if client.name == "angularls" then
 					client.server_capabilities.renameProvider = false
 				end
 				lsp_zero.default_keymaps({ buffer = bufnr })
 				lsp_zero.highlight_symbol(client, bufnr)
-			end
+			end)
 
 			local lsp_capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
 				textDocument = {
@@ -122,10 +122,6 @@ return {
 			local lspconfig_defaults = require("lspconfig").util.default_config
 			lspconfig_defaults.capabilities =
 				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
-
-			lsp_zero.extend_lspconfig({
-				lsp_attach = lsp_attach,
-			})
 
 			require("mason-lspconfig").setup({
 				-- Replace the language servers listed here
