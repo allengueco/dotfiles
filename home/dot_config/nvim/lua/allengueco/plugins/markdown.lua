@@ -6,6 +6,11 @@ return {
         ---@type render.md.UserConfig
         opts = {
             preset = 'obsidian',
+            anti_conceal = {
+                ignore = {
+                    link = true,
+                }
+            }
         },
     }
 }
