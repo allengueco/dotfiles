@@ -121,9 +121,9 @@ return {
 				},
 			})
 
-			-- local lspconfig_defaults = require("lspconfig").util.default_config
-			-- lspconfig_defaults.capabilities =
-			-- 	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
+			local lspconfig_defaults = require("lspconfig").util.default_config
+			lspconfig_defaults.capabilities =
+				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
 
 			lsp_zero.extend_lspconfig({
 				lsp_attach = lsp_attach,
@@ -143,9 +143,7 @@ return {
 				},
 				handlers = {
 					function(server_name)
-						require("lspconfig")[server_name].setup({
-                            capabilities = lsp_capabilities
-                        })
+						require("lspconfig")[server_name].setup({})
 					end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
