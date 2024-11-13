@@ -127,6 +127,7 @@ return {
 
 			lsp_zero.extend_lspconfig({
 				lsp_attach = lsp_attach,
+                capabilities = lspconfig_defaults.capabilities,
 			})
 
 			require("mason-lspconfig").setup({
