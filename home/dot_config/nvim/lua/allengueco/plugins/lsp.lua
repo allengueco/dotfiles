@@ -97,7 +97,6 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			{ "williamboman/mason-lspconfig.nvim" },
-			{ "kevinhwang91/nvim-ufo" },
 			{ "saghen/blink.cmp" },
 			{ "folke/neoconf.nvim" },
 		},
