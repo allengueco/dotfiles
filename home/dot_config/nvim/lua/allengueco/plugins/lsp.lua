@@ -121,13 +121,12 @@ return {
 				},
 			})
 
-			local lspconfig_defaults = require("lspconfig").util.default_config
-			lspconfig_defaults.capabilities =
-				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
+			-- local lspconfig_defaults = require("lspconfig").util.default_config
+			-- lspconfig_defaults.capabilities =
+			-- 	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
 
 			lsp_zero.extend_lspconfig({
 				lsp_attach = lsp_attach,
-                capabilities = lspconfig_defaults.capabilities,
 			})
 
 			require("mason-lspconfig").setup({
@@ -144,7 +143,9 @@ return {
 				},
 				handlers = {
 					function(server_name)
-						require("lspconfig")[server_name].setup({})
+						require("lspconfig")[server_name].setup({
+                            capabilities = lsp_capabilities
+                        })
 					end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
