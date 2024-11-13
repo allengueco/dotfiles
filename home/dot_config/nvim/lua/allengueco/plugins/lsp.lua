@@ -31,7 +31,7 @@ return {
 		"saghen/blink.cmp",
 		lazy = false,
 		dependencies = { "rafamadriz/friendly-snippets" },
-		version = "v0.*",
+        branch = "main",
 		opts = {
 			highlight = {
 				use_nvim_cmp_as_default = true,
