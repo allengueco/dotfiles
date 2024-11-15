@@ -4,19 +4,18 @@ return {
 	opts = {
 		styles = {
 			statuscolumn = {
-                enabled = true,
+				enabled = true,
 				folds = {
 					open = true,
 					git_hl = true,
 				},
 			},
-			notification = {
+			notifier = {
 				enabled = true,
-				wo = { wrap = true },
 			},
-            words = {
-                enabled = true,
-            }
+			words = {
+				enabled = true,
+			},
 		},
 	},
 	init = function()
