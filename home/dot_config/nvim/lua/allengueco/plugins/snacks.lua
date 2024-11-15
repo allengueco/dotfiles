@@ -1,6 +1,7 @@
 return {
 	"folke/snacks.nvim",
 	lazy = false,
+    priority = 1000, --- Need to be setup early since it creates autocmds
 	opts = {
 		styles = {
 			statuscolumn = {
