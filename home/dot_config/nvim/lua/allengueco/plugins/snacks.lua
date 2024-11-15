@@ -3,15 +3,20 @@ return {
 	lazy = false,
 	opts = {
 		styles = {
-            statuscolumn = {
-                folds = {
-                    open = true,
-                    git_hl = true,
-                }
-            },
+			statuscolumn = {
+                enabled = true,
+				folds = {
+					open = true,
+					git_hl = true,
+				},
+			},
 			notification = {
+				enabled = true,
 				wo = { wrap = true },
 			},
+            words = {
+                enabled = true,
+            }
 		},
 	},
 	init = function()
