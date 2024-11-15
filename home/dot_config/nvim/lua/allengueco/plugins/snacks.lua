@@ -1,21 +1,27 @@
 return {
 	"folke/snacks.nvim",
 	lazy = false,
-    priority = 1000, --- Need to be setup early since it creates autocmds
+	priority = 1000,
 	opts = {
-		styles = {
-			statuscolumn = {
-				enabled = true,
-				folds = {
-					open = true,
-					git_hl = true,
-				},
-			},
-			notifier = {
-				enabled = true,
-			},
-			words = {
-				enabled = true,
+		bigfile = {
+			notify = true,
+			size = 1.5 * 1024 * 1024, -- 1.5 MB
+
+			-- Enable or disable features when big file is detected
+			---@param ctx {buf: number, ft: string}
+			setup = function(ctx)
+				vim.schedule(function()
+					vim.bo[ctx.buf].syntax = ctx.ft
+				end)
+			end,
+		},
+		notifier = { enabled = true },
+		words = { enabled = true },
+		quickfile = { enabled = true },
+		statuscolumn = {
+			folds = {
+				open = true,
+				git_hl = true,
 			},
 		},
 	},
