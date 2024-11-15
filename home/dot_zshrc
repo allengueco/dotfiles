@@ -73,6 +73,7 @@ zstyle ':omz:update' frequency 7
 plugins=(
     catppuccin-mocha-zsh-syntax-highlighting
     git
+    git-auto-fetch
     chezmoi
     gradle
     zsh-syntax-highlighting
