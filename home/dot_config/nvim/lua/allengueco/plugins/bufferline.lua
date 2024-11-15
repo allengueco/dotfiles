@@ -4,7 +4,6 @@ return {
     lazy = false,
     dependencies = {
         'nvim-tree/nvim-web-devicons',
-        'famiu/bufdelete.nvim',
     },
     opts = function(_, opts)
         if (vim.g.colors_name or ""):find("catppuccin") then
@@ -12,10 +11,10 @@ return {
         end
         opts.options = {
             close_command = function(bufnum)
-                require('bufdelete').bufdelete(bufnum, true)
+                Snacks.bufdelete(bufnum)
             end,
             middle_mouse_command = function(bufnum)
-                require('bufdelete').bufdelete(bufnum, true)
+                Snacks.bufdelete(bufnum)
             end,
             hover = {
                 enabled = true,
