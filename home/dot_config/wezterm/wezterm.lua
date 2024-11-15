@@ -15,6 +15,7 @@ config.window_decorations = "RESIZE"
 config.max_fps = 144
 config.initial_rows = 36
 config.initial_cols = 96
+config.audible_bell = "Disabled"
 
 --- Windows Config
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
