@@ -139,7 +139,6 @@ return {
 					"jdtls",
 					"lua_ls",
 					"marksman",
-					"docker-compose-language-server",
 				},
 				handlers = {
 					function(server_name)
