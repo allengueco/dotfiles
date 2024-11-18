@@ -24,7 +24,18 @@ return {
 				git_hl = true,
 			},
 		},
-		dashboard = { enabled = true },
+		dashboard = {
+			preset = {
+				keys = {
+					{
+						icon = " ",
+						key = "c",
+						desc = "Config",
+						action = ":Telescope chezmoi find_files",
+					},
+				},
+			},
+		},
 	},
 	init = function()
 		---@type table<number, {token:lsp.ProgressToken, msg:string, done:boolean}[]>
