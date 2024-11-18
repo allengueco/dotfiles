@@ -26,7 +26,8 @@ require("lazy").setup({
 		{
 			"m4xshen/hardtime.nvim",
 			dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-			opts = {},
+			opts = {
+			},
 		},
 		{ "nvim-treesitter/nvim-treesitter-context" },
 		{ "nvim-tree/nvim-web-devicons" },
@@ -40,7 +41,13 @@ require("lazy").setup({
 		{
 			"lukas-reineke/indent-blankline.nvim",
 			main = "ibl",
-			opts = {},
+			opts = {
+				exclude = {
+					filetypes = {
+						"snacks_dashboard",
+					},
+				},
+			},
 		},
 		{
 			"windwp/nvim-autopairs",
