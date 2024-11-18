@@ -24,6 +24,7 @@ return {
 				git_hl = true,
 			},
 		},
+		dashboard = { enabled = true },
 	},
 	init = function()
 		---@type table<number, {token:lsp.ProgressToken, msg:string, done:boolean}[]>
