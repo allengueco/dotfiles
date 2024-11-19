@@ -6,22 +6,6 @@ return {
 		---@type render.md.UserConfig
 		opts = {
 			preset = "obsidian",
-			overrides = {
-				link = {
-					custom = {
-						jdt = {
-							pattern = "^jdt://",
-							icon = "󰖟 ",
-							highlight = "RenderMarkdownLink",
-						},
-					},
-				},
-				anti_conceal = {
-					ignore = {
-						link = true,
-					},
-				},
-			},
 		},
 	},
 }
