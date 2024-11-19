@@ -9,6 +9,13 @@ return {
     {
         'xvzc/chezmoi.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = {},
+        opts = {
+            edit = {
+                watch = true,
+            },
+            notification = {
+                on_watch = true,
+            }
+        },
     }
 }
