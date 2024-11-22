@@ -43,15 +43,21 @@ return {
 					},
 					{ icon = " ", key = "s", desc = "Restore Session", section = "session" },
 					{ icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy },
-                    {
-                        icon = " ",
-                        key = "c",
-                        desc = "Config",
-                        action = ":Telescope chezmoi find_files",
-                    },
+					{
+						icon = " ",
+						key = "c",
+						desc = "Config",
+						action = ":Telescope chezmoi find_files",
+					},
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
 			},
+            sections = {
+                { section = "header" },
+                { section = "keys", gap = 1, padding = 1},
+                { section = "projects" },
+                { section = "startup" },
+            },
 		},
 	},
 	init = function()
