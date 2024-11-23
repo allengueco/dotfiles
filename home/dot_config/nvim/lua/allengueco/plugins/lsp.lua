@@ -5,23 +5,6 @@ return {
 		opts = {},
 	},
 	{
-		"rafamadriz/friendly-snippets",
-		config = function()
-			require("luasnip.loaders.from_vscode").lazy_load()
-		end,
-	},
-	{
-		"L3MON4D3/LuaSnip",
-		lazy = true,
-		dependencies = { "rafamadriz/friendly-snippets" },
-		config = function()
-			local luasnip = require("luasnip")
-			luasnip.filetype_extend("typescript", { "angular" })
-			luasnip.filetype_extend("html", { "angular" })
-			luasnip.filetype_extend("htmlangular", { "angular" })
-		end,
-	},
-	{
 		"saghen/blink.cmp",
 		lazy = false,
 		dependencies = { "rafamadriz/friendly-snippets" },
