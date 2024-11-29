@@ -41,7 +41,7 @@ return {
 				},
 			},
 			nerd_font_variant = "mono",
-			keymap = "enter",
+			keymap = { preset = "enter" },
 			accept = {
 				auto_brackets = {
 					enabled = true,
