@@ -3,6 +3,7 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {
+		profiler = {},
 		bigfile = {
 			notify = true,
 			size = 1.5 * 1024 * 1024, -- 1.5 MB
@@ -52,12 +53,12 @@ return {
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
 			},
-            sections = {
-                { section = "header" },
-                { section = "keys", gap = 1, padding = 1},
-                { section = "projects" },
-                { section = "startup" },
-            },
+			sections = {
+				{ section = "header" },
+				{ section = "keys", gap = 1, padding = 1 },
+				{ section = "projects" },
+				{ section = "startup" },
+			},
 		},
 	},
 	init = function()
