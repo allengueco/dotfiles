@@ -10,8 +10,10 @@ return {
 		dependencies = { "rafamadriz/friendly-snippets" },
 		branch = "main",
 		opts = {
-			highlight = {
+			keymap = { preset = "enter" },
+			appearance = {
 				use_nvim_cmp_as_default = true,
+				nerd_font_variant = "mono",
 			},
 			sources = {
 				completion = {
@@ -32,19 +34,17 @@ return {
 					},
 				},
 			},
-			windows = {
-				autocomplete = {
+			completion = {
+				list = {
 					selection = "auto_insert",
 				},
 				documentation = {
 					auto_show = true,
 				},
-			},
-			nerd_font_variant = "mono",
-			keymap = { preset = "enter" },
-			accept = {
-				auto_brackets = {
-					enabled = true,
+				accept = {
+					auto_brackets = {
+						enabled = true,
+					},
 				},
 			},
 		},
