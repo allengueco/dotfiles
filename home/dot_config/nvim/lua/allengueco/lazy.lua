@@ -38,6 +38,7 @@ require("lazy").setup({
 		{ "numToStr/Comment.nvim", opts = {} },
 		{ "nvim-neotest/nvim-nio" },
 		{
+            enabled = false,
 			"lukas-reineke/indent-blankline.nvim",
 			main = "ibl",
 			opts = {
