@@ -16,8 +16,12 @@ return {
 				nerd_font_variant = "mono",
 			},
 			sources = {
-				completion = {
-					enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
+				default = {
+					"lsp",
+					"path",
+					"snippets",
+					"buffer",
+					"lazydev",
 				},
 				providers = {
 					-- dont show LuaLS require statements when lazydev has items
