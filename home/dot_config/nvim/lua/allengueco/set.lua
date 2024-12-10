@@ -9,14 +9,14 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.list = true
-vim.opt.listchars = {
-    space = "·",
-    eol = "↴",
-    trail = "·",
-    tab = "▎_",
-    extends = "❯",
-    precedes = "❮",
-}
+-- vim.opt.listchars = {
+--     space = "·",
+--     eol = "↴",
+--     trail = "·",
+--     tab = "▎_",
+--     extends = "❯",
+--     precedes = "❮",
+-- }
 vim.opt.fillchars = {
     diff = "╱",
 }
