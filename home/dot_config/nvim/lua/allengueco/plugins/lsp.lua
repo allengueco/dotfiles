@@ -25,7 +25,7 @@ return {
 				},
 				providers = {
 					-- dont show LuaLS require statements when lazydev has items
-					lsp = { fallback_for = { "lazydev" } },
+					lsp = { fallbacks = { "lazydev" } },
 					lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
 					snippets = {
 						opts = {
