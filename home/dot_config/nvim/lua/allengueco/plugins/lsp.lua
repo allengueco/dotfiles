@@ -8,7 +8,7 @@ return {
 		"saghen/blink.cmp",
 		lazy = false,
 		dependencies = { "rafamadriz/friendly-snippets" },
-		branch = "main",
+        version = "v0.*",
 		opts = {
 			keymap = { preset = "enter" },
 			appearance = {
