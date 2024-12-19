@@ -19,13 +19,16 @@ return {
 		notifier = { enabled = true },
 		words = { enabled = true },
 		quickfile = { enabled = true },
-        indent = { enabled = true },
-        scroll = { enabled = true },
+		indent = { enabled = true },
+		scroll = { enabled = true },
 		statuscolumn = {
 			folds = {
 				open = true,
 				git_hl = true,
 			},
+		},
+		terminal = {
+			win = { style = "terminal" },
 		},
 		dashboard = {
 			preset = {
