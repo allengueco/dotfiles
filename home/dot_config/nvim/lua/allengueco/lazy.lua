@@ -21,11 +21,29 @@ require("lazy").setup({
 	spec = {
 		{
 			"stevearc/dressing.nvim",
-			opts = {},
+			opts = {
+				input = {
+					enabled = false,
+				},
+				select = {
+					backend = { "fzf_lua", "fzf", "builtin", "nui" },
+					get_config = function(opts)
+						if opts.kind == "codeaction" then
+							return {
+								backend = "nui",
+								nui = {
+									relative = "cursor",
+									max_width = 40,
+								},
+							}
+						end
+					end,
+				},
+			},
 		},
 		{
 			"m4xshen/hardtime.nvim",
-            enabled = false,
+			enabled = false,
 			dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 			opts = {},
 		},
@@ -39,7 +57,7 @@ require("lazy").setup({
 		{ "numToStr/Comment.nvim", opts = {} },
 		{ "nvim-neotest/nvim-nio" },
 		{
-            enabled = false,
+			enabled = false,
 			"lukas-reineke/indent-blankline.nvim",
 			main = "ibl",
 			opts = {
