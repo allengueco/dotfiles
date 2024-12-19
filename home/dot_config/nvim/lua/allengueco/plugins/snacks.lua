@@ -3,7 +3,6 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {
-		profiler = {},
 		bigfile = {
 			notify = true,
 			size = 1.5 * 1024 * 1024, -- 1.5 MB
@@ -59,6 +58,12 @@ return {
 				{ section = "startup" },
 			},
 		},
+
+		styles = {
+            keys = {
+                q = "hide",                
+            }
+        },
 	},
 	init = function()
 		---@type table<number, {token:lsp.ProgressToken, msg:string, done:boolean}[]>
@@ -105,4 +110,7 @@ return {
 			end,
 		})
 	end,
+	keys = {
+		{ "<leader>T", "<Cmd>lua Snacks.terminal.toggle()<CR>", "Open Terminal" },
+	},
 }
