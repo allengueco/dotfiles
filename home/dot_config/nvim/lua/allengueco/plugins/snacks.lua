@@ -20,6 +20,7 @@ return {
 		words = { enabled = true },
 		quickfile = { enabled = true },
         indent = { enabled = true },
+        scope = { enabled = true },
         scroll = { enabled = true },
 		statuscolumn = {
 			folds = {
