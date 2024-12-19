@@ -4,7 +4,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"sindrets/diffview.nvim",
-		"nvim-telescope/telescope.nvim",
+		"ibhagwan/fzf-lua",
 	},
 	opts = {
 		graph_style = "kitty",
