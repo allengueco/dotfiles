@@ -3,7 +3,6 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {
-		profiler = {},
 		bigfile = {
 			notify = true,
 			size = 1.5 * 1024 * 1024, -- 1.5 MB
@@ -19,14 +18,16 @@ return {
 		notifier = { enabled = true },
 		words = { enabled = true },
 		quickfile = { enabled = true },
-        indent = { enabled = true },
-        scope = { enabled = true },
-        scroll = { enabled = true },
+		indent = { enabled = true },
+		scroll = { enabled = true },
 		statuscolumn = {
 			folds = {
 				open = true,
 				git_hl = true,
 			},
+		},
+		terminal = {
+			win = { style = "terminal" },
 		},
 		dashboard = {
 			preset = {
@@ -55,6 +56,11 @@ return {
 				{ section = "keys", padding = 1 },
 				{ section = "projects" },
 				{ section = "startup" },
+			},
+		},
+		styles = {
+			keys = {
+				q = "hide",
 			},
 		},
 	},
@@ -103,4 +109,7 @@ return {
 			end,
 		})
 	end,
+	keys = {
+		{ "<leader>T", "<Cmd>lua Snacks.terminal.toggle()<CR>", "Open Terminal" },
+	},
 }
