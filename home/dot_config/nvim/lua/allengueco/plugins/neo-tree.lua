@@ -17,4 +17,8 @@ return {
 			{ event = events.FILE_RENAMED, handler = on_move },
 		})
 	end,
+	keys = {
+		{ "<leader>pe", "<Cmd>NeoTree toggle<CR>", desc = "Toggle NeoTree and focus" },
+		{ "<leader>pe", "<Cmd>NeoTree focus<CR>", desc = "Toggle NeoTree" },
+	},
 }
