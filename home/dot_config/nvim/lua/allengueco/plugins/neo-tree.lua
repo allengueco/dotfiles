@@ -18,7 +18,7 @@ return {
 		})
 	end,
 	keys = {
-		{ "<leader>pe", "<Cmd>NeoTree toggle<CR>", desc = "Toggle NeoTree and focus" },
-		{ "<leader>pe", "<Cmd>NeoTree focus<CR>", desc = "Toggle NeoTree" },
+		{ "<leader>pe", "<Cmd>Neotree toggle<CR>", desc = "Toggle NeoTree and focus" },
+		{ "<leader>pe", "<Cmd>Neotree focus<CR>", desc = "Toggle NeoTree" },
 	},
 }
