@@ -1,7 +1,11 @@
 return {
 	"folke/edgy.nvim",
+    init = function()
+        vim.opt.laststatus = 3
+        vim.opt.splitkeep = "screen"
+    end,
 	opts = {
-        animate = { enabled = false },
+		animate = { enabled = false },
 		left = {
 			{
 				title = "Nvim-Tree",
