@@ -16,9 +16,10 @@ return {
 			{ event = events.FILE_MOVED, handler = on_move },
 			{ event = events.FILE_RENAMED, handler = on_move },
 		})
+        opts.group_empty_dirs = true
 	end,
 	keys = {
 		{ "<leader>pe", "<Cmd>Neotree toggle<CR>", desc = "Toggle NeoTree and focus" },
-		{ "<leader>pe", "<Cmd>Neotree focus<CR>", desc = "Toggle NeoTree" },
+		{ "<leader>ps", "<Cmd>Neotree show<CR>", desc = "Toggle NeoTree" },
 	},
 }
