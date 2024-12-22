@@ -1,6 +1,7 @@
 return {
 	"folke/edgy.nvim",
 	opts = {
+        animate = { enabled = false },
 		left = {
 			{
 				title = "Nvim-Tree",
