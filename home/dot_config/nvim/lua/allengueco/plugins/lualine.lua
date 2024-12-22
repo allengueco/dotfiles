@@ -8,6 +8,7 @@ return {
             "fugitive",
             "fzf",
             "lazy",
+            "neotree",
             "nvim-tree",
             "trouble",
             "mason",
