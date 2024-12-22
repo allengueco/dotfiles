@@ -2,6 +2,7 @@ return {
 	"nvim-tree/nvim-tree.lua",
 	version = "*",
 	lazy = false,
+    enabled = false,
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
@@ -28,7 +29,7 @@ return {
 				events.subscribe(events.Event.NodeRenamed, function(data)
 					if prev.new_name ~= data.new_name or prev.old_name ~= data.old_name then
 						data = data
-						Snacks.rename.on_renam_file(data.old_name, data.new_name)
+						Snacks.rename.on_rename_file(data.old_name, data.new_name)
 					end
 				end)
 			end,
