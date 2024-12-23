@@ -16,7 +16,9 @@ return {
 			{ event = events.FILE_MOVED, handler = on_move },
 			{ event = events.FILE_RENAMED, handler = on_move },
 		})
-        opts.group_empty_dirs = true
+        -- For flattening java projects
+		opts.group_empty_dirs = true
+		opts.filesystem = { scan_mode = "deep" }
 	end,
 	keys = {
 		{ "<leader>pe", "<Cmd>Neotree toggle<CR>", desc = "Toggle NeoTree and focus" },
