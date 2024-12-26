@@ -79,7 +79,7 @@ return {
 					map("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename symbol")
 					map("n", "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", "Format file")
 					map("x", "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", "Format selection")
-					map("n", "<A-Enter>", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Execute code action")
+					map("n", "<C-A-Enter>", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Execute code action")
 				end,
 			})
 			local lsp_capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
