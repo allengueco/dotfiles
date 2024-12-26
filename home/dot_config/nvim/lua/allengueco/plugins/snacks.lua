@@ -54,7 +54,7 @@ return {
 			sections = {
 				{ section = "header" },
 				{ section = "keys", padding = 1 },
-				{ section = "projects" },
+				{ section = "projects", title = "Projects" },
 				{ section = "startup" },
 			},
 		},
