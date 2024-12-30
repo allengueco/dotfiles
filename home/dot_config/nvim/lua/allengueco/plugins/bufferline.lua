@@ -6,6 +6,7 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	opts = function(_, opts)
+        opts.mode = "tabs"
 		if (vim.g.colors_name or ""):find("catppuccin") then
 			opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
 		end
