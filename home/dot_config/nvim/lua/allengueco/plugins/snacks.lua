@@ -21,6 +21,7 @@ return {
 		indent = { enabled = true },
 		scroll = { enabled = true },
 		scope = { enabled = true },
+        input = { enabled = true },
 		statuscolumn = {
 			folds = {
 				open = true,
