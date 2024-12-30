@@ -16,8 +16,11 @@ return {
 			{ event = events.FILE_MOVED, handler = on_move },
 			{ event = events.FILE_RENAMED, handler = on_move },
 		})
-        -- For flattening java projects
+		-- For flattening java projects
 		opts.group_empty_dirs = true
+		opts.source_selector = {
+			winbar = true,
+		}
 		opts.filesystem = { scan_mode = "deep" }
 	end,
 	keys = {
