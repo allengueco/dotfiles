@@ -30,7 +30,7 @@ return {
 			"Outline",
 		}
 		opts.source_selector = {
-			winbar = true,
+			statusline = true,
 		}
 		opts.filesystem = {
 			bind_to_cwd = false,
