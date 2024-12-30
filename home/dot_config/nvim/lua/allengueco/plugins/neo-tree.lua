@@ -25,16 +25,15 @@ return {
 			"terminal",
 			"snacks_terminal",
 			"Trouble",
+            "trouble",
 			"qf",
 			"edgy",
 			"Outline",
 		}
-		opts.source_selector = {
-			statusline = true,
-		}
 		opts.filesystem = {
 			bind_to_cwd = false,
 			scan_mode = "deep",
+            follow_current_file = { enabled = true },
 			use_libuv_file_watcher = true,
 		}
 	end,
