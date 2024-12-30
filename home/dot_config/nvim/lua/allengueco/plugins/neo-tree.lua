@@ -18,10 +18,25 @@ return {
 		})
 		-- For flattening java projects
 		opts.group_empty_dirs = true
+		opts.buffers = {
+			show_unloaded = true,
+		}
+		opts.open_files_do_not_replace = {
+			"terminal",
+			"snacks_terminal",
+			"Trouble",
+			"qf",
+			"edgy",
+			"Outline",
+		}
 		opts.source_selector = {
 			winbar = true,
 		}
-		opts.filesystem = { scan_mode = "deep" }
+		opts.filesystem = {
+			bind_to_cwd = false,
+			scan_mode = "deep",
+			use_libuv_file_watcher = true,
+		}
 	end,
 	keys = {
 		{ "<leader>pe", "<Cmd>Neotree toggle<CR>", desc = "Toggle NeoTree and focus" },
