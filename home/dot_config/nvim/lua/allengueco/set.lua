@@ -28,6 +28,8 @@ vim.opt.backup = false
 vim.opt.undodir = (os.getenv("HOME") or os.getenv("UserProfile")) .. "/.vim/undodir"
 vim.opt.undofile = true
 
+vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
+
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
