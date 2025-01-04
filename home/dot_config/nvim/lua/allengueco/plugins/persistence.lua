@@ -1,6 +1,13 @@
 return {
 	"folke/persistence.nvim",
-    enabled = false,
 	event = "BufReadPre",
 	opts = {},
+	keys = {
+		{
+			"<leader>ql",
+			function()
+				require("persistence").load({ last = true })
+			end,
+		},
+	},
 }
