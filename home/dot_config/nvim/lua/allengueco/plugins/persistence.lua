@@ -6,7 +6,7 @@ return {
 		{
 			"<leader>ql",
 			function()
-				require("persistence").load({ last = true })
+				require("persistence").load()
 			end,
 		},
 	},
