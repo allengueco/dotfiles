@@ -8,7 +8,7 @@ return {
 		"saghen/blink.cmp",
 		lazy = false,
 		dependencies = { "rafamadriz/friendly-snippets" },
-        version = "v0.*",
+		version = "v0.*",
 		opts = {
 			keymap = { preset = "enter" },
 			appearance = {
@@ -39,7 +39,7 @@ return {
 			},
 			completion = {
 				list = {
-					selection = "auto_insert",
+					selection = { preselect = false, auto_insert = true },
 				},
 				documentation = {
 					auto_show = true,
@@ -82,18 +82,18 @@ return {
 					map("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Execute code action")
 				end,
 			})
-			local lsp_capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
-				textDocument = {
-					foldingRange = {
-						dynamicRegistration = false,
-						lineFoldingOnly = true,
-					},
-				},
-			})
-
-			local lspconfig_defaults = require("lspconfig").util.default_config
-			lspconfig_defaults.capabilities =
-				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
+			-- local lsp_capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
+			-- 	textDocument = {
+			-- 		foldingRange = {
+			-- 			dynamicRegistration = false,
+			-- 			lineFoldingOnly = true,
+			-- 		},
+			-- 	},
+			-- })
+			--
+			-- local lspconfig_defaults = require("lspconfig").util.default_config
+			-- lspconfig_defaults.capabilities =
+			-- 	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
 
 			require("mason-lspconfig").setup({
 				-- Replace the language servers listed here
