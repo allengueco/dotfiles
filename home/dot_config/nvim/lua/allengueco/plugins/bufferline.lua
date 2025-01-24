@@ -61,6 +61,8 @@ return {
 		}
 	end,
 	keys = {
+		{ "<S-h>", "<Cmd>BufferLineCyclePrev<CR>" },
+        { "<S-l>", "<Cmd>BufferLineCycleNext<CR>" },
 		{ "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>" },
 		{ "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>" },
 		{ "<A-3>", "<Cmd>BufferLineGoToBuffer 3<CR>" },
