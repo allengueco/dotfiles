@@ -129,4 +129,5 @@ if type ng &> /dev/null; then
     source <(ng completion script)
 fi
 
-[ -f "/home/allengueco/.ghcup/env" ] && . "/home/allengueco/.ghcup/env" # ghcup-env
+
+[ -f "/Users/allengueco/.ghcup/env" ] && . "/Users/allengueco/.ghcup/env" # ghcup-env
