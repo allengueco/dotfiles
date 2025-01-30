@@ -115,6 +115,7 @@ return {
 					end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
+                    hls = function() end,
 					ltex = function()
 						require("lspconfig").ltex.setup({
 							filetypes = {
