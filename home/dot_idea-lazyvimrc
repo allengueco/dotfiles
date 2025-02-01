@@ -82,7 +82,9 @@ set which-key
 set matchit
 
 " MY OWN KEY MAPS "
-nmap <leader>pe <Action>(ActivateProjectToolWindow) 
+nmap <leader>pe <Action>(ActivateProjectToolWindow)
+nmap <C-n> <Action>(EditorDown)
+nmap <C-p> <Action>(EditorUp)
 
 " Key maps
 
@@ -153,8 +155,8 @@ nmap [q <Action>(GotoPreviousError)
 " Next Quickfix
 nmap ]q <Action>(GotoNextError)
 " Format
-nmap <leader>cf <Action>(Format)
-vmap <leader>cf <Action>(Format)
+nmap <leader>gq <Action>(Format)
+vmap <leader>gq <Action>(Format)
 " Line Diagnostics
 nmap <leader>cd <Action>(ActivateProblemsViewToolWindow)
 " Next Diagnostic
