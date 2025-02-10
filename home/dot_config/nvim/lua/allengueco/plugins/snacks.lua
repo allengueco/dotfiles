@@ -23,7 +23,9 @@ return {
 		scroll = { enabled = true },
 		scope = { enabled = true },
 		input = { enabled = true },
-        toggle = { enabled = true },
+		explorer = {
+			replace_netrw = true,
+		},
 		statuscolumn = {
 			folds = {
 				open = true,
@@ -131,5 +133,7 @@ return {
 	end,
 	keys = {
 		{ "<leader>T", "<Cmd>lua Snacks.terminal.toggle()<CR>", "Open Terminal" },
+		{ "<leader>pe", "<Cmd>lua Snacks.explorer()<CR>", "Open Explorer" },
+		{ "<leader>bd", "<Cmd>lua Snacks.bufdelete()<CR>", "Delete current buffer" },
 	},
 }

@@ -18,7 +18,7 @@ vim.opt.expandtab = true
 --     precedes = "❮",
 -- }
 vim.opt.fillchars = {
-    diff = "╱",
+	diff = "╱",
 }
 vim.opt.smartindent = true
 vim.opt.wrap = false
@@ -45,12 +45,13 @@ vim.opt.updatetime = 50
 
 vim.opt.conceallevel = 2
 vim.diagnostic.config({
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = '✘',
-      [vim.diagnostic.severity.WARN] = '▲',
-      [vim.diagnostic.severity.HINT] = '⚑',
-      [vim.diagnostic.severity.INFO] = '»',
-    },
-  },
+    virtual_lines = true,
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "✘",
+			[vim.diagnostic.severity.WARN] = "▲",
+			[vim.diagnostic.severity.HINT] = "⚑",
+			[vim.diagnostic.severity.INFO] = "»",
+		},
+	},
 })

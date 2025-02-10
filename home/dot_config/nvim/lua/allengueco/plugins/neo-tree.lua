@@ -1,6 +1,7 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
+    enabled = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
@@ -25,7 +26,7 @@ return {
 			"terminal",
 			"snacks_terminal",
 			"Trouble",
-            "trouble",
+			"trouble",
 			"qf",
 			"edgy",
 			"Outline",
@@ -33,12 +34,8 @@ return {
 		opts.filesystem = {
 			bind_to_cwd = false,
 			scan_mode = "deep",
-            follow_current_file = { enabled = true },
+			follow_current_file = { enabled = true },
 			use_libuv_file_watcher = true,
 		}
 	end,
-	keys = {
-		{ "<leader>pe", "<Cmd>Neotree toggle<CR>", desc = "Toggle NeoTree and focus" },
-		{ "<leader>ps", "<Cmd>Neotree show<CR>", desc = "Toggle NeoTree" },
-	},
 }

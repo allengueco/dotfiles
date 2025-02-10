@@ -10,15 +10,11 @@ return {
 				lsp_trouble = true,
 				gitsigns = true,
 				diffview = true,
+                grug_far = true,
 				mason = true,
 				noice = true,
 				notify = true,
 				snacks = true,
-				indent_blankline = {
-					enabled = true,
-					scope_color = "lavender",
-					colored_indent_levels = false,
-				},
 				neotest = true,
 				native_lsp = {
 					enabled = true,

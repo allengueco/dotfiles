@@ -12,22 +12,31 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			keymap = { preset = "enter" },
+			keymap = {
+				preset = "enter",
+				cmdline = {
+					preset = "enter",
+				},
+			},
 			appearance = {
 				use_nvim_cmp_as_default = true,
 				nerd_font_variant = "mono",
 			},
 			sources = {
 				default = {
+					"lazydev",
 					"lsp",
 					"path",
 					"snippets",
 					"buffer",
-					"lazydev",
 				},
 				providers = {
 					-- dont show LuaLS require statements when lazydev has items
-					lazydev = { fallbacks = { "lsp" }, name = "LazyDev", module = "lazydev.integrations.blink" },
+					lazydev = {
+						name = "LazyDev",
+						module = "lazydev.integrations.blink",
+						score_offset = 100,
+					},
 					snippets = {
 						opts = {
 							extended_filetypes = {
@@ -40,8 +49,28 @@ return {
 				},
 			},
 			completion = {
+				menu = {
+					draw = {
+						-- We don't need label_description now because label and label_description are already
+						-- combined together in label by colorful-menu.nvim.
+						columns = { { "kind_icon" }, { "label", gap = 1 } },
+						components = {
+							label = {
+								text = function(ctx)
+									return require("colorful-menu").blink_components_text(ctx)
+								end,
+								highlight = function(ctx)
+									return require("colorful-menu").blink_components_highlight(ctx)
+								end,
+							},
+						},
+					},
+				},
 				list = {
-					selection = { preselect = false, auto_insert = true },
+					selection = {
+						preselect = false,
+						auto_insert = true,
+					},
 				},
 				documentation = {
 					auto_show = true,
@@ -84,19 +113,18 @@ return {
 					map("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Execute code action")
 				end,
 			})
-			-- local lsp_capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
-			-- 	textDocument = {
-			-- 		foldingRange = {
-			-- 			dynamicRegistration = false,
-			-- 			lineFoldingOnly = true,
-			-- 		},
-			-- 	},
-			-- })
-			--
-			-- local lspconfig_defaults = require("lspconfig").util.default_config
-			-- lspconfig_defaults.capabilities =
-			-- 	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
+			local lsp_capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
+				textDocument = {
+					foldingRange = {
+						dynamicRegistration = false,
+						lineFoldingOnly = true,
+					},
+				},
+			})
 
+			local lspconfig_defaults = require("lspconfig").util.default_config
+			lspconfig_defaults.capabilities =
+				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
 			require("mason-lspconfig").setup({
 				-- Replace the language servers listed here
 				-- with the ones you want to install
@@ -179,9 +207,11 @@ return {
 		ft = "lua",
 		opts = {
 			library = {
-				{ path = "luvit-meta/library", words = { "vim%.uv" } },
+				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 			},
 		},
 	},
-	{ "Bilal2453/luvit-meta", lazy = true },
+	{
+		"xzbdmw/colorful-menu.nvim",
+	},
 }
