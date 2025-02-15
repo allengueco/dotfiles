@@ -23,6 +23,7 @@ return {
 		scroll = { enabled = true },
 		scope = { enabled = true },
 		input = { enabled = true },
+        picker = { enabled = true },
 		explorer = {
 			replace_netrw = true,
 		},
