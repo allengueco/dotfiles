@@ -24,6 +24,11 @@ return {
 		scope = { enabled = true },
 		input = { enabled = true },
 		picker = {
+			previewers = {
+				git = {
+					native = true,
+				},
+			},
 			layout = {
 				preset = "ivy",
 			},
