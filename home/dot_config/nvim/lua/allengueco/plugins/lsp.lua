@@ -12,11 +12,11 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
+			cmdline = {
+				preset = "enter",
+			},
 			keymap = {
 				preset = "enter",
-				cmdline = {
-					preset = "enter",
-				},
 			},
 			appearance = {
 				use_nvim_cmp_as_default = true,
@@ -50,6 +50,7 @@ return {
 			},
 			completion = {
 				menu = {
+					border = "single",
 					draw = {
 						-- We don't need label_description now because label and label_description are already
 						-- combined together in label by colorful-menu.nvim.
@@ -73,6 +74,9 @@ return {
 					},
 				},
 				documentation = {
+					window = {
+						border = "single",
+					},
 					auto_show = true,
 				},
 				accept = {
@@ -143,7 +147,7 @@ return {
 					end,
 					-- Configured with rustacean.lua
 					rust_analyzer = function() end,
-                    hls = function() end,
+					hls = function() end,
 					ltex = function()
 						require("lspconfig").ltex.setup({
 							filetypes = {
