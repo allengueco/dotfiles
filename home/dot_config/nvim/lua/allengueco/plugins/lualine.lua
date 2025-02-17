@@ -3,6 +3,8 @@ return {
 	opts = {
 		options = {
 			theme = "catppuccin",
+			section_separators = { left = "", right = "" },
+			component_separators = { left = "", right = "" },
 		},
 		extensions = {
 			"fugitive",
@@ -11,9 +13,9 @@ return {
 			"neo-tree",
 			"mason",
 			"nvim-dap-ui",
-            "quickfix",
+			"quickfix",
 			"symbols-outline",
-            "trouble",
+			"trouble",
 		},
 	},
 }
