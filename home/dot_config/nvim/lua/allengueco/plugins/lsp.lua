@@ -13,9 +13,9 @@ return {
 		---@type blink.cmp.Config
 		opts = {
 			cmdline = {
-                keymap = {
-                    preset = "enter",
-                }
+				keymap = {
+					preset = "enter",
+				},
 			},
 			keymap = {
 				preset = "enter",
@@ -128,8 +128,7 @@ return {
 			lspconfig_defaults.capabilities =
 				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
 			require("mason-lspconfig").setup({
-				-- Replace the language servers listed here
-				-- with the ones you want to install
+				automatic_installation = true,
 				ensure_installed = {
 					"angularls",
 					"html",

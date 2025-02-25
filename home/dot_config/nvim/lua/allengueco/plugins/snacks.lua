@@ -25,6 +25,9 @@ return {
 		input = { enabled = true },
 		picker = {
 			previewers = {
+				diff = {
+					native = true,
+				},
 				git = {
 					native = true,
 				},
