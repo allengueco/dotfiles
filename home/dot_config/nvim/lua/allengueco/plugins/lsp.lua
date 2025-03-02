@@ -14,8 +14,14 @@ return {
 		opts = {
 			cmdline = {
 				keymap = {
-					["<Tab>"] = { "accept" },
-					["<CR>"] = { "accept_and_enter", "fallback" },
+					["<Tab>"] = { "show", "accept" },
+				},
+				completion = {
+					menu = {
+						auto_show = function()
+							return vim.fn.getcmdtype() == ":"
+						end,
+					},
 				},
 			},
 			keymap = {
@@ -48,7 +54,7 @@ return {
 							if ctx.mode == "cmdline" and string.find(ctx.line, " ") == nil then
 								return 3
 							end
-                            return 0
+							return 0
 						end,
 					},
 				},
