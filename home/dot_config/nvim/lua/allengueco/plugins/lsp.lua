@@ -14,7 +14,7 @@ return {
 		opts = {
 			cmdline = {
 				keymap = {
-					preset = "cmdline",
+					preset = "enter",
 				},
 			},
 			keymap = {
