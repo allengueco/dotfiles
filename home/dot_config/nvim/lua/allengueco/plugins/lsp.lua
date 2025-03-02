@@ -12,6 +12,12 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
+			cmdline = {
+				keymap = { preset = "enter" },
+				completion = {
+					menu = { auto_show = true },
+				},
+			},
 			keymap = {
 				preset = "enter",
 			},
@@ -36,14 +42,6 @@ return {
 								htmlangular = { "angular" },
 							},
 						},
-					},
-					cmdline = {
-						min_keyword_length = function(ctx)
-							if ctx.mode == "cmdline" and string.find(ctx.line, " ") == nil then
-								return 3
-							end
-							return 0
-						end,
 					},
 				},
 			},
