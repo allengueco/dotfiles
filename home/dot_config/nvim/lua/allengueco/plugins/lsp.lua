@@ -14,7 +14,8 @@ return {
 		opts = {
 			cmdline = {
 				keymap = {
-					preset = "enter",
+					["<Tab>"] = { "accept" },
+					["<CR>"] = { "accept_and_enter", "fallback" },
 				},
 			},
 			keymap = {
@@ -41,6 +42,14 @@ return {
 								htmlangular = { "angular" },
 							},
 						},
+					},
+					cmdline = {
+						min_keyword_length = function(ctx)
+							if ctx.mode == "cmdline" and string.find(ctx.line, " ") == nil then
+								return 3
+							end
+                            return 0
+						end,
 					},
 				},
 			},
