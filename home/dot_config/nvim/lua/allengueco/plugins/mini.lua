@@ -46,4 +46,9 @@ return {
 			}
 		end,
 	},
+	{
+		"echasnovski/mini.move",
+		event = "VeryLazy",
+		opts = {},
+	},
 }
