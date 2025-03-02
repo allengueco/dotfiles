@@ -12,9 +12,6 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			cmdline = {
-				completion = { ghost_text = { enabled = true } },
-			},
 			keymap = {
 				preset = "enter",
 			},
