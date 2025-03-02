@@ -7,7 +7,7 @@ return {
 	{
 		"saghen/blink.cmp",
 		lazy = false,
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = { "rafamadriz/friendly-snippets", "folke/noice.nvim" },
 		version = "v0.*",
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
