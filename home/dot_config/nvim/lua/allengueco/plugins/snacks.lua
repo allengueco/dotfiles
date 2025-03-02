@@ -50,7 +50,7 @@ return {
 		},
 		dashboard = {
 			preset = {
-				keys = {
+                keys = {
 					{ icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
 					{ icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
 					{
@@ -124,10 +124,11 @@ return {
 			end,
 		})
 	end,
+    -- stylua: ignore
 	keys = {
-		{ "<leader>T", "<Cmd>lua Snacks.terminal.toggle()<CR>", "Open Terminal" },
-		{ "<leader>pe", "<Cmd>lua Snacks.explorer()<CR>", "Open Explorer" },
-		{ "<leader>bd", "<Cmd>lua Snacks.bufdelete()<CR>", "Delete current buffer" },
+		{ "<leader>T",  function() Snacks.terminal.toggle() end, "Open Terminal" },
+		{ "<leader>pe", function() Snacks.explorer() end, "Open Explorer" },
+		{ "<leader>bd", function() Snacks.bufdelete() end, "Delete current buffer" },
 		{ "<leader>ff", function() Snacks.picker.files() end, "Find Files" },
 		{ "<leader>fr", function() Snacks.picker.recent() end, "Recent" },
 	},
