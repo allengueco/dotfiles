@@ -16,6 +16,11 @@ return {
 				keymap = { preset = "enter" },
 				completion = {
 					menu = { auto_show = true },
+                    list = {
+                        selection = {
+                            preselect = false,
+                        }
+                    }
 				},
 			},
 			keymap = {
