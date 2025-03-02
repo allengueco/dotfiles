@@ -10,7 +10,7 @@ return {
 				lsp_trouble = true,
 				gitsigns = true,
 				diffview = true,
-                grug_far = true,
+				grug_far = true,
 				mason = true,
 				noice = true,
 				notify = true,
@@ -26,6 +26,13 @@ return {
 					},
 				},
 				which_key = true,
+			},
+			highlight_overrides = {
+				all = function(colors)
+					return {
+						NormalFloat = { bg = colors.base, fg = colors.text },
+					}
+				end,
 			},
 			styles = {
 				functions = { "italic" },
