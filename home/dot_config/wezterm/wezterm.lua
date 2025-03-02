@@ -164,7 +164,7 @@ config.keys = {
         action = wezterm.action.SpawnTab 'CurrentPaneDomain'
     },
     {
-        key = 'f',
+        key = 'z',
         mods = 'ALT',
         action = wezterm.action.TogglePaneZoomState,
     },
