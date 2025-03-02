@@ -12,18 +12,6 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			cmdline = {
-				keymap = {
-					["<Tab>"] = { "show", "accept" },
-				},
-				completion = {
-					menu = {
-						auto_show = function()
-							return vim.fn.getcmdtype() == ":"
-						end,
-					},
-				},
-			},
 			keymap = {
 				preset = "enter",
 			},
