@@ -12,6 +12,11 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
+			cmdline = {
+				keymap = {
+					preset = "cmdline",
+				},
+			},
 			keymap = {
 				preset = "enter",
 			},
