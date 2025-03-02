@@ -18,21 +18,15 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
+    -- stylua: ignore
 	spec = {
 		{ "nvim-treesitter/nvim-treesitter-context" },
 		{ "nvim-tree/nvim-web-devicons" },
-		{
-			"saecki/crates.nvim",
-			event = "BufRead Cargo.toml",
-			tag = "stable",
-		},
+		{ "saecki/crates.nvim", event = "BufRead Cargo.toml", tag = "stable" },
 		{ "nvim-neotest/nvim-nio" },
-		{
-			"folke/todo-comments.nvim",
-			dependencies = { "nvim-lua/plenary.nvim" },
-			opts = {},
-		},
+		{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 		{ "folke/neoconf.nvim" },
+		{ "folke/ts-comments.nvim", event = "VeryLazy" },
 		{ import = "allengueco.plugins" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
