@@ -19,12 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{
-			"m4xshen/hardtime.nvim",
-			enabled = false,
-			dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-			opts = {},
-		},
 		{ "nvim-treesitter/nvim-treesitter-context" },
 		{ "nvim-tree/nvim-web-devicons" },
 		{
@@ -32,13 +26,7 @@ require("lazy").setup({
 			event = "BufRead Cargo.toml",
 			tag = "stable",
 		},
-		{ "numToStr/Comment.nvim", opts = {} },
 		{ "nvim-neotest/nvim-nio" },
-		{
-			"windwp/nvim-autopairs",
-			event = "InsertEnter",
-			config = true,
-		},
 		{
 			"folke/todo-comments.nvim",
 			dependencies = { "nvim-lua/plenary.nvim" },
