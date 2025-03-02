@@ -13,9 +13,7 @@ return {
 		---@type blink.cmp.Config
 		opts = {
 			cmdline = {
-				keymap = {
-					preset = "enter",
-				},
+				completion = { ghost_text = { enabled = true } },
 			},
 			keymap = {
 				preset = "enter",
@@ -29,10 +27,10 @@ return {
 				providers = {
 					-- dont show LuaLS require statements when lazydev has items
 					lazydev = {
-                        name = "LazyDev",
-                        module = "lazydev.integrations.blink",
-                        score_offset = 100,
-                    },
+						name = "LazyDev",
+						module = "lazydev.integrations.blink",
+						score_offset = 100,
+					},
 					snippets = {
 						opts = {
 							extended_filetypes = {
@@ -203,13 +201,13 @@ return {
 		opts = {
 			library = {
 				{
-                    path = "${3rd}/luv/library",
-                    words = { "vim%.uv" },
-                },
+					path = "${3rd}/luv/library",
+					words = { "vim%.uv" },
+				},
 				{
-                    path = "snacks.nvim",
-                    words = { "Snacks" },
-                },
+					path = "snacks.nvim",
+					words = { "Snacks" },
+				},
 			},
 		},
 	},
