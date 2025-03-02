@@ -16,11 +16,11 @@ return {
 				keymap = { preset = "enter" },
 				completion = {
 					menu = { auto_show = true },
-                    list = {
-                        selection = {
-                            preselect = false,
-                        }
-                    }
+					list = {
+						selection = {
+							preselect = false,
+						},
+					},
 				},
 			},
 			keymap = {
@@ -51,7 +51,9 @@ return {
 				},
 			},
 			completion = {
+				ghost_text = { enabled = true },
 				menu = {
+					auto_show = false,
 					draw = {
 						-- We don't need label_description now because label and label_description are already
 						-- combined together in label by colorful-menu.nvim.
