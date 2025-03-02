@@ -25,20 +25,14 @@ return {
 				nerd_font_variant = "mono",
 			},
 			sources = {
-				default = {
-					"lazydev",
-					"lsp",
-					"path",
-					"snippets",
-					"buffer",
-				},
+				default = { "lazydev", "lsp", "path", "snippets", "buffer" },
 				providers = {
 					-- dont show LuaLS require statements when lazydev has items
 					lazydev = {
-						name = "LazyDev",
-						module = "lazydev.integrations.blink",
-						score_offset = 100,
-					},
+                        name = "LazyDev",
+                        module = "lazydev.integrations.blink",
+                        score_offset = 100,
+                    },
 					snippets = {
 						opts = {
 							extended_filetypes = {
@@ -208,7 +202,14 @@ return {
 		ft = "lua",
 		opts = {
 			library = {
-				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+				{
+                    path = "${3rd}/luv/library",
+                    words = { "vim%.uv" },
+                },
+				{
+                    path = "snacks.nvim",
+                    words = { "Snacks" },
+                },
 			},
 		},
 	},
