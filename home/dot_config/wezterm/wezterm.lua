@@ -171,4 +171,7 @@ config.keys = {
 	},
 }
 
+tabline.apply_to_config(config)
+
 return config
+
