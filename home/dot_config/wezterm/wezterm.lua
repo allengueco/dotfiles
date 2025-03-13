@@ -18,7 +18,6 @@ config.font = wezterm.font_with_fallback({
 	},
 	"Flog Symbols",
 })
-config.window_decorations = "RESIZE"
 config.max_fps = 144
 config.initial_rows = 36
 config.initial_cols = 96
@@ -31,12 +30,6 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.default_prog = { "pwsh.exe", "-nologo" }
 end
 
-config.window_padding = {
-	left = "1cell",
-	right = "1cell",
-	top = "0.5cell",
-	bottom = "0.5cell",
-}
 
 config.leader = {
 	key = "a",
