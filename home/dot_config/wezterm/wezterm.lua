@@ -9,7 +9,6 @@ tabline.setup({
     }
 })
 
-config.use_fancy_tab_bar = true
 config.tab_max_width = 32
 config.pane_focus_follows_mouse = true
 config.scrollback_lines = 5000
