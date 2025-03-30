@@ -45,7 +45,9 @@ vim.opt.updatetime = 50
 
 vim.opt.conceallevel = 2
 vim.diagnostic.config({
-    virtual_lines = true,
+    virtual_lines = {
+        current_line = true
+    },
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = "✘",
