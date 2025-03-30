@@ -87,6 +87,48 @@ return {
 		},
 	},
 	{
+		"williamboman/mason-lspconfig.nvim",
+		opts = {
+			automatic_installation = true,
+			ensure_installed = {
+				"angularls",
+				"html",
+				"ts_ls",
+				"rust_analyzer",
+				"jdtls",
+				"lua_ls",
+				"marksman",
+			},
+			handlers = {
+				function(server_name)
+					require("lspconfig")[server_name].setup({})
+				end,
+				-- Configured with rustacean.lua
+				rust_analyzer = function() end,
+				hls = function() end,
+				ltex = function()
+					require("lspconfig").ltex.setup({
+						filetypes = {
+							"bib",
+							"gitcommit",
+							"markdown",
+							"org",
+							"plaintex",
+							"rst",
+							"rnoweb",
+							"tex",
+							"pandoc",
+							"quarto",
+							"rmd",
+							"context",
+							"text",
+						},
+					})
+				end,
+			},
+		},
+	},
+	{
 		"neovim/nvim-lspconfig",
 		cmd = { "LspInfo", "LspInstall", "LspStart" },
 		event = { "BufReadPre", "BufNewFile" },
@@ -124,49 +166,9 @@ return {
 					},
 				},
 			})
-
 			local lspconfig_defaults = require("lspconfig").util.default_config
 			lspconfig_defaults.capabilities =
 				vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, lsp_capabilities)
-			require("mason-lspconfig").setup({
-				automatic_installation = true,
-				ensure_installed = {
-					"angularls",
-					"html",
-					"ts_ls",
-					"rust_analyzer",
-					"jdtls",
-					"lua_ls",
-					"marksman",
-				},
-				handlers = {
-					function(server_name)
-						require("lspconfig")[server_name].setup({})
-					end,
-					-- Configured with rustacean.lua
-					rust_analyzer = function() end,
-					hls = function() end,
-					ltex = function()
-						require("lspconfig").ltex.setup({
-							filetypes = {
-								"bib",
-								"gitcommit",
-								"markdown",
-								"org",
-								"plaintex",
-								"rst",
-								"rnoweb",
-								"tex",
-								"pandoc",
-								"quarto",
-								"rmd",
-								"context",
-								"text",
-							},
-						})
-					end,
-				},
-			})
 		end,
 	},
 	-- Formatting
