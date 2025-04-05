@@ -82,6 +82,8 @@ plugins=(
     starship
     zoxide
     nvm
+    fzf
+    mvn
     ng
     rust
 )
