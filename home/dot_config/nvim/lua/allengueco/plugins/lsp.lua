@@ -1,6 +1,6 @@
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		lazy = false,
 		opts = {},
 	},
@@ -87,7 +87,7 @@ return {
 		},
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		opts = {
 			automatic_installation = true,
 			ensure_installed = {
@@ -133,7 +133,7 @@ return {
 		cmd = { "LspInfo", "LspInstall", "LspStart" },
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			{ "williamboman/mason-lspconfig.nvim" },
+			{ "mason-org/mason-lspconfig.nvim" },
 			{ "saghen/blink.cmp" },
 			{ "folke/neoconf.nvim" },
 		},
