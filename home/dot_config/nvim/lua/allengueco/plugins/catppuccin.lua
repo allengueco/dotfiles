@@ -6,7 +6,9 @@ return {
 		require("catppuccin").setup({
 			integrations = {
 				nvim_surround = true,
-				blink_cmp = true,
+				blink_cmp = {
+					style = "bordered",
+				},
 				lsp_trouble = true,
 				gitsigns = true,
 				diffview = true,
@@ -26,13 +28,6 @@ return {
 					},
 				},
 				which_key = true,
-			},
-			highlight_overrides = {
-				all = function(colors)
-					return {
-						NormalFloat = { bg = colors.base, fg = colors.text },
-					}
-				end,
 			},
 			styles = {
 				functions = { "italic" },
