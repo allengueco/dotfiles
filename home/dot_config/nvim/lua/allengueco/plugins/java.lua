@@ -1,12 +1,14 @@
 return {
-	"nvim-java/nvim-java",
-	ft = "java",
-	opts = {
-		jdk = {
-			auto_install = false,
+	-- Using autocmd launch (default)
+	-- Default uses jars from mason or ~/.vscode/extensions/vmware.vscode-spring-boot-x.x.x
+	{
+		"JavaHello/spring-boot.nvim",
+		ft = { "java", "yaml", "jproperties" },
+		dependencies = {
+			"mfussenegger/nvim-jdtls",
+			"ibhagwan/fzf-lua",
 		},
-		notifications = {
-			dap = false,
-		},
+		---@type bootls.Config
+		opts = {},
 	},
 }
