@@ -97,7 +97,6 @@ return {
 				"angularls",
 				"cssls",
 				"css_variables",
-				"eslint_d",
 				"hls",
 				"html",
 				"jdtls",
