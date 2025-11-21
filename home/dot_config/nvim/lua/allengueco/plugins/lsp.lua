@@ -88,18 +88,40 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
-        dependencies = {
-            "mason-org/mason.nvim",
-            "neovim/nvim-lspconfig"
-        },
+		dependencies = {
+			"mason-org/mason.nvim",
+			"neovim/nvim-lspconfig",
+		},
 		opts = {
-            automatic_enable = {
-                exclude = {
-                    "rust_analyzer",
-                    "hls",
-                    "ltex",
-                }
-            },
+			ensure_installed = {
+				"angularls",
+				"codelldb",
+				"cssls",
+				"css_variables",
+				"eslint_d",
+				"hls",
+				"html",
+				"java-debug-adapter",
+				"java-test",
+				"jdtls",
+				"jsonls",
+				"ltex",
+				"lua_ls",
+				"marksman",
+				"prettierd",
+				"rust_analyzer",
+				"stylua",
+				"tailwindcss",
+				"tinymist",
+				"ts_ls",
+			},
+			automatic_enable = {
+				exclude = {
+					"rust_analyzer",
+					"hls",
+					"ltex",
+				},
+			},
 		},
 	},
 	{
