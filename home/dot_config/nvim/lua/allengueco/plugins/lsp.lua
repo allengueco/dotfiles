@@ -128,7 +128,7 @@ return {
 			{ "folke/neoconf.nvim" },
 		},
         opts = {},
-    }
+    },
 	-- Formatting
 	{
 		"stevearc/conform.nvim",
