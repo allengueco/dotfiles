@@ -230,6 +230,7 @@ local cmd = {
 return {
 	cmd = cmd,
     on_attach = jdtls_on_attach,
+    root_markers = root_files,
 	settings = lsp_settings,
 	init_options = {
 		bundles = path.bundles,
