@@ -227,6 +227,7 @@ local cmd = {
 	data_dir,
 }
 
+---
 return {
 	cmd = cmd,
     on_attach = jdtls_on_attach,
