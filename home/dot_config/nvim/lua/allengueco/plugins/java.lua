@@ -1,7 +1,6 @@
 return {
 	{
 		"mfussenegger/nvim-jdtls",
-		filetype = { "java" },
 	},
 	-- Using autocmd launch (default)
 	-- Default uses jars from mason or ~/.vscode/extensions/vmware.vscode-spring-boot-x.x.x
