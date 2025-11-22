@@ -2,5 +2,5 @@
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 require("allengueco.set")
-require("allengueco.remap")
+require("allengueco.autocmd")
 require("allengueco.lazy")

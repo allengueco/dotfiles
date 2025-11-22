@@ -291,6 +291,7 @@ end
 
 return {
     'mfussenegger/nvim-jdtls',
+    enabled = false,
     config = function()
         vim.api.nvim_create_autocmd('FileType', {
             group = java_cmds,
