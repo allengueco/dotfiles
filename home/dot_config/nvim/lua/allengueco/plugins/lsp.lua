@@ -118,17 +118,6 @@ return {
 			},
 		},
 	},
-	{
-		"neovim/nvim-lspconfig",
-		cmd = { "LspInfo", "LspInstall", "LspStart" },
-		event = { "BufReadPre", "BufNewFile" },
-		dependencies = {
-			{ "mason-org/mason-lspconfig.nvim" },
-			{ "saghen/blink.cmp" },
-			{ "folke/neoconf.nvim" },
-		},
-        opts = {},
-    },
 	-- Formatting
 	{
 		"stevearc/conform.nvim",
