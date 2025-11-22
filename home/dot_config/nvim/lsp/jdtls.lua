@@ -228,7 +228,7 @@ local cmd = {
 }
 
 return {
-	cmd = { cmd },
+	cmd = cmd,
     on_attach = jdtls_on_attach,
 	settings = lsp_settings,
 	init_options = {
