@@ -103,7 +103,6 @@ return {
 				"cssls",
 				"css_variables",
 				"html",
-                "jdtls",
 				"jsonls",
 				"ltex",
 				"lua_ls",
