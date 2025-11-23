@@ -80,15 +80,12 @@ local function get_jdtls_paths()
 	---
 	-- configure sts4
 	---
-	-- local spring_path = require('mason-registry')
-	--     .get_package('spring-boot-tools')
-	--     :get_install_path() .. '/extension/jars/*.jar'
-	-- local spring_bundle = vim.split(vim.fn.glob(spring_path), '\n', {})
-	--
-	-- if spring_bundle[1] ~= '' then
-	--     vim.list_extend(path.bundles, spring_bundle)
-	-- end
-	vim.list_extend(path.bundles, require("spring_boot").java_extensions())
+	local spring_path = vim.fn.expand("$MASON/packages/spring-boot-tools")
+	local spring_bundle = vim.split(vim.fn.glob(spring_path .. "/extension/jars/*.jar"), "\n")
+
+	if spring_bundle[1] ~= "" then
+		vim.list_extend(path.bundles, spring_bundle)
+	end
 
 	---
 	-- Useful if you're starting jdtls with a Java version that's
@@ -218,27 +215,6 @@ local lsp_settings = {
 }
 
 return {
-	cmd = {
-		"java",
-		"-Declipse.application=org.eclipse.jdt.ls.core.id1",
-		"-Dosgi.bundles.defaultStartLevel=4",
-		"-Declipse.product=org.eclipse.jdt.ls.core.product",
-		"-Dlog.protocol=true",
-		"-Dlog.level=ALL",
-		"-javaagent:" .. path.java_agent,
-		"-Xms1g",
-		"--add-modules=ALL-SYSTEM",
-		"--add-opens",
-		"java.base/java.util=ALL-UNNAMED",
-		"--add-opens",
-		"java.base/java.lang=ALL-UNNAMED",
-		"-jar",
-		path.launcher_jar,
-		"-configuration",
-		path.platform_config,
-		"-data",
-		data_dir,
-	},
 	on_attach = jdtls_on_attach,
 	root_markers = vim.fn.has("nvim-0.11.3") == 1 and { root_markers1, root_markers2 }
 		or vim.list_extend(root_markers1, root_markers2),
