@@ -28,11 +28,7 @@ return {
 				},
 			},
 			keymap = {
-				preset = "enter",
-			},
-			appearance = {
-				use_nvim_cmp_as_default = true,
-				nerd_font_variant = "mono",
+				preset = "super-tab",
 			},
 			sources = {
 				default = { "lazydev", "lsp", "path", "snippets", "buffer" },
@@ -55,6 +51,9 @@ return {
 				},
 			},
 			completion = {
+                trigger = {
+                    show_in_snippet = false
+                },
 				ghost_text = { enabled = true },
 				menu = {
 					auto_show = false,
