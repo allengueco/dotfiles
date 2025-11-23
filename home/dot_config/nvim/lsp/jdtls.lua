@@ -78,16 +78,6 @@ local function get_jdtls_paths()
 	end
 
 	---
-	-- configure sts4
-	---
-	local spring_path = vim.fn.expand("$MASON/packages/spring-boot-tools")
-	local spring_bundle = vim.split(vim.fn.glob(spring_path .. "/extension/jars/*.jar"), "\n")
-
-	if spring_bundle[1] ~= "" then
-		vim.list_extend(path.bundles, spring_bundle)
-	end
-
-	---
 	-- Useful if you're starting jdtls with a Java version that's
 	-- different from the one the project uses.
 	---
