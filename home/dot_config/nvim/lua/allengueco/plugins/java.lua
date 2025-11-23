@@ -1,6 +1,9 @@
 return {
 	{
 		"mfussenegger/nvim-jdtls",
+		config = function()
+			vim.lsp.enable("jdtls")
+		end,
 	},
 	-- Using autocmd launch (default)
 	-- Default uses jars from mason or ~/.vscode/extensions/vmware.vscode-spring-boot-x.x.x
