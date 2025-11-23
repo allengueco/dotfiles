@@ -2,12 +2,7 @@ return {
 	{
 		"mason-org/mason.nvim",
 		lazy = false,
-		opts = {
-            registries = {
-                "github:mason-org/mason-registry",
-                "github:nvim-java/mason-registry",
-            }
-        },
+		opts = {},
 	},
 	{
 		"saghen/blink.cmp",
@@ -51,9 +46,9 @@ return {
 				},
 			},
 			completion = {
-                trigger = {
-                    show_in_snippet = false
-                },
+				trigger = {
+					show_in_snippet = false,
+				},
 				ghost_text = { enabled = true },
 				menu = {
 					auto_show = false,
