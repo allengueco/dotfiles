@@ -12,6 +12,10 @@ error_symbol = "[✗](bold red)"
 vicmd_symbol = "[❮](bold green)"
 disabled = false
 
+[time]
+disabled = false
+time_format = "%HH:%MM"
+
 [username]
 show_always = true
 style_root = "bold red"
