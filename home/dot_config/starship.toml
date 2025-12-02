@@ -59,7 +59,7 @@ RedHatEnterprise = "󱄛"
 
 [hostname]
 ssh_only = false
-format = '[ @ $ssh_symbol$hostname ]($style)'
+format = '[ @ $hostname ]($style)'
 style = "bg:red fg:crust"
 
 [username]
