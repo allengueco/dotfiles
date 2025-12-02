@@ -3,8 +3,8 @@
 format = """
 [](red)\
 $os\
-$hostname\
 $username\
+$hostname\
 [](bg:peach fg:red)\
 $directory\
 [](bg:yellow fg:peach)\
@@ -60,6 +60,7 @@ RedHatEnterprise = "󱄛"
 [hostname]
 ssh_only = false
 format = '[@$ssh_symbol$hostname]($style)'
+style = "bg:red fg:crust"
 
 [username]
 show_always = true
