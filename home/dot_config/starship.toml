@@ -14,7 +14,7 @@ disabled = false
 
 [time]
 disabled = false
-time_format = "%HH:%MM"
+time_format = "%H:%M"
 format = "[$time]($style)"
 
 [username]
