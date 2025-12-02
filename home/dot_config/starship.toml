@@ -15,6 +15,7 @@ disabled = false
 [time]
 disabled = false
 time_format = "%HH:%MM"
+format = "[$time]($style)"
 
 [username]
 show_always = true
