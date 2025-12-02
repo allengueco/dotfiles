@@ -2,6 +2,9 @@ format = """
 [╭─](white)$username$os$hostname in $directory$java$gradle$kotlin$nodejs$python$rust$git_branch$git_status$battery$cmd_duration
 [╰─](white)$character """
 
+
+right_format = """"$time"""
+
 [character]
 format = "$symbol"
 success_symbol = "[❯](bold green)"
