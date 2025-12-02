@@ -4,6 +4,7 @@ format = """
 [](red)\
 $os\
 $username\
+[](fg:green bg:sapphire)\
 $hostname\
 [](bg:peach fg:red)\
 $directory\
@@ -20,7 +21,6 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:green bg:sapphire)\
 $conda\
 [](fg:sapphire bg:lavender)\
 $time\
@@ -59,8 +59,6 @@ RedHatEnterprise = "󱄛"
 
 [hostname]
 ssh_only = false
-format = '[ @ $hostname]($style)'
-style = "bg:red fg:crust"
 
 [username]
 show_always = true
