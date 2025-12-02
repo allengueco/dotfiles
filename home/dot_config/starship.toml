@@ -3,7 +3,7 @@ format = """
 [╰─](white)$character """
 
 
-right_format = """"$time"""
+right_format = """$time"""
 
 [character]
 format = "$symbol"
