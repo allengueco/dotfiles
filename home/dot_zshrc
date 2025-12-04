@@ -86,6 +86,8 @@ plugins=(
     mvn
     ng
     rust
+    docker
+    docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
