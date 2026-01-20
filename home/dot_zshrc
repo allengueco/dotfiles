@@ -81,7 +81,7 @@ plugins=(
     zsh-vi-mode
     starship
     zoxide
-    nvm
+    fnm
     fzf
     mvn
     ng
