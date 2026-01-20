@@ -128,7 +128,6 @@ if type rg &> /dev/null; then
     export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 fi
 
-
 if type ng &> /dev/null; then
     source <(ng completion script)
 fi
