@@ -1,3 +1,5 @@
+export FZF_DEFAULT_OPTS_FILE="$HOME/.config/fzf/config"
+export FZF_DEFAULT_COMMAND="rg --color=always --files --ignore-vcs --hidden"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -121,8 +123,6 @@ fi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# export FZF_DEFAULT_OPTS_FILE="$HOME/.config/fzf/config"
-# export FZF_DEFAULT_COMMAND="rg --color=always --files --ignore-vcs --hidden"
 
 if type rg &> /dev/null; then
     export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
