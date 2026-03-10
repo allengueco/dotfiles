@@ -90,6 +90,7 @@ plugins=(
     rust
     docker
     docker-compose
+    you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
