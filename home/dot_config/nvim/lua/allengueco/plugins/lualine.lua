@@ -2,7 +2,6 @@ return {
 	"nvim-lualine/lualine.nvim",
 	opts = {
 		options = {
-			theme = "catppuccin",
 			section_separators = { left = "", right = "" },
 			component_separators = { left = "", right = "" },
 		},
@@ -10,8 +9,9 @@ return {
 			"fugitive",
 			"fzf",
 			"lazy",
-			"neo-tree",
+            "man",
 			"mason",
+			"neo-tree",
 			"nvim-dap-ui",
 			"quickfix",
 			"symbols-outline",
