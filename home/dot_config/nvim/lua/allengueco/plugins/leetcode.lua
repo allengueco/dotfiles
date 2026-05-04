@@ -3,6 +3,7 @@ local leet_arg = "leetcode.nvim"
 return {
 	"kawre/leetcode.nvim",
 	build = ":TSUpdate html",
+	enabled = "false",
 	lazy = leet_arg ~= vim.fn.argv()[1],
 	dependencies = {
 		"ibhagwan/fzf-lua",
