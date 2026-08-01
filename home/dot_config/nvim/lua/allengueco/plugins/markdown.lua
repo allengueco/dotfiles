@@ -7,6 +7,9 @@ return {
 		---@type render.md.UserConfig
 		opts = {
 			preset = "obsidian",
+			completions = {
+				lsp = { enabled = true },
+			},
 		},
 	},
 }

@@ -134,6 +134,7 @@ return {
 				lua = { "stylua" },
 				typescript = { "prettierd" },
 				javascript = { "prettierd" },
+				java = { "palantir-java-format" },
 			},
 			default_format_opts = {
 				lsp_format = "fallback",
@@ -147,6 +148,7 @@ return {
 			require("lint").linters_by_ft = {
 				typescript = { "eslint_d" },
 				javascript = { "eslint_d" },
+				java = { "checkstyle", "sonarlint-language-server" },
 			}
 		end,
 	},
