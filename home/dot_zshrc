@@ -28,7 +28,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode disabled  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 zstyle ':omz:update' frequency 7
@@ -140,3 +140,11 @@ esac
 # pnpm end
 
 eval $($HOME/wsl2-ssh-agent)
+# Adding wsl-open as a browser for Bash for Windows
+if [[ $(uname -r) =~ (m|M)icrosoft ]]; then
+    if [[ -z $BROWSER ]]; then
+      export BROWSER=wsl-open
+    else
+      export BROWSER=$BROWSER:wsl-open
+    fi
+fi
