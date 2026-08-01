@@ -23,6 +23,7 @@ return {
 		scroll = { enabled = true },
 		scope = { enabled = true },
 		input = { enabled = true },
+        image = { enabled = true },
 		picker = {
 			previewers = {
 				diff = {
