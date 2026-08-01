@@ -13,11 +13,9 @@ return {
 			edit = {
 				watch = true,
 			},
-			notification = {
-				on_watch = true,
-			},
 		},
 		init = function()
+            -- The below configuration will allow you to automatically apply changes on files under chezmoi source path
 			--  e.g. ~/.local/share/chezmoi/*
 			vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 				pattern = { os.getenv("HOME") or os.getenv("UserProfile") .. "/.local/share/chezmoi/*" },
@@ -32,3 +30,4 @@ return {
 		end,
 	},
 }
+

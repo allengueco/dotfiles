@@ -95,10 +95,10 @@ return {
 	end,
     -- stylua: ignore
 	keys = {
-		{ "<leader>T",  function() Snacks.terminal.toggle() end, "Open Terminal" },
-		{ "<leader>pe", function() Snacks.explorer() end, "Open Explorer" },
-		{ "<leader>bd", function() Snacks.bufdelete() end, "Delete current buffer" },
-		{ "<leader>ff", function() Snacks.picker.files() end, "Find Files" },
-		{ "<leader>fr", function() Snacks.picker.recent() end, "Recent" },
+		{ "<leader>T",  function() Snacks.terminal.toggle() end, desc = "Open Terminal" },
+		{ "<leader>pe", function() Snacks.explorer() end, desc = "Open Explorer" },
+		{ "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete current buffer" },
+		{ "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+		{ "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
 	},
 }
