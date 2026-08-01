@@ -9,18 +9,8 @@ return {
 			name = "snacks.picker",
 		},
 		workspaces = {
-			{
-				name = "aws",
-				path = "~/vaults/aws",
-			},
-			{
-				name = "personal",
-				path = "~/vaults/personal",
-			},
-			{
-				name = "leetcode",
-				path = "~/leetcode",
-			},
+			{ name = "personal", path = "~/vaults/personal" },
+			{ name = "work", path = "~/vaults/work" },
 		},
 	},
 }
