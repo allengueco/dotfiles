@@ -3,26 +3,24 @@ return {
 	version = "*",
 	---@module 'obsidian'
 	---@type function|obsidian.config
-	opts = function()
-		return {
-			legacy_commands = false,
-			picker = {
-				name = "snacks.picker",
-			},
-			workspaces = {
-				{ name = "personal", path = "~/vaults/personal" },
-				{ name = "work", path = "~/vaults/work" },
-			},
-            notes_subdir = "0-fleeting",
-			note_id_func = function(title, dir)
-				return require("obsidian.builtin").title_id(title, dir)
-			end,
-			templates = {
-				substitutions = {},
-				folder = "templates",
-				date_format = "%Y-%m-%d",
-				time_format = "%HH:%M",
-			},
-		}
-	end,
+	opts = {
+		legacy_commands = false,
+		picker = {
+			name = "snacks.picker",
+		},
+		workspaces = {
+			{ name = "personal", path = "~/vaults/personal" },
+			{ name = "work", path = "~/vaults/work" },
+		},
+		notes_subdir = "0-fleeting",
+		note_id_func = function(title, dir)
+			return require("obsidian.builtin").title_id(title, dir)
+		end,
+		templates = {
+			substitutions = {},
+			folder = "templates",
+			date_format = "%Y-%m-%d",
+			time_format = "%HH:%M",
+		},
+	},
 }
