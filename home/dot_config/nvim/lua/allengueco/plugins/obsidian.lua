@@ -12,5 +12,19 @@ return {
 			{ name = "personal", path = "~/vaults/personal" },
 			{ name = "work", path = "~/vaults/work" },
 		},
+		notes_subdir = "0-fleeting",
+		new_notes_location = "notes_subdir",
+		note_id_func = function(title, dir)
+			return require("obsidian.builtin").title_id(title, dir)
+		end,
+		templates = {
+			substitutions = {},
+			folder = "templates",
+			date_format = "%Y-%m-%d",
+			time_format = "%HH:%M",
+		},
+	},
+	keys = {
+		{ "<Leader>on", "<cmd>Obsidian new_from_template<CR>", desc = "(Obsidian) New from template" },
 	},
 }
