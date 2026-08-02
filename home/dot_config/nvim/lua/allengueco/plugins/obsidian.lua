@@ -2,7 +2,7 @@ return {
 	"obsidian-nvim/obsidian.nvim",
 	version = "*",
 	---@module 'obsidian'
-	---@type obsidian.config
+	---@type function|obsidian.config
 	opts = function()
 		return {
 			legacy_commands = false,
@@ -13,15 +13,9 @@ return {
 				{ name = "personal", path = "~/vaults/personal" },
 				{ name = "work", path = "~/vaults/work" },
 			},
-			note_id_func = function()
-				return require("obsidian.builtin").title_id
+			note_id_func = function(title)
+				return require("obsidian.builtin").title_id(title)
 			end,
-			notes_subdir = "notes",
-			new_notes_location = "notes_subdir",
-			daily_notes = {
-				folder = "daily",
-				date_format = "%Y-%m-%d",
-			},
 			templates = {
 				substitutions = {},
 				folder = "templates",
