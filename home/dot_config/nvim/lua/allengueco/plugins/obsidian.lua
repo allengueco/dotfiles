@@ -13,6 +13,7 @@ return {
 				{ name = "personal", path = "~/vaults/personal" },
 				{ name = "work", path = "~/vaults/work" },
 			},
+            notes_subdir = "0-fleeting",
 			note_id_func = function(title)
 				return require("obsidian.builtin").title_id(title)
 			end,
