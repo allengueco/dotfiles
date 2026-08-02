@@ -12,5 +12,16 @@ return {
 			{ name = "personal", path = "~/vaults/personal" },
 			{ name = "work", path = "~/vaults/work" },
 		},
+        notes_subdir = "notes",
+        new_notes_location = "notes_subdir",
+        daily_notes = {
+            folder = "daily",
+            date_format = "%Y-%m-%d",
+        },
+        templates = {
+            folder = "templates",
+            date_format = "%Y-%m-%d",
+            time_format = "%HH:%M"
+        }
 	},
 }
