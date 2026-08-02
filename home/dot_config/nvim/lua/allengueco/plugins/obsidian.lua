@@ -14,8 +14,8 @@ return {
 				{ name = "work", path = "~/vaults/work" },
 			},
             notes_subdir = "0-fleeting",
-			note_id_func = function(title)
-				return require("obsidian.builtin").title_id(title)
+			note_id_func = function(title, dir)
+				return require("obsidian.builtin").title_id(title, dir)
 			end,
 			templates = {
 				substitutions = {},
