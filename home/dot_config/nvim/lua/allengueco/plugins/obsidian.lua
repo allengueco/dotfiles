@@ -12,6 +12,7 @@ return {
 			{ name = "personal", path = "~/vaults/personal" },
 			{ name = "work", path = "~/vaults/work" },
 		},
+        note_id_func = require("obsidian.builtin").title_id,
         notes_subdir = "notes",
         new_notes_location = "notes_subdir",
         daily_notes = {
