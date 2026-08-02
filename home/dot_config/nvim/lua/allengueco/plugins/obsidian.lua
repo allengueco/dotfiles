@@ -2,7 +2,7 @@ return {
 	"obsidian-nvim/obsidian.nvim",
 	version = "*",
 	---@module 'obsidian'
-	---@type function|obsidian.config
+	---@type obsidian.config
 	opts = {
 		legacy_commands = false,
 		picker = {
