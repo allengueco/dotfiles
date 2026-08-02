@@ -139,7 +139,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-eval $($HOME/wsl2-ssh-agent)
 # Adding wsl-open as a browser for Bash for Windows
 if [[ $(uname -r) =~ (m|M)icrosoft ]]; then
     if [[ -z $BROWSER ]]; then
@@ -147,4 +146,6 @@ if [[ $(uname -r) =~ (m|M)icrosoft ]]; then
     else
       export BROWSER=$BROWSER:wsl-open
     fi
+
+    eval $($HOME/wsl2-ssh-agent)
 fi
