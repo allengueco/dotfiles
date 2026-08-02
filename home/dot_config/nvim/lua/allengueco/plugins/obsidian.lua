@@ -25,6 +25,6 @@ return {
 		},
 	},
 	keys = {
-		{ "<Leader>on", "<cmd>Obsidian new_from_template", desc = "(Obsidian) New from template" },
+		{ "<Leader>on", "<cmd>Obsidian new_from_template<CR>", desc = "(Obsidian) New from template" },
 	},
 }
