@@ -19,6 +19,7 @@ return {
             date_format = "%Y-%m-%d",
         },
         templates = {
+            substitutions = {},
             folder = "templates",
             date_format = "%Y-%m-%d",
             time_format = "%HH:%M"
